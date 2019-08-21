@@ -1,0 +1,15 @@
+###############################
+# TEST STEP: Raw Text Command #
+###############################
+
+
+SCRIPT "CONNECT.txt" 1 1 -1 -1 -1 -1 1 0 0
+SCRIPT "LOGMASK.txt" 1 1 -1 -1 -1 -1 1 0 0
+
+SCRIPT "NRCELLSEARCH.txt" 1 1 -1 -1 -1 -1 1 0 0
+SCRIPT "REGISTER.txt" 1 1 -1 -1 -1 -1 1 0 0
+
+SCRIPT "GETSTATS.txt" 1 1 -1 -1 -1 -1 1 0 0
+
+SCRIPT "LOGMASK-DATA.txt" 1 1 -1 -1 -1 -1 1 0 0
+SCRIPT "DEREGISTER.txt" 1 1 -1 -1 -1 -1 1 0 0

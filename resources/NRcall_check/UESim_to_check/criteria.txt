@@ -1,0 +1,19 @@
+Sending MSG 1 for RAPID
+DEBUG Processing RAR ra-rnti
+CCCH MSG3 : ueCb
+Contention Resolution id received isMsg4Rcvd
+received connection setup
+Sending Attach request
+Registration Req msgLen
+Processing Identity Request Message
+Processing Authenctication Request Message
+Registration accept sent
+Rcvd RRC Re-configuration
+SRB(1) configuration received at UE
+SRB(2) configuration received at UE
+DRB(1) is configuread with LCG(1)
+DRB(2) is configuread with LCG(1)
+DRB(3) is configuread with LCG(1)
+DRB(4) is configuread with LCG(1)
+UE IPv4 ADDR allocated
+Send RRC Reconfiguration Complete for UEId 

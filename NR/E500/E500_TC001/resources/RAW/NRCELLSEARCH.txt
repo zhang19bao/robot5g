@@ -1,0 +1,41 @@
+###################################################################################################################################################################
+forw l2 setRadioContext 0
+forw l1 setRadioContext 0
+forw l1 SETRFRXGAIN 0 -20
+
+SETP RRC_TEST_LOG_PCO_MSG_TO_MCI 1
+SETP DE_RDA_VERBOSITY 5
+
+#@@@@
+SETP NR_L0_UL_CTRL_DISABLE_HARQ_ACK_OVER_PUSCH 1
+FORW L2 MACSETFIXEDPREAMBLE 1
+SETP L2_MAC_NR_RACH_FORCE_TO_OPPORTUNITY 0
+
+# Sep spec enabler
+SETP MTE_NR_3GPP_SEP18_SUPPORTED 1
+SETP L1_NR_3GPP_SEP18_SUPPORTED 1
+SETP L2_NR_3GPP_SEP18_SUPPORTED 1
+SETP L0_DL_CTRL_NR_3GPP_SEP18_SUPPORTED 1
+SETP L0_UL_CTRL_NR_3GPP_SEP18_SUPPORTED 1
+
+setp NAS_TEST_ENABLE_INVALID_EVENT_LOGGING_TO_MCI 1 
+setp RRC_TEST_ENABLE_INVALID_EVENT_LOGGING_TO_MCI 1
+setp RRC_TEST_ENABLE_ASN1_VIOLATION_INDS_TO_MCI 1
+setp RRC_TEST_UL_DELIVERY_INDS_REQUIRED 0
+setp RRC_TEST_OVERRIDE_INITIAL_UE_ID 0
+setp RRC_TEST_LOG_PCO_MSG_TO_MCI 1
+setp ENABLE_NAS_APN_DECODING 0
+
+###################################################################################################################################################################
+
+###################################################################################################################################################################
+# disable phase compensation by appending [0]
+forw mte NrSetMueRadioContextCell 0 16 25650 100 [] [] [2] [25158.6 25261.50] [0]
+
+
+###################################################################################################################################################################
+# start RDA test case
+forw mte SetUeContext 0
+forw mte DeConfigRdaStartTestCase 0 192.168.10.200 [1] [UDP]
+WAIT FOR "I: CMPI DTE RDA TEST GROUP STARTED IND:" TIMEOUT 20
+

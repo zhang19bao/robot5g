@@ -1,0 +1,275 @@
+=~=~=~=~=~=~=~=~=~=~=~= MobaXterm log 2019.05.08 15:40:31 =~=~=~=~=~=~=~=~=~=~=~=
+     
+                              MobaXterm 11.0                           
+                 (SSH client, X-server and networking tools)             
+                                                                         
+       SSH session to root@172.21.6.101                                 
+         SSH compression :                                             
+         SSH-browser     :                                             
+         X11-forwarding  :   (remote display is forwarded through SSH) 
+         DISPLAY         :   (automatically set on remote server)      
+                                                                         
+       For more info, ctrl+click on help or visit our website           
+     
+
+Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.15.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+108 packages can be updated.
+0 updates are security updates.
+
+New release '18.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Wed May  8 15:40:27 2019 from 172.21.16.35
+root@core:~# dussh
+Last login: Wed May  8 02:19:16 2019 from 192.169.4.10
+[root@du ~]# cd env/latest/cu
+[root@du latest]# ls
+5gc  cu  du  du_0507  du_bin_0507_config_0425  uesim
+[root@du latest]# cdrm du_bin_0507_config_0425-du_bin_0507_config_0425rdu_bin_0507_config_0425fdu_bin_0507_config_0425 du_bin_0507_config_0425
+[root@du latest]# ls
+5gc  cu  du  du_0507  uesim
+[root@du latest]# cd du_0507]
+-bash: cd: du_0507]: No such file or directory
+[root@du latest]# cd du_0507]
+[root@du du_0507]# ls
+bin  config
+[root@du du_0507]# cd bin
+[root@du bin]# ls
+clear-log.sh                 dbglog_2019_5_8_3_28_17.txt              du_dbg_log_19_05_08_03_28_17_part_1.log  msgdump_19_05_08_02_43_46.log
+dbglog_2019_5_8_1_59_40.txt  du_dbg_log_19_05_08_01_59_40_part_1.log  gnb_du                                   msgdump_19_05_08_03_28_17.log
+dbglog_2019_5_8_2_43_46.txt  du_dbg_log_19_05_08_02_43_46_part_1.log  msgdump_19_05_08_01_59_40.log
+[root@du bin]# alias
+alias cp='cp -i'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias startdu='cd /root/radisys-new/du/bin && ./gnb_du_txl_0130 -f ../config/ssi_mem'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@du bin]# ./gnb_du -f ../config/ssi_mem
+
+
+
+#############################################################################
+#  _______    ______         __    __  _______         _______   __    __   #
+# |       \  /      \       |  \  |  \|       \       |       \ |     |  \  #
+# | $$$$$$$ |  $$$$$$\      | $$\ | $$| $$$$$$$\      | $$$$$$$\| $$  | $$  #
+# | $$____  | $$ __\$$      | $$$\| $$| $$__| $$      | $$  | $$| $$  | $$  #
+# | $$    \ | $$|           | $$$$\ $$| $$    $/      | $$  | $$| $$  | $$  #
+#  \$$$$$$$\| $$ \$$$\      | $$\$$ $$| $$$$$$$\      | $$  | $$| $$  | $$  #
+# |  \__| $$| $$__| $$      | $$ \$$$$| $$  | $$      | $$__/ $$| $$__/ $$  #
+#  \$$    $$ \$$    $$      | $$  \$$$| $$  | $$      | $$    $$ \$$    $$  #
+#   \$$$$$$   \$$$$$$        \$$   \$$ \$$   \$$       \$$$$$$$   \$$$$$$   #
+#                                                                           #
+#############################################################################
+
+
+
+[08/05/2019 03:50:01.095374][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+[08/05/2019 03:50:01.096541][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+[08/05/2019 03:50:01.096759][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+[08/05/2019 03:50:01.096992][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+[08/05/2019 03:50:01.097130][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+[08/05/2019 03:50:01.097446][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+[08/05/2019 03:50:01.098010][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+Log File:[dbglog]
+Log level:[ALWAYS]
+Module Mask:[0]
+File Size Limit:[3145728]
+Maximum Log Files:[1]
+Time Zone:[EST]
+Binary Logging:[Disabled]
+Remote Logging:[Disabled]
+Console Logging:[Disabled]
+
+ ============Slot Format:========
+ D D D S U D D D S U D D D S U D D D S U
+*** Muted Slot count 0AllowedPrbStart: 0 numberOfPrbsAllowed: 273
+Successfully encoded MIB, len: 3
+Successfully Encoded SIB1, len: 108
+DEBUG11### Triggering F1 Setup Request message...
+[DU_APP]::Decoded DU_SIB_TYPE_2 Success
+[DU_APP]::Decoded DU_SIB_TYPE_3 Success
+Successfully Encoded SIB1, len: 115
+### Triggering GNB-DU CONFIG UPDATE message...
+Mu=1 and dlulTxPrdcty 5 numSlots=5
+Inside rgSCHUtlCalcCceStrtIndxFrmCmnPrb coreSetId=1 firstSetBitPos=16
+
+ Intial DL BWP based on type-0 pdcch cfg: RACH SLOT 19 yIdx 0 idx1 0 totalSlot[yIdx] 0
+maxUePerUlSf 1 maxUePerDlSf 1 maxDlUePerTti 1 maxUlUePerTti 1
+
+SIB1 for SSB 0 added for schd in slot 0 sib1Lst 0x7f6199893330 numEnt 1
+SIB1 for SSB 1 added for schd in slot 1 sib1Lst 0x7f6199893370 numEnt 1
+ [DU_APP]: SI is configured to SCH with si index:1 
+ [DU_APP]: SI is configured to SCH with si index:2 
+ SI_CFG_REQ Received with SI index:1 prd 128
+
+ SI_CFG_REQ Received with SI index:2 prd 256
+CELL[1] is UP
+
+ dbgBoUeEnqCnt 0 dbgBoUeDqCnt 0 dbgSfRecpUeEqCnt 0 dbgSfRecpUeDqCnt 0 dbgInvalidCrcIndDbgCnt 0 g_invalid_nrup_pkt 0
+================ Num Ue Per TTI stats===================at time 0/1
+DL  UL
+==========================   ===========================
+mUe/TTI  count  mUe/TTI  count
+   1  0           1  0     
+   2  0           2  0     
+   3  0           3  0     
+   4  0           4  0     
+   5  0           5  0     
+   6  0           6  0     
+   7  0           7  0     
+   8  0           8  0     
+TTI received at APP : 0
+### Received GNB-DU CONFIG UPDATE ACK - TransactionID: 1
+g_sfDiffCount: 10 lvl1 381:14 lvl2 381:16 sfDiff 2  
+g_sfDiffCount: 20 lvl1 662:16 lvl2 663:2 sfDiff 6  
+g_sfDiffCount: 30 lvl1 225:11 lvl2 225:13 sfDiff 2  
+g_sfDiffCount: 40 lvl1 583:11 lvl2 583:13 sfDiff 2  
+UpTime : 30 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   ULBLER  ULPRB   
+1       0        0     0      47861    0        0        0        0        0        0        0       0       
+---------------------------------------------------------
+
+DU APP Level User Statistics:
+
+UE-ID     #PKT_TX   #PKT_RX   DL_TPT    UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2   
+---------------------------------------------------------
+-----------------------------------------------
+TTI received at APP : 3000
+g_sfDiffCount: 50 lvl1 450:12 lvl2 451:1 sfDiff 9  
+g_sfDiffCount: 60 lvl1 596:6 lvl2 596:8 sfDiff 2  
+g_sfDiffCount: 70 lvl1 593:12 lvl2 593:15 sfDiff 3  
+UpTime : 60 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   ULBLER  ULPRB   
+1       0        0     0      48000    0        0        0        0        0        0        0       0       
+---------------------------------------------------------
+
+DU APP Level User Statistics:
+
+UE-ID     #PKT_TX   #PKT_RX   DL_TPT    UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2   
+---------------------------------------------------------
+-----------------------------------------------
+TTI received at APP : 6000
+g_sfDiffCount: 80 lvl1 651:11 lvl2 651:15 sfDiff 4  
+UpTime : 90 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   ULBLER  ULPRB   
+1       0        0     0      48000    0        0        0        0        0        0        0       0       
+---------------------------------------------------------
+
+DU APP Level User Statistics:
+
+UE-ID     #PKT_TX   #PKT_RX   DL_TPT    UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2   
+---------------------------------------------------------
+-----------------------------------------------
+TTI received at APP : 9000
+g_sfDiffCount: 90 lvl1 65:11 lvl2 65:18 sfDiff 7  
+g_sfDiffCount: 100 lvl1 225:13 lvl2 225:15 sfDiff 2  
+g_sfDiffCount: 110 lvl1 642:7 lvl2 642:10 sfDiff 3  
+g_sfDiffCount: 120 lvl1 284:5 lvl2 284:8 sfDiff 3  
+NR_RACH_DBG: RA REQ IND Received 
+NR_RACH_DBG: RA REQ IND rapid 0 
+Found SSB Id 1 beamId 1SSB found raInfo time (slotIdx:sfn) (19:839)
+NR_RACH_DBG : RA REQ : MSG 1 : Rcvd : raRnti 267 RAPID 0  ulcarrier 0 
+
+NR_RACH_DBG: RACH Time [839:19] winStart [840:1] winEnd [841:1]
+NR_RACH_DBG: RA RSP for raRnti 267 
+NR_RACH_DBG: Processing MSG2 for raRnti 267 rapid 0 
+NR_RACH_DBG: TBS for RAR PDU 12 
+NR_RACH_DBG: RB allco for RAR success 
+NR_RACH_DBG: Processing MSG2 SUCCESS for raRnti 267 num rapid 1 
+ rgSCHRamCreateRaUe 0x7f619983eae0 
+NR_RACH_DBG: RGSCH_RA_MSG3_PENDING 
+
+NR_RACH_DBG: k0 0 RA-RSP SCH Time 840:5 
+NR_RACH_DBG: RA RSP for raRnti 267 
+NR_RACH_DBG: Processing MSG2 for raRnti 267 rapid 0 
+NR_RACH_DBG: TBS for RAR PDU 12 
+NR_RACH_DBG: RB allco for RAR success 
+NR_RACH_DBG: Processing MSG2 SUCCESS for raRnti 267 num rapid 1 
+ rgSCHRamCreateRaUe 0x7f619983eae0 
+NR_RACH_DBG: RGSCH_RA_MSG3_PENDING 
+
+NR_RACH_DBG: k0 0 RA-RSP SCH Time 840:6 
+NR_RACH_DBG : Processing MSG3 grant for raRnti 267 rapId 0 
+gUeCb is created with ueIdx 0 and Crnti 17017 batchBitPos 1 batchBitIdx 0
+NR_RACH_DBG: G UECB created for rnti 17017 
+RNTI:267 Scheduled RAR @ (840,2) g_sfDiffCount: 130 lvl1 399:12 lvl2 400:4 sfDiff 12  
+g_sfDiffCount: 140 lvl1 400:2 lvl2 400:6 sfDiff 4  
+UpTime : 120 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   ULBLER  ULPRB   
+1       0        0     0      48001    0        0        0        0        0        0        0       0       
+---------------------------------------------------------
+
+DU APP Level User Statistics:
+
+UE-ID     #PKT_TX   #PKT_RX   DL_TPT    UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2   
+17017     0         0         0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    
+---------------------------------------------------------
+-----------------------------------------------
+TTI received at APP : 12000
+ rgSCHRamResetRlsRaUe 0x7f619983eae0   tMprnti 17017 rlsRnti 1 
+Inside cmnDelGUeCb calling cmnDeAllocUeKpiCb tGUeCb address = 0x7f61b64f1010
+*****************************************
+cmnDeAllocUeKpiCb:: ueID = 17017Inside cmnDelGUeCb cmGCb.ueLstCp[ueIdx] = NULLP  tGUeCb->crnti= 17017 ueIdx=0
+g_sfDiffCount: 150 lvl1 400:10 lvl2 400:13 sfDiff 3  
+g_sfDiffCount: 160 lvl1 557:17 lvl2 557:19 sfDiff 2  
+UpTime : 150 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   ULBLER  ULPRB   
+1       0        0     0      48001    0        0        0        0        0        0        0       0       
+---------------------------------------------------------
+
+DU APP Level User Statistics:
+
+UE-ID     #PKT_TX   #PKT_RX   DL_TPT    UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2   
+---------------------------------------------------------
+-----------------------------------------------
+
+ dbgBoUeEnqCnt 0 dbgBoUeDqCnt 0 dbgSfRecpUeEqCnt 1 dbgSfRecpUeDqCnt 1 dbgInvalidCrcIndDbgCnt 0 g_invalid_nrup_pkt 0
+================ Num Ue Per TTI stats===================at time 664/1
+DL  UL
+==========================   ===========================
+mUe/TTI  count  mUe/TTI  count
+   1  0           1  0     
+   2  0           2  0     
+   3  0           3  0     
+   4  0           4  0     
+   5  0           5  0     
+   6  0           6  0     
+   7  0           7  0     
+   8  0           8  0     
+TTI received at APP : 15000

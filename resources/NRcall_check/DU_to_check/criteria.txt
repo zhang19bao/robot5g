@@ -1,0 +1,19 @@
+NR_RACH_DBG: RA REQ IND Received
+NR_RACH_DBG: RA REQ IND rapid
+NR_RACH_DBG : RA REQ : MSG 1
+NR_RACH_DBG: Processing MSG2 for raRnti
+NR_RACH_DBG: Processing MSG2 SUCCESS for raRnti
+NR_RACH_DBG : Processing MSG3 grant for raRnti
+gUeCb is created with ueIdx
+Scheduled RAR
+NR_RACH_DBG: MSG3 RECVED
+NR_RACH_DBG: Alloc MSG4
+PDCCH Allocation is done 
+PUCCH Allocation is done 
+DMRS Allocation is done 
+RB Allocation is done
+Added msg4 ueCb in TFU list
+NR_RACH_DBG: RGSCH_RA_MSG4_DONE
+FREE msg4 PUCCH
+MSG4 Done
+SA UE CONTEXT ADDITION SUCCESSFUL

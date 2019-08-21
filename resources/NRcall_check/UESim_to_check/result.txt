@@ -1,0 +1,6 @@
+----> Sending MSG 1 for RAPID 0 ulcarrier 0 
+DEBUG Processing RAR ra-rnti:274 RgLiTfuDatReq:4030
+CCCH MSG3 : ueCb->rnti 17017 
+----> Sending MSG 1 for RAPID 1 ulcarrier 0 
+DEBUG Processing RAR ra-rnti:274 RgLiTfuDatReq:4030
+CCCH MSG3 : ueCb->rnti 17018 

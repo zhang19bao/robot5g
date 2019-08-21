@@ -1,0 +1,491 @@
+=~=~=~=~=~=~=~=~=~=~=~= MobaXterm log 2019.05.08 15:40:24 =~=~=~=~=~=~=~=~=~=~=~=
+     
+                              MobaXterm 11.0                           
+                 (SSH client, X-server and networking tools)             
+                                                                         
+       SSH session to root@172.21.6.101                                 
+         SSH compression :                                             
+         SSH-browser     :                                             
+         X11-forwarding  :   (remote display is forwarded through SSH) 
+         DISPLAY         :   (automatically set on remote server)      
+                                                                         
+       For more info, ctrl+click on help or visit our website           
+     
+
+Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.15.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+108 packages can be updated.
+0 updates are security updates.
+
+New release '18.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Wed May  8 15:40:21 2019 from 172.21.16.35
+root@core:~# env/latestcenv/latestdenv/latest env/latest/5gc
+root@core:~/env/latest/5gc# ls
+amf  amf_cli  amf_config.json  amf_nf_profile.txt  smf  smf_cli  smf_config.json  smf_nf_profile.cfg
+root@core:~/env/latest/5gc# ./amf
+[08/05/2019 15:47:19.845210][APP][INF][amf_main.cpp:126]LOG_MODULE_CONFIGURED 
+ HTTP2 Server is configured with IP: 10.10.8.108080
+[08/05/2019 07:47:19.912474][TRC][amf_sctp_conn_mgr_msg_processor.cpp:215] No thread to handle SCTP Rx from gNB. Creating a new thread
+[08/05/2019 07:47:19.912475][TRC][amf_thread_factory.h:159] Creating a new GNB Manager thread
+[08/05/2019 07:47:19.912650][INF][amf_gnb_mgr_thread.cpp:102] GNB Manager Comm Thread Created :: on_init called, Thread Id: 140497981212416
+[08/05/2019 07:47:19.912741][INF][amf_sctp_conn_mgr_thread.cpp:93] SCTP Conn Manager Comm Thread Created :: on_init called, Thread Id: 140497980159744
+[08/05/2019 07:47:19.912762][TRC][amf_sctp_conn_mgr_msg_processor.cpp:98] START_GST_THREAD_REQ rcvd at SCTP conn manager
+[08/05/2019 07:47:19.912778][INF][amf_sctp_conn_mgr_msg_processor.cpp:152] Starting GST Thread with ID 196609
+[08/05/2019 07:47:19.912791][INF][amf_cli_send_thread.cpp:99] AMF CLI Send Thread Created :: on_init called, Thread Id: 140497978054400
+[08/05/2019 07:47:19.912910][TRC][amf_gst_thread.cpp:93] AMF GST thread Created :: on_init called, Thread Id: 140497892923136
+[08/05/2019 07:47:19.913123][TRC][amf_thread_factory.h:204] Creating a new UE Conn Manager thread
+[08/05/2019 07:47:19.913221][TRC][amf_ue_conn_mgr_thread.cpp:104] UE Conn Manager Comm Thread Created :: on_init called, Thread Id: 140497890817792
+[08/05/2019 07:47:19.913262][INF][amf_thread_factory.h:222] Creating a new UE Conn Manager threadNo of UE Manager Threads in system : 1
+[08/05/2019 07:47:19.913272][TRC][amf_thread_factory.h:204] Creating a new UE Conn Manager thread
+[08/05/2019 07:47:19.913377][TRC][amf_ue_conn_mgr_thread.cpp:104] UE Conn Manager Comm Thread Created :: on_init called, Thread Id: 140497889765120
+[08/05/2019 07:47:19.913418][INF][amf_thread_factory.h:222] Creating a new UE Conn Manager threadNo of UE Manager Threads in system : 2
+[08/05/2019 07:47:19.913427][TRC][amf_thread_factory.h:204] Creating a new UE Conn Manager thread
+[08/05/2019 07:47:19.913525][TRC][amf_ue_conn_mgr_thread.cpp:104] UE Conn Manager Comm Thread Created :: on_init called, Thread Id: 140497888712448
+[08/05/2019 07:47:19.913573][INF][amf_thread_factory.h:222] Creating a new UE Conn Manager threadNo of UE Manager Threads in system : 3
+[08/05/2019 07:47:19.913661][TRC][amf_thread_factory.h:252] Creating a new UE Conn Manager thread
+[08/05/2019 07:47:19.913773][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:47:19.913864][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:47:19.913953][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:47:19.914007][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 140497885554432
+[08/05/2019 07:47:19.914446][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:47:19.914466][DBG][amf_node_sel_thread.cpp:127] Building and sending NF Register Req to NRF.
+
+[08/05/2019 07:47:19.914355][INF][amf_stats_handler_thread.cpp:91] Statistics Handler Thread Init on_init called, Thread Id: 140497887659776
+[08/05/2019 07:47:19.914615][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:47:19.914159][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 140497884501760
+[08/05/2019 07:47:19.914817][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 140497883449088
+[08/05/2019 07:47:19.915192][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 140497882396416
+[08/05/2019 07:47:19.915920][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:47:19.915028][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:47:19.914872][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:47:19.915394][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:47:19.916155][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:47:19.916162][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 140497881343744
+[08/05/2019 07:47:19.916288][TRC][amf_thread_factory.h:347] Creating a new NASP HTTP2 server handler thread
+[08/05/2019 07:47:19.916376][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:47:19.916452][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 140497880291072
+[08/05/2019 07:47:19.916456][TRC][amf_nasp_http2_server_handle.cpp:97] NASP HTTP2 server_handle Comm Thread Created :: on_init called, Thread Id: 140497879238400
+[08/05/2019 07:47:19.916539][TRC][amf_thread_factory.h:347] Creating a new NASP HTTP2 server handler thread
+[08/05/2019 07:47:19.916633][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:47:19.916707][TRC][amf_nasp_http2_server_handle.cpp:97] NASP HTTP2 server_handle Comm Thread Created :: on_init called, Thread Id: 140497878185728
+[08/05/2019 07:47:19.915605][DBG][amf_node_sel_thread.cpp:222] NF_Instance_Id = 9b03ddfb-56ac-4b5d-9b49-87ece865c13c.
+
+[08/05/2019 07:47:19.916871][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0001 source id: e0001
+[08/05/2019 07:47:19.916915][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://192.168.2.200:8010/nnrf-nfm/v1/nf-instances/9b03ddfb-56ac-4b5d-9b49-87ece865c13c [AMF UE ID : 0] nasp_http2_client_id : a0001
+[08/05/2019 07:47:19.917359][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 0] nasp_http2_client_id : a0001
+[08/05/2019 07:48:19.918083][TRC][amf_nasp_http2_client.cpp:210] Failed to established HTTP2 connection towards Server
+[08/05/2019 07:48:19.918117][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0001
+[08/05/2019 07:50:01.564875][TRC][amf_sctp_conn_mgr_msg_processor.cpp:112] GST_FD_TRANSFER_INFO_REQ rcvd at SCTP conn manager
+[08/05/2019 07:50:01.564922][TRC][amf_sctp_conn_mgr_msg_processor.cpp:173] Adding Transferred SCTP FD[15] to EPOLL
+[08/05/2019 07:50:01.564941][INF][amf_gst_rx_thread.h:120] Registering FD to Rx thread EPOLL with instance id 393217
+[08/05/2019 07:50:01.565167][INF][amf_gst_sctp_msg_processsor.cpp:727] Assoc Id : 12 SCTP_ASSOC_UP
+[08/05/2019 07:50:01.584221][INF][amf_gnb_mgr_thread.cpp:120] GNB Manager Comm Thread:: process_message, Thread Id: 40001 Source  Thread Id: 60001
+[08/05/2019 07:50:01.584267][TRC][amf_gnb_mgr_fsm.cpp:186] Processing NG Setup Request Message at AMF
+[08/05/2019 07:50:01.620576][INF][amf_gnb_mgr_fsm.cpp:225] Sending NG Setup Response Message from AMF
+[08/05/2019 07:52:47.725916][INF][amf_gst_sctp_msg_processsor.cpp:181]  received NG_INITIAL_UE_MESSAGE Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 07:52:47.725986][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 07:52:47.726028][INF][amf_ue_conn_mgr_thread.h:176] Allocating UE ID on Instance 327681 : 65537
+[08/05/2019 07:52:47.726194][INF][amf_ue_conn_mgr_fsm.cpp:230] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_INIT_UE_MESSAGE[NAS_5GS_MSG_REGISTRATION_REQ]
+[08/05/2019 07:52:47.726238][DBG][amf_ue_conn_mgr_fsm.cpp:237] Reg Req: Mobile identity value = 1 is received in Reg Req Msg
+[08/05/2019 07:52:47.726267][INF][amf_ue_conn_mgr_fsm.cpp:335] AMF >>> GNB_SIM [AMF UE ID : 10001][RAN UE ID : 0] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_IDENTITY_REQ]
+[08/05/2019 07:52:47.727197][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:47.745586][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 07:52:47.745656][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 07:52:47.745778][INF][amf_ue_conn_mgr_fsm.cpp:441] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_IDENTITY_RES]
+[08/05/2019 07:52:47.745794][DBG][amf_ue_conn_mgr_fsm.cpp:448] Iden Res: Mobile identity value = 1 is received in Reg Req Msg
+[08/05/2019 07:52:47.745869][INF][amf_ue_conn_mgr_fsm.cpp:478] AMF >>> GNB_SIM [AMF UE ID : 10001][RAN UE ID : 0] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_AUTHENTICATION_REQ]
+[08/05/2019 07:52:47.746670][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:47.764758][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 07:52:47.764849][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 07:52:47.764932][INF][amf_ue_conn_mgr_fsm.cpp:547] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_AUTHENTICATION_RES]
+[08/05/2019 07:52:47.764959][INF][amf_ue_conn_mgr_fsm.cpp:551] AMF >>> GNB_SIM [AMF UE ID : 10001][RAN UE ID : 0] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_SECURITY_MODE_CMD]
+[08/05/2019 07:52:47.765303][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:47.784946][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 07:52:47.785013][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 07:52:47.785098][INF][amf_ue_conn_mgr_fsm.cpp:622] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_SECURITY_MODE_CMPLT]
+[08/05/2019 07:52:47.785113][INF][amf_ue_conn_mgr_fsm.cpp:626] AMF >>> GNB_SIM [AMF UE ID : 10001][RAN UE ID : 0] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_REGISTRATION_ACC]
+[08/05/2019 07:52:47.785520][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:47.811900][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 07:52:47.811933][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 07:52:47.811974][INF][amf_ue_conn_mgr_fsm.cpp:696] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_REGISTRATION_CMPLT]
+[08/05/2019 07:52:47.811984][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:48.012645][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 07:52:48.012711][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 07:52:48.012811][INF][amf_ue_conn_mgr_fsm.cpp:903]  on_ul_nas_transport_msg - PDU SESSION ID = 5
+[08/05/2019 07:52:48.012868][INF][amf_ue_conn_mgr_fsm.cpp:912]  GNB_SIM >>> AMF  PDU SESSION ID = 5and PDU REQUEST TYPE = 1
+[08/05/2019 07:52:48.012881][INF][amf_ue_conn_mgr_fsm.cpp:938] PDU Sess Est Req: Session Context does not exist for pdu sess idcreating new
+[08/05/2019 07:52:48.012896][INF][amf_ue_conn_mgr_fsm.cpp:968] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID :0] NGAP_INIT_UE_MESSAGE[NAS_5GS_MSG_PDU_SESSION_ESTABLISHMENT_REQ] [Current State = 1]
+[08/05/2019 07:52:48.012915][INF][amf_session_mgr_fsm.cpp:213] ue_conn_mgr_inst_id = 327681 ue_inst_id = 327680
+[08/05/2019 07:52:48.012957][INF][amf_session_mgr_fsm.cpp:1903] SUPI in CREATE_DATA_MSG =  imsi-111111111111111[AMF UE ID : 10001]
+[08/05/2019 07:52:48.013077][INF][amf_session_mgr_fsm.cpp:268] AMF >>> SMF [AMF UE ID : 10001] Before posting SM_CONTEXT_CREATE_MESSAGE to queue of nasp_http2_client_id : a0002
+[08/05/2019 07:52:48.013118][INF][amf_session_mgr_fsm.cpp:277] AMF >>> SMF [AMF UE ID : 10001][RAN UE ID : 0] SM_CONTEXT_CREATE_MESSAGE after posting nasp_http2_client_id : a0002
+[08/05/2019 07:52:48.013155][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:48.013183][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0002 source id: 50001
+[08/05/2019 07:52:48.013229][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts [AMF UE ID : 10001] nasp_http2_client_id : a0002
+[08/05/2019 07:52:48.013362][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 10001] nasp_http2_client_id : a0002
+[08/05/2019 07:52:48.017318][DBG][amf_nasp_http2_client.cpp:259]  Posted response from nasp_http2_client_id : a0002 to UE CONN Manager Thread id :50001
+[08/05/2019 07:52:48.017340][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: a0002
+[08/05/2019 07:52:48.017377][INF][amf_nasp_http2_client.cpp:193]  SMF >>> AMF HTTP2 sent client response [AMF UE ID : 10001] nasp_http2_client_id : a0002
+[08/05/2019 07:52:48.017386][DBG][amf_ue_conn_mgr_thread.cpp:768] HTTP2 Client message received from NASP sent from the SMF node
+[08/05/2019 07:52:48.017409][INF][amf_session_mgr_fsm.cpp:316] SMF >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] SM_CONTEXT_CREATED_MESSAGE
+[08/05/2019 07:52:48.017430][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:48.017760][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0002
+xterm-256color[08/05/2019 07:52:48.027414][DBG][amf_nasp_http2_server_handle.cpp:123]  Message received at HTTP server_handle Thread  
+Source Id  : 589824
+Dest Id    : 851969
+
+[08/05/2019 07:52:48.027471][TRC][amf_nasp_http2_server_handle.cpp:133] NAMF request message received from NASP_HTTP2_SERVER 
+
+[08/05/2019 07:52:48.027556][INF][amf_nasp_http2_server_handle.cpp:193] Path  = /namf-comm/v1/ue-contexts/imsi-111111111111111/n1-n2-messages
+[08/05/2019 07:52:48.027751][TRC][amf_nasp_http2_server_handle.cpp:246] posting Namf message : 
+
+[08/05/2019 07:52:48.027793][TRC][amf_nasp_http2_server_handle.cpp:333]  HTTP2 request message is sent to destination thread instance 
+
+[08/05/2019 07:52:48.027877][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: d0001
+[08/05/2019 07:52:48.027895][DBG][amf_ue_conn_mgr_thread.cpp:658] Message Received from NASP sent from the SMF node
+[08/05/2019 07:52:48.027915][DBG][amf_session_mgr_fsm.cpp:419] SMF >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] N1N2_MESSAGE_TRANSFER_DATA_REQUEST
+[08/05/2019 07:52:48.027934][DBG][amf_session_mgr_fsm.cpp:478] AMF >>> SMF [AMF UE ID : 10001][RAN UE ID : 0] N1N2_MESSAGE_TRANSFER_DATA_RESPONSE
+[08/05/2019 07:52:48.029056][INF][amf_session_mgr_fsm.cpp:2084] AMF >>> GNB_SIM [AMF UE ID : 65537][RAN UE ID : 0] NGAP_INIT_CTXT_SETUP_REQ[NAS_5GS_MSG_PDU_SESSION_ESTABLISHMENT_ACCEPT]
+[08/05/2019 07:52:48.029155][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:48.426211][INF][amf_gst_sctp_msg_processsor.cpp:299] Received NG_INITIAL_CONTEXT_SETUP_RSP for UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 07:52:48.426295][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 07:52:48.426329][INF][amf_ue_conn_mgr_thread.cpp:279] Received NG_INITIAL_CONTEXT_SETUP_RSP
+[08/05/2019 07:52:48.426348][INF][amf_session_mgr_fsm.cpp:602] Received Initial Context Setup Resp message from GNB Node
+[08/05/2019 07:52:48.426420][INF][amf_session_mgr_fsm.cpp:669] Received Initial Context Setup Resp message from GNB NodeAMF >>> SMF [AMF UE ID : 10001]  Before posting SM_CONTEXT_UPDAT_MESSAGE during Create with URI : http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts/65537/modify to nasp_http2_client_id : a0003
+[08/05/2019 07:52:48.426477][INF][amf_session_mgr_fsm.cpp:693] AMF >>> SMF [AMF UE ID : 10001] posted UPDATE to nasp_http2_client_id : a0003
+[08/05/2019 07:52:48.426498][INF][amf_session_mgr_fsm.cpp:698] 
+[08/05/2019 07:52:48.426547][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:48.426572][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0003 source id: 50001
+[08/05/2019 07:52:48.426613][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts/65537/modify [AMF UE ID : 10001] nasp_http2_client_id : a0003
+[08/05/2019 07:52:48.426703][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 10001] nasp_http2_client_id : a0003
+[08/05/2019 07:52:48.436698][DBG][amf_nasp_http2_client.cpp:259]  Posted response from nasp_http2_client_id : a0003 to UE CONN Manager Thread id :50001
+[08/05/2019 07:52:48.436732][INF][amf_nasp_http2_client.cpp:193]  SMF >>> AMF HTTP2 sent client response [AMF UE ID : 10001] nasp_http2_client_id : a0003
+[08/05/2019 07:52:48.436746][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: a0003
+[08/05/2019 07:52:48.436768][DBG][amf_ue_conn_mgr_thread.cpp:768] HTTP2 Client message received from NASP sent from the SMF node
+[08/05/2019 07:52:48.436783][INF][amf_session_mgr_fsm.cpp:935] SMF >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] SM_CONTEXT_UPDATED_MESSAGE nasp_http2_client_id : a0003
+[08/05/2019 07:52:48.436795][INF][amf_session_mgr_fsm.cpp:961] SMF >>> AMF [AMF UE ID : 10001] SM_CONTEXT_UPDATED_MESSAGE with UP_CTXT_STATE ACTIVATED
+[08/05/2019 07:52:48.436807][INF][amf_session_mgr_fsm.cpp:971] Established State = 5
+[08/05/2019 07:52:48.436815][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:52:48.437004][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0003
+[08/05/2019 07:56:23.991457][INF][amf_gst_sctp_msg_processsor.cpp:774] SCTP_SHUTDOWN_EVENT for the Assoc_Id from sctp_msg = 12
+[08/05/2019 07:56:23.991599][INF][amf_gnb_mgr_thread.cpp:120] GNB Manager Comm Thread:: process_message, Thread Id: 40001 Source  Thread Id: 60001
+[08/05/2019 07:56:23.991638][TRC][amf_gnb_mgr_fsm.cpp:152] GNB_MGR_SCTP_STATUS_IND received
+[08/05/2019 07:56:23.991702][TRC][amf_gnb_mgr_fsm.cpp:488] Processing SCTP STATUS IND Message at AMF
+[08/05/2019 07:56:23.991761][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 07:56:23.991776][TRC][amf_ue_conn_mgr_thread.cpp:508] Received request to clean up the UE Context
+[08/05/2019 07:56:23.991790][INF][amf_ue_conn_mgr_thread.cpp:520] Total No of UE Context 1 on Association Id  12 .
+ 
+[08/05/2019 07:56:23.991811][INF][amf_session_mgr_fsm.cpp:1365] AMF >>> SMF [AMF UE ID : 10001][PDU SESS ID : ] SM_CONTEXT_RELEASE_MESSAGE- ESTB STATE nasp_http2_client_id : a0004
+[08/05/2019 07:56:23.991846][INF][amf_ue_conn_mgr_thread.cpp:537] UE[AMF_UE_NGAP_ID : 65537] marked for deletion
+[08/05/2019 07:56:23.991959][INF][amf_ue_conn_mgr_thread.cpp:558] Total No of UE Context after deletion = 0 on Association Id  12 .
+ 
+[08/05/2019 07:56:23.991943][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0004 source id: 50001
+[08/05/2019 07:56:23.991982][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:56:23.991994][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts/65537/release [AMF UE ID : 10001] nasp_http2_client_id : a0004
+[08/05/2019 07:56:23.992013][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 10001] nasp_http2_client_id : a0004
+[08/05/2019 07:56:23.992013][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: 60001
+[08/05/2019 07:56:23.992044][TRC][amf_ue_conn_mgr_thread.cpp:508] Received request to clean up the UE Context
+[08/05/2019 07:56:23.992058][INF][amf_ue_conn_mgr_thread.cpp:520] Total No of UE Context 0 on Association Id  12 .
+ 
+[08/05/2019 07:56:23.992070][INF][amf_ue_conn_mgr_thread.cpp:558] Total No of UE Context after deletion = 0 on Association Id  12 .
+ 
+[08/05/2019 07:56:23.992084][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 07:56:23.992135][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50003 Source  Thread Id: 60001
+[08/05/2019 07:56:23.992154][TRC][amf_ue_conn_mgr_thread.cpp:508] Received request to clean up the UE Context
+[08/05/2019 07:56:23.992173][INF][amf_ue_conn_mgr_thread.cpp:520] Total No of UE Context 0 on Association Id  12 .
+ 
+[08/05/2019 07:56:23.992190][INF][amf_ue_conn_mgr_thread.cpp:558] Total No of UE Context after deletion = 0 on Association Id  12 .
+ 
+[08/05/2019 07:56:23.992207][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50003
+xterm-256color[08/05/2019 07:56:24.000085][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: a0004
+[08/05/2019 07:56:24.000139][DBG][amf_ue_conn_mgr_thread.cpp:768] HTTP2 Client message received from NASP sent from the SMF node
+[08/05/2019 07:56:24.000164][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 07:56:24.000402][DBG][amf_nasp_http2_client.cpp:259]  Posted response from nasp_http2_client_id : a0004 to UE CONN Manager Thread id :50001
+[08/05/2019 07:56:24.000464][INF][amf_nasp_http2_client.cpp:193]  SMF >>> AMF HTTP2 sent client response [AMF UE ID : 10001] nasp_http2_client_id : a0004
+[08/05/2019 07:56:24.000940][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0004
+^CFATAL: exception not rethrown
+root@core:~/env/latest/5gc# ./amf
+[08/05/2019 15:59:43.153766][APP][INF][amf_main.cpp:126]LOG_MODULE_CONFIGURED 
+ HTTP2 Server is configured with IP: 10.10.8.108080
+[08/05/2019 07:59:43.217709][TRC][amf_sctp_conn_mgr_msg_processor.cpp:215] No thread to handle SCTP Rx from gNB. Creating a new thread
+[08/05/2019 07:59:43.217728][TRC][amf_thread_factory.h:159] Creating a new GNB Manager thread
+[08/05/2019 07:59:43.218154][INF][amf_sctp_conn_mgr_thread.cpp:93] SCTP Conn Manager Comm Thread Created :: on_init called, Thread Id: 139749676513024
+[08/05/2019 07:59:43.218215][TRC][amf_sctp_conn_mgr_msg_processor.cpp:98] START_GST_THREAD_REQ rcvd at SCTP conn manager
+[08/05/2019 07:59:43.218417][INF][amf_sctp_conn_mgr_msg_processor.cpp:152] Starting GST Thread with ID 196609
+[08/05/2019 07:59:43.218282][INF][amf_cli_send_thread.cpp:99] AMF CLI Send Thread Created :: on_init called, Thread Id: 139749674407680
+[08/05/2019 07:59:43.218681][TRC][amf_gst_thread.cpp:93] AMF GST thread Created :: on_init called, Thread Id: 139749673355008
+[08/05/2019 07:59:43.218989][INF][amf_gnb_mgr_thread.cpp:102] GNB Manager Comm Thread Created :: on_init called, Thread Id: 139749672302336
+[08/05/2019 07:59:43.219186][TRC][amf_thread_factory.h:204] Creating a new UE Conn Manager thread
+[08/05/2019 07:59:43.219390][TRC][amf_ue_conn_mgr_thread.cpp:104] UE Conn Manager Comm Thread Created :: on_init called, Thread Id: 139749670196992
+[08/05/2019 07:59:43.219484][INF][amf_thread_factory.h:222] Creating a new UE Conn Manager threadNo of UE Manager Threads in system : 1
+[08/05/2019 07:59:43.219525][TRC][amf_thread_factory.h:204] Creating a new UE Conn Manager thread
+[08/05/2019 07:59:43.219745][TRC][amf_ue_conn_mgr_thread.cpp:104] UE Conn Manager Comm Thread Created :: on_init called, Thread Id: 139749669144320
+[08/05/2019 07:59:43.219827][INF][amf_thread_factory.h:222] Creating a new UE Conn Manager threadNo of UE Manager Threads in system : 2
+[08/05/2019 07:59:43.219900][TRC][amf_thread_factory.h:204] Creating a new UE Conn Manager thread
+[08/05/2019 07:59:43.220063][TRC][amf_ue_conn_mgr_thread.cpp:104] UE Conn Manager Comm Thread Created :: on_init called, Thread Id: 139749668091648
+[08/05/2019 07:59:43.220151][INF][amf_thread_factory.h:222] Creating a new UE Conn Manager threadNo of UE Manager Threads in system : 3
+[08/05/2019 07:59:43.220311][TRC][amf_thread_factory.h:252] Creating a new UE Conn Manager thread
+[08/05/2019 07:59:43.220491][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:59:43.220681][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:59:43.220782][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 139749664933632
+[08/05/2019 07:59:43.221125][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:59:43.221172][DBG][amf_node_sel_thread.cpp:127] Building and sending NF Register Req to NRF.
+
+[08/05/2019 07:59:43.220980][INF][amf_stats_handler_thread.cpp:91] Statistics Handler Thread Init on_init called, Thread Id: 139749667038976
+[08/05/2019 07:59:43.221335][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:59:43.221498][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:59:43.221744][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 139749663880960
+[08/05/2019 07:59:43.221914][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:59:43.222003][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:59:43.221713][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 139749662828288
+[08/05/2019 07:59:43.222178][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 139749661775616
+[08/05/2019 07:59:43.222239][TRC][amf_thread_factory.h:296] Creating a new NASP HTTP2 Client thread
+[08/05/2019 07:59:43.222384][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:59:43.222519][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:59:43.222607][TRC][amf_thread_factory.h:347] Creating a new NASP HTTP2 server handler thread
+[08/05/2019 07:59:43.222733][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 139749660722944
+[08/05/2019 07:59:43.223050][TRC][amf_thread_factory.h:347] Creating a new NASP HTTP2 server handler thread
+[08/05/2019 07:59:43.223076][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:59:43.222848][TRC][amf_nasp_http2_client.cpp:95] NASP HTTP2 Client Comm Thread Created :: on_init called, Thread Id: 139749659670272
+[08/05/2019 07:59:43.223184][TRC][amf_nasp_http2_server_handle.cpp:97] NASP HTTP2 server_handle Comm Thread Created :: on_init called, Thread Id: 139749658617600
+[08/05/2019 07:59:43.223355][TRC][amf_nasp_http2_client.cpp:98] HTTP2 CLIENT OBJ is created
+[08/05/2019 07:59:43.223493][TRC][amf_nasp_http2_server_handle.cpp:97] NASP HTTP2 server_handle Comm Thread Created :: on_init called, Thread Id: 139749657564928
+[08/05/2019 07:59:43.223895][DBG][amf_node_sel_thread.cpp:222] NF_Instance_Id = 9b03ddfb-56ac-4b5d-9b49-87ece865c13c.
+
+[08/05/2019 07:59:43.224008][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0001 source id: e0001
+[08/05/2019 07:59:43.224066][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://192.168.2.200:8010/nnrf-nfm/v1/nf-instances/9b03ddfb-56ac-4b5d-9b49-87ece865c13c [AMF UE ID : 0] nasp_http2_client_id : a0001
+[08/05/2019 07:59:43.224517][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 0] nasp_http2_client_id : a0001
+[08/05/2019 08:00:01.236926][TRC][amf_sctp_conn_mgr_msg_processor.cpp:112] GST_FD_TRANSFER_INFO_REQ rcvd at SCTP conn manager
+[08/05/2019 08:00:01.236988][TRC][amf_sctp_conn_mgr_msg_processor.cpp:173] Adding Transferred SCTP FD[19] to EPOLL
+[08/05/2019 08:00:01.237005][INF][amf_gst_rx_thread.h:120] Registering FD to Rx thread EPOLL with instance id 393217
+[08/05/2019 08:00:01.237137][INF][amf_gst_sctp_msg_processsor.cpp:727] Assoc Id : 13 SCTP_ASSOC_UP
+[08/05/2019 08:00:01.256690][INF][amf_gnb_mgr_thread.cpp:120] GNB Manager Comm Thread:: process_message, Thread Id: 40001 Source  Thread Id: 60001
+[08/05/2019 08:00:01.256755][TRC][amf_gnb_mgr_fsm.cpp:186] Processing NG Setup Request Message at AMF
+[08/05/2019 08:00:01.293930][INF][amf_gnb_mgr_fsm.cpp:225] Sending NG Setup Response Message from AMF
+[08/05/2019 08:00:18.079465][INF][amf_gst_sctp_msg_processsor.cpp:181]  received NG_INITIAL_UE_MESSAGE Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 08:00:18.079553][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 08:00:18.079650][INF][amf_ue_conn_mgr_thread.h:176] Allocating UE ID on Instance 327681 : 65537
+[08/05/2019 08:00:18.079782][INF][amf_ue_conn_mgr_fsm.cpp:230] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_INIT_UE_MESSAGE[NAS_5GS_MSG_REGISTRATION_REQ]
+[08/05/2019 08:00:18.079815][DBG][amf_ue_conn_mgr_fsm.cpp:237] Reg Req: Mobile identity value = 1 is received in Reg Req Msg
+[08/05/2019 08:00:18.079847][INF][amf_ue_conn_mgr_fsm.cpp:335] AMF >>> GNB_SIM [AMF UE ID : 10001][RAN UE ID : 0] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_IDENTITY_REQ]
+[08/05/2019 08:00:18.080874][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.098387][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 08:00:18.098453][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 08:00:18.098570][INF][amf_ue_conn_mgr_fsm.cpp:441] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_IDENTITY_RES]
+[08/05/2019 08:00:18.098601][DBG][amf_ue_conn_mgr_fsm.cpp:448] Iden Res: Mobile identity value = 1 is received in Reg Req Msg
+[08/05/2019 08:00:18.098690][INF][amf_ue_conn_mgr_fsm.cpp:478] AMF >>> GNB_SIM [AMF UE ID : 10001][RAN UE ID : 0] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_AUTHENTICATION_REQ]
+[08/05/2019 08:00:18.099534][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.118312][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 08:00:18.118375][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 08:00:18.118499][INF][amf_ue_conn_mgr_fsm.cpp:547] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_AUTHENTICATION_RES]
+[08/05/2019 08:00:18.118537][INF][amf_ue_conn_mgr_fsm.cpp:551] AMF >>> GNB_SIM [AMF UE ID : 10001][RAN UE ID : 0] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_SECURITY_MODE_CMD]
+[08/05/2019 08:00:18.118882][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.138269][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 08:00:18.138331][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 08:00:18.138402][INF][amf_ue_conn_mgr_fsm.cpp:622] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_SECURITY_MODE_CMPLT]
+[08/05/2019 08:00:18.138424][INF][amf_ue_conn_mgr_fsm.cpp:626] AMF >>> GNB_SIM [AMF UE ID : 10001][RAN UE ID : 0] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_REGISTRATION_ACC]
+[08/05/2019 08:00:18.138780][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.158265][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 08:00:18.158326][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 08:00:18.158474][INF][amf_ue_conn_mgr_fsm.cpp:696] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_REGISTRATION_CMPLT]
+[08/05/2019 08:00:18.158532][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.360614][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 08:00:18.360690][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 08:00:18.360787][INF][amf_ue_conn_mgr_fsm.cpp:903]  on_ul_nas_transport_msg - PDU SESSION ID = 5
+[08/05/2019 08:00:18.360843][INF][amf_ue_conn_mgr_fsm.cpp:912]  GNB_SIM >>> AMF  PDU SESSION ID = 5and PDU REQUEST TYPE = 1
+[08/05/2019 08:00:18.360864][INF][amf_ue_conn_mgr_fsm.cpp:938] PDU Sess Est Req: Session Context does not exist for pdu sess idcreating new
+[08/05/2019 08:00:18.360905][INF][amf_ue_conn_mgr_fsm.cpp:968] GNB_SIM >>> AMF [AMF UE ID : 10001][RAN UE ID :0] NGAP_INIT_UE_MESSAGE[NAS_5GS_MSG_PDU_SESSION_ESTABLISHMENT_REQ] [Current State = 1]
+[08/05/2019 08:00:18.360943][INF][amf_session_mgr_fsm.cpp:213] ue_conn_mgr_inst_id = 327681 ue_inst_id = 327680
+[08/05/2019 08:00:18.361000][INF][amf_session_mgr_fsm.cpp:1903] SUPI in CREATE_DATA_MSG =  imsi-111111111111111[AMF UE ID : 10001]
+[08/05/2019 08:00:18.361146][INF][amf_session_mgr_fsm.cpp:268] AMF >>> SMF [AMF UE ID : 10001] Before posting SM_CONTEXT_CREATE_MESSAGE to queue of nasp_http2_client_id : a0002
+[08/05/2019 08:00:18.361202][INF][amf_session_mgr_fsm.cpp:277] AMF >>> SMF [AMF UE ID : 10001][RAN UE ID : 0] SM_CONTEXT_CREATE_MESSAGE after posting nasp_http2_client_id : a0002
+[08/05/2019 08:00:18.361252][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.361274][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0002 source id: 50001
+[08/05/2019 08:00:18.361306][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts [AMF UE ID : 10001] nasp_http2_client_id : a0002
+[08/05/2019 08:00:18.361441][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 10001] nasp_http2_client_id : a0002
+xterm-256color[08/05/2019 08:00:18.365484][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: a0002
+[08/05/2019 08:00:18.365453][DBG][amf_nasp_http2_client.cpp:259]  Posted response from nasp_http2_client_id : a0002 to UE CONN Manager Thread id :50001
+[08/05/2019 08:00:18.365516][INF][amf_nasp_http2_client.cpp:193]  SMF >>> AMF HTTP2 sent client response [AMF UE ID : 10001] nasp_http2_client_id : a0002
+[08/05/2019 08:00:18.365519][DBG][amf_ue_conn_mgr_thread.cpp:768] HTTP2 Client message received from NASP sent from the SMF node
+[08/05/2019 08:00:18.365538][INF][amf_session_mgr_fsm.cpp:316] SMF >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] SM_CONTEXT_CREATED_MESSAGE
+[08/05/2019 08:00:18.365557][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.365866][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0002
+[08/05/2019 08:00:18.378069][DBG][amf_nasp_http2_server_handle.cpp:123]  Message received at HTTP server_handle Thread  
+Source Id  : 589824
+Dest Id    : 851969
+
+[08/05/2019 08:00:18.378108][TRC][amf_nasp_http2_server_handle.cpp:133] NAMF request message received from NASP_HTTP2_SERVER 
+
+[08/05/2019 08:00:18.378152][INF][amf_nasp_http2_server_handle.cpp:193] Path  = /namf-comm/v1/ue-contexts/imsi-111111111111111/n1-n2-messages
+[08/05/2019 08:00:18.378283][TRC][amf_nasp_http2_server_handle.cpp:246] posting Namf message : 
+
+[08/05/2019 08:00:18.378317][TRC][amf_nasp_http2_server_handle.cpp:333]  HTTP2 request message is sent to destination thread instance 
+
+[08/05/2019 08:00:18.378340][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: d0001
+[08/05/2019 08:00:18.378350][DBG][amf_ue_conn_mgr_thread.cpp:658] Message Received from NASP sent from the SMF node
+[08/05/2019 08:00:18.378362][DBG][amf_session_mgr_fsm.cpp:419] SMF >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] N1N2_MESSAGE_TRANSFER_DATA_REQUEST
+[08/05/2019 08:00:18.378379][DBG][amf_session_mgr_fsm.cpp:478] AMF >>> SMF [AMF UE ID : 10001][RAN UE ID : 0] N1N2_MESSAGE_TRANSFER_DATA_RESPONSE
+[08/05/2019 08:00:18.379086][INF][amf_session_mgr_fsm.cpp:2084] AMF >>> GNB_SIM [AMF UE ID : 65537][RAN UE ID : 0] NGAP_INIT_CTXT_SETUP_REQ[NAS_5GS_MSG_PDU_SESSION_ESTABLISHMENT_ACCEPT]
+[08/05/2019 08:00:18.379157][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.768591][INF][amf_gst_sctp_msg_processsor.cpp:299] Received NG_INITIAL_CONTEXT_SETUP_RSP for UE_NGAP_ID = 10001 Posting to ue_conn_mgr_inst_id : 50001
+[08/05/2019 08:00:18.768670][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 08:00:18.768687][INF][amf_ue_conn_mgr_thread.cpp:279] Received NG_INITIAL_CONTEXT_SETUP_RSP
+[08/05/2019 08:00:18.768704][INF][amf_session_mgr_fsm.cpp:602] Received Initial Context Setup Resp message from GNB Node
+[08/05/2019 08:00:18.768782][INF][amf_session_mgr_fsm.cpp:669] Received Initial Context Setup Resp message from GNB NodeAMF >>> SMF [AMF UE ID : 10001]  Before posting SM_CONTEXT_UPDAT_MESSAGE during Create with URI : http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts/65537/modify to nasp_http2_client_id : a0003
+[08/05/2019 08:00:18.768818][INF][amf_session_mgr_fsm.cpp:693] AMF >>> SMF [AMF UE ID : 10001] posted UPDATE to nasp_http2_client_id : a0003
+[08/05/2019 08:00:18.768831][INF][amf_session_mgr_fsm.cpp:698] 
+[08/05/2019 08:00:18.768870][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.768934][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0003 source id: 50001
+[08/05/2019 08:00:18.768980][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts/65537/modify [AMF UE ID : 10001] nasp_http2_client_id : a0003
+[08/05/2019 08:00:18.769130][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 10001] nasp_http2_client_id : a0003
+[08/05/2019 08:00:18.779130][DBG][amf_nasp_http2_client.cpp:259]  Posted response from nasp_http2_client_id : a0003 to UE CONN Manager Thread id :50001
+[08/05/2019 08:00:18.779190][INF][amf_nasp_http2_client.cpp:193]  SMF >>> AMF HTTP2 sent client response [AMF UE ID : 10001] nasp_http2_client_id : a0003
+[08/05/2019 08:00:18.779258][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: a0003
+[08/05/2019 08:00:18.779307][DBG][amf_ue_conn_mgr_thread.cpp:768] HTTP2 Client message received from NASP sent from the SMF node
+[08/05/2019 08:00:18.779328][INF][amf_session_mgr_fsm.cpp:935] SMF >>> AMF [AMF UE ID : 10001][RAN UE ID : 0] SM_CONTEXT_UPDATED_MESSAGE nasp_http2_client_id : a0003
+[08/05/2019 08:00:18.779343][INF][amf_session_mgr_fsm.cpp:961] SMF >>> AMF [AMF UE ID : 10001] SM_CONTEXT_UPDATED_MESSAGE with UP_CTXT_STATE ACTIVATED
+[08/05/2019 08:00:18.779366][INF][amf_session_mgr_fsm.cpp:971] Established State = 5
+[08/05/2019 08:00:18.779385][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:00:18.779608][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0003
+[08/05/2019 08:00:24.289151][INF][amf_gst_sctp_msg_processsor.cpp:181]  received NG_INITIAL_UE_MESSAGE Posting to ue_conn_mgr_inst_id : 50002
+[08/05/2019 08:00:24.289248][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: 60001
+[08/05/2019 08:00:24.289298][INF][amf_ue_conn_mgr_thread.h:176] Allocating UE ID on Instance 327682 : 131073
+[08/05/2019 08:00:24.289400][INF][amf_ue_conn_mgr_fsm.cpp:230] GNB_SIM >>> AMF [AMF UE ID : 20001][RAN UE ID : 0] NGAP_INIT_UE_MESSAGE[NAS_5GS_MSG_REGISTRATION_REQ]
+[08/05/2019 08:00:24.289435][DBG][amf_ue_conn_mgr_fsm.cpp:237] Reg Req: Mobile identity value = 1 is received in Reg Req Msg
+[08/05/2019 08:00:24.289455][INF][amf_ue_conn_mgr_fsm.cpp:335] AMF >>> GNB_SIM [AMF UE ID : 20001][RAN UE ID : 0] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_IDENTITY_REQ]
+[08/05/2019 08:00:24.290393][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.308736][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 20001 Posting to ue_conn_mgr_inst_id : 50002
+[08/05/2019 08:00:24.308809][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: 60001
+[08/05/2019 08:00:24.309002][INF][amf_ue_conn_mgr_fsm.cpp:441] GNB_SIM >>> AMF [AMF UE ID : 20001][RAN UE ID : 1] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_IDENTITY_RES]
+[08/05/2019 08:00:24.309049][DBG][amf_ue_conn_mgr_fsm.cpp:448] Iden Res: Mobile identity value = 1 is received in Reg Req Msg
+[08/05/2019 08:00:24.309474][INF][amf_ue_conn_mgr_fsm.cpp:478] AMF >>> GNB_SIM [AMF UE ID : 20001][RAN UE ID : 1] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_AUTHENTICATION_REQ]
+[08/05/2019 08:00:24.310233][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.325748][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 20001 Posting to ue_conn_mgr_inst_id : 50002
+[08/05/2019 08:00:24.325830][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: 60001
+[08/05/2019 08:00:24.325926][INF][amf_ue_conn_mgr_fsm.cpp:547] GNB_SIM >>> AMF [AMF UE ID : 20001][RAN UE ID : 1] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_AUTHENTICATION_RES]
+[08/05/2019 08:00:24.325956][INF][amf_ue_conn_mgr_fsm.cpp:551] AMF >>> GNB_SIM [AMF UE ID : 20001][RAN UE ID : 1] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_SECURITY_MODE_CMD]
+[08/05/2019 08:00:24.326422][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.348201][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 20001 Posting to ue_conn_mgr_inst_id : 50002
+[08/05/2019 08:00:24.348268][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: 60001
+[08/05/2019 08:00:24.348347][INF][amf_ue_conn_mgr_fsm.cpp:622] GNB_SIM >>> AMF [AMF UE ID : 20001][RAN UE ID : 1] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_SECURITY_MODE_CMPLT]
+[08/05/2019 08:00:24.348384][INF][amf_ue_conn_mgr_fsm.cpp:626] AMF >>> GNB_SIM [AMF UE ID : 20001][RAN UE ID : 1] NGAP_DL_NAS_TRANSPORT[NAS_5GS_MSG_REGISTRATION_ACC]
+[08/05/2019 08:00:24.348822][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.368204][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 20001 Posting to ue_conn_mgr_inst_id : 50002
+[08/05/2019 08:00:24.368273][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: 60001
+[08/05/2019 08:00:24.368342][INF][amf_ue_conn_mgr_fsm.cpp:696] GNB_SIM >>> AMF [AMF UE ID : 20001][RAN UE ID : 1] NGAP_UL_NAS_TRANSPORT[NAS_5GS_MSG_REGISTRATION_CMPLT]
+[08/05/2019 08:00:24.368397][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.568658][INF][amf_gst_sctp_msg_processsor.cpp:231] Received NG_UL_NAS_TRANSPORT_MSG UE_NGAP_ID = 20001 Posting to ue_conn_mgr_inst_id : 50002
+[08/05/2019 08:00:24.568735][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: 60001
+[08/05/2019 08:00:24.568872][INF][amf_ue_conn_mgr_fsm.cpp:903]  on_ul_nas_transport_msg - PDU SESSION ID = 5
+[08/05/2019 08:00:24.568925][INF][amf_ue_conn_mgr_fsm.cpp:912]  GNB_SIM >>> AMF  PDU SESSION ID = 5and PDU REQUEST TYPE = 1
+[08/05/2019 08:00:24.568939][INF][amf_ue_conn_mgr_fsm.cpp:938] PDU Sess Est Req: Session Context does not exist for pdu sess idcreating new
+[08/05/2019 08:00:24.568965][INF][amf_ue_conn_mgr_fsm.cpp:968] GNB_SIM >>> AMF [AMF UE ID : 20001][RAN UE ID :1] NGAP_INIT_UE_MESSAGE[NAS_5GS_MSG_PDU_SESSION_ESTABLISHMENT_REQ] [Current State = 1]
+[08/05/2019 08:00:24.569003][INF][amf_session_mgr_fsm.cpp:213] ue_conn_mgr_inst_id = 327682 ue_inst_id = 327680
+[08/05/2019 08:00:24.569094][INF][amf_session_mgr_fsm.cpp:1903] SUPI in CREATE_DATA_MSG =  imsi-222222222222221[AMF UE ID : 20001]
+xterm-256color[08/05/2019 08:00:24.569171][INF][amf_session_mgr_fsm.cpp:268] AMF >>> SMF [AMF UE ID : 20001] Before posting SM_CONTEXT_CREATE_MESSAGE to queue of nasp_http2_client_id : a0004
+[08/05/2019 08:00:24.569226][INF][amf_session_mgr_fsm.cpp:277] AMF >>> SMF [AMF UE ID : 20001][RAN UE ID : 1] SM_CONTEXT_CREATE_MESSAGE after posting nasp_http2_client_id : a0004
+[08/05/2019 08:00:24.569270][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.569282][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0004 source id: 50002
+[08/05/2019 08:00:24.569332][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts [AMF UE ID : 20001] nasp_http2_client_id : a0004
+[08/05/2019 08:00:24.569518][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 20001] nasp_http2_client_id : a0004
+[08/05/2019 08:00:24.572900][DBG][amf_nasp_http2_client.cpp:259]  Posted response from nasp_http2_client_id : a0004 to UE CONN Manager Thread id :50002
+[08/05/2019 08:00:24.572924][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: a0004
+[08/05/2019 08:00:24.572962][DBG][amf_ue_conn_mgr_thread.cpp:768] HTTP2 Client message received from NASP sent from the SMF node
+[08/05/2019 08:00:24.573095][INF][amf_session_mgr_fsm.cpp:316] SMF >>> AMF [AMF UE ID : 20001][RAN UE ID : 1] SM_CONTEXT_CREATED_MESSAGE
+[08/05/2019 08:00:24.572961][INF][amf_nasp_http2_client.cpp:193]  SMF >>> AMF HTTP2 sent client response [AMF UE ID : 20001] nasp_http2_client_id : a0004
+[08/05/2019 08:00:24.573118][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.573533][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0004
+[08/05/2019 08:00:24.580910][DBG][amf_nasp_http2_server_handle.cpp:123]  Message received at HTTP server_handle Thread  
+Source Id  : 589824
+Dest Id    : 851970
+
+[08/05/2019 08:00:24.580955][TRC][amf_nasp_http2_server_handle.cpp:133] NAMF request message received from NASP_HTTP2_SERVER 
+
+[08/05/2019 08:00:24.581003][INF][amf_nasp_http2_server_handle.cpp:193] Path  = /namf-comm/v1/ue-contexts/imsi-222222222222221/n1-n2-messages
+[08/05/2019 08:00:24.581254][TRC][amf_nasp_http2_server_handle.cpp:246] posting Namf message : 
+
+[08/05/2019 08:00:24.581328][TRC][amf_nasp_http2_server_handle.cpp:333]  HTTP2 request message is sent to destination thread instance 
+
+[08/05/2019 08:00:24.581379][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: d0002
+[08/05/2019 08:00:24.581409][DBG][amf_ue_conn_mgr_thread.cpp:658] Message Received from NASP sent from the SMF node
+[08/05/2019 08:00:24.581440][DBG][amf_session_mgr_fsm.cpp:419] SMF >>> AMF [AMF UE ID : 20001][RAN UE ID : 1] N1N2_MESSAGE_TRANSFER_DATA_REQUEST
+[08/05/2019 08:00:24.581478][DBG][amf_session_mgr_fsm.cpp:478] AMF >>> SMF [AMF UE ID : 20001][RAN UE ID : 1] N1N2_MESSAGE_TRANSFER_DATA_RESPONSE
+[08/05/2019 08:00:24.582708][INF][amf_session_mgr_fsm.cpp:2084] AMF >>> GNB_SIM [AMF UE ID : 131073][RAN UE ID : 1] NGAP_INIT_CTXT_SETUP_REQ[NAS_5GS_MSG_PDU_SESSION_ESTABLISHMENT_ACCEPT]
+[08/05/2019 08:00:24.582764][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.968241][INF][amf_gst_sctp_msg_processsor.cpp:299] Received NG_INITIAL_CONTEXT_SETUP_RSP for UE_NGAP_ID = 20001 Posting to ue_conn_mgr_inst_id : 50002
+[08/05/2019 08:00:24.968327][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: 60001
+[08/05/2019 08:00:24.968345][INF][amf_ue_conn_mgr_thread.cpp:279] Received NG_INITIAL_CONTEXT_SETUP_RSP
+[08/05/2019 08:00:24.968366][INF][amf_session_mgr_fsm.cpp:602] Received Initial Context Setup Resp message from GNB Node
+[08/05/2019 08:00:24.968455][INF][amf_session_mgr_fsm.cpp:669] Received Initial Context Setup Resp message from GNB NodeAMF >>> SMF [AMF UE ID : 20001]  Before posting SM_CONTEXT_UPDAT_MESSAGE during Create with URI : http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts/131073/modify to nasp_http2_client_id : a0005
+[08/05/2019 08:00:24.968504][INF][amf_session_mgr_fsm.cpp:693] AMF >>> SMF [AMF UE ID : 20001] posted UPDATE to nasp_http2_client_id : a0005
+[08/05/2019 08:00:24.968519][INF][amf_session_mgr_fsm.cpp:698] 
+[08/05/2019 08:00:24.968548][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.968558][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0005 source id: 50002
+[08/05/2019 08:00:24.968597][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts/131073/modify [AMF UE ID : 20001] nasp_http2_client_id : a0005
+[08/05/2019 08:00:24.968668][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 20001] nasp_http2_client_id : a0005
+[08/05/2019 08:00:24.977477][DBG][amf_nasp_http2_client.cpp:259]  Posted response from nasp_http2_client_id : a0005 to UE CONN Manager Thread id :50002
+[08/05/2019 08:00:24.977521][INF][amf_nasp_http2_client.cpp:193]  SMF >>> AMF HTTP2 sent client response [AMF UE ID : 20001] nasp_http2_client_id : a0005
+[08/05/2019 08:00:24.977609][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: a0005
+[08/05/2019 08:00:24.977647][DBG][amf_ue_conn_mgr_thread.cpp:768] HTTP2 Client message received from NASP sent from the SMF node
+[08/05/2019 08:00:24.977669][INF][amf_session_mgr_fsm.cpp:935] SMF >>> AMF [AMF UE ID : 20001][RAN UE ID : 1] SM_CONTEXT_UPDATED_MESSAGE nasp_http2_client_id : a0005
+[08/05/2019 08:00:24.977684][INF][amf_session_mgr_fsm.cpp:961] SMF >>> AMF [AMF UE ID : 20001] SM_CONTEXT_UPDATED_MESSAGE with UP_CTXT_STATE ACTIVATED
+[08/05/2019 08:00:24.977702][INF][amf_session_mgr_fsm.cpp:971] Established State = 5
+[08/05/2019 08:00:24.977721][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:00:24.977828][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0005
+[08/05/2019 08:00:43.225420][TRC][amf_nasp_http2_client.cpp:210] Failed to established HTTP2 connection towards Server
+[08/05/2019 08:00:43.225485][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0001
+[08/05/2019 08:11:35.587978][INF][amf_gst_sctp_msg_processsor.cpp:774] SCTP_SHUTDOWN_EVENT for the Assoc_Id from sctp_msg = 13
+[08/05/2019 08:11:35.588078][INF][amf_gnb_mgr_thread.cpp:120] GNB Manager Comm Thread:: process_message, Thread Id: 40001 Source  Thread Id: 60001
+[08/05/2019 08:11:35.588109][TRC][amf_gnb_mgr_fsm.cpp:152] GNB_MGR_SCTP_STATUS_IND received
+[08/05/2019 08:11:35.588189][TRC][amf_gnb_mgr_fsm.cpp:488] Processing SCTP STATUS IND Message at AMF
+[08/05/2019 08:11:35.588327][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: 60001
+[08/05/2019 08:11:35.588369][TRC][amf_ue_conn_mgr_thread.cpp:508] Received request to clean up the UE Context
+[08/05/2019 08:11:35.588416][INF][amf_ue_conn_mgr_thread.cpp:520] Total No of UE Context 1 on Association Id  13 .
+ 
+[08/05/2019 08:11:35.588459][INF][amf_session_mgr_fsm.cpp:1365] AMF >>> SMF [AMF UE ID : 10001][PDU SESS ID : ] SM_CONTEXT_RELEASE_MESSAGE- ESTB STATE nasp_http2_client_id : a0006
+[08/05/2019 08:11:35.588519][INF][amf_ue_conn_mgr_thread.cpp:537] UE[AMF_UE_NGAP_ID : 65537] marked for deletion
+[08/05/2019 08:11:35.588551][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0006 source id: 50001
+[08/05/2019 08:11:35.588574][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts/65537/release [AMF UE ID : 10001] nasp_http2_client_id : a0006
+[08/05/2019 08:11:35.588580][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 10001] nasp_http2_client_id : a0006
+[08/05/2019 08:11:35.588632][INF][amf_ue_conn_mgr_thread.cpp:558] Total No of UE Context after deletion = 0 on Association Id  13 .
+ 
+[08/05/2019 08:11:35.588664][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+[08/05/2019 08:11:35.588707][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: 60001
+[08/05/2019 08:11:35.588739][TRC][amf_ue_conn_mgr_thread.cpp:508] Received request to clean up the UE Context
+[08/05/2019 08:11:35.588760][INF][amf_ue_conn_mgr_thread.cpp:520] Total No of UE Context 1 on Association Id  13 .
+ 
+[08/05/2019 08:11:35.588786][INF][amf_session_mgr_fsm.cpp:1365] AMF >>> SMF [AMF UE ID : 20001][PDU SESS ID : ] SM_CONTEXT_RELEASE_MESSAGE- ESTB STATE nasp_http2_client_id : a0001
+[08/05/2019 08:11:35.588834][INF][amf_ue_conn_mgr_thread.cpp:537] UE[AMF_UE_NGAP_ID : 131073] marked for deletion
+[08/05/2019 08:11:35.588847][TRC][amf_nasp_http2_client.cpp:116]  Message received at HTTP Client Thread  nasp_http2_client_id : a0001 source id: 50002
+[08/05/2019 08:11:35.588856][INF][amf_nasp_http2_client.cpp:132] AMF >> SMF HTTP2 uri:http://10.10.8.20:80/nsmf-pdusession/v1/sm-contexts/131073/release [AMF UE ID : 20001] nasp_http2_client_id : a0001
+[08/05/2019 08:11:35.588861][DBG][amf_nasp_http2_client.cpp:143] completed get_encoded_payload for [AMF UE ID : 20001] nasp_http2_client_id : a0001
+[08/05/2019 08:11:35.588890][INF][amf_ue_conn_mgr_thread.cpp:558] Total No of UE Context after deletion = 0 on Association Id  13 .
+ 
+[08/05/2019 08:11:35.588946][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50003 Source  Thread Id: 60001
+[08/05/2019 08:11:35.588976][TRC][amf_ue_conn_mgr_thread.cpp:508] Received request to clean up the UE Context
+[08/05/2019 08:11:35.589011][INF][amf_ue_conn_mgr_thread.cpp:520] Total No of UE Context 0 on Association Id  13 .
+ 
+[08/05/2019 08:11:35.589032][INF][amf_ue_conn_mgr_thread.cpp:558] Total No of UE Context after deletion = 0 on Association Id  13 .
+ 
+[08/05/2019 08:11:35.589058][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50003
+[08/05/2019 08:11:35.588910][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+xterm-256colorxterm-256color[08/05/2019 08:11:35.594059][DBG][amf_nasp_http2_client.cpp:259]  Posted response from nasp_http2_client_id : a0001 to UE CONN Manager Thread id :50002
+[08/05/2019 08:11:35.594059][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50002 Source  Thread Id: a0001
+[08/05/2019 08:11:35.594080][DBG][amf_ue_conn_mgr_thread.cpp:768] HTTP2 Client message received from NASP sent from the SMF node
+[08/05/2019 08:11:35.594081][INF][amf_nasp_http2_client.cpp:193]  SMF >>> AMF HTTP2 sent client response [AMF UE ID : 20001] nasp_http2_client_id : a0001
+[08/05/2019 08:11:35.594088][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50002
+[08/05/2019 08:11:35.594266][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0001
+[08/05/2019 08:11:35.595928][DBG][amf_nasp_http2_client.cpp:259]  Posted response from nasp_http2_client_id : a0006 to UE CONN Manager Thread id :50001
+[08/05/2019 08:11:35.595942][INF][amf_nasp_http2_client.cpp:193]  SMF >>> AMF HTTP2 sent client response [AMF UE ID : 10001] nasp_http2_client_id : a0006
+[08/05/2019 08:11:35.596036][TRC][amf_nasp_http2_client.cpp:218]  Exiting amf_nasp_http2_client::process_message nasp_http2_client_id :  a0006
+[08/05/2019 08:11:35.596183][INF][amf_ue_conn_mgr_thread.cpp:121] UE Conn Manager Comm Thread:: process_message, Thread Id: 50001 Source  Thread Id: a0006
+[08/05/2019 08:11:35.596221][DBG][amf_ue_conn_mgr_thread.cpp:768] HTTP2 Client message received from NASP sent from the SMF node
+[08/05/2019 08:11:35.596236][TRC][amf_ue_conn_mgr_thread.cpp:174]  Exiting UE Conn Manager Comm Thread:: process_message, Thread Id: 50001
+^CFATAL: exception not rethrown
+root@core:~/env/latest/5gc# 

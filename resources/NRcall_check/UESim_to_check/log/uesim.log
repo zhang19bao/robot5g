@@ -1,0 +1,679 @@
+=~=~=~=~=~=~=~=~=~=~=~= MobaXterm log 2019.05.08 14:18:42 =~=~=~=~=~=~=~=~=~=~=~=
+     
+                              MobaXterm 11.0                           
+                 (SSH client, X-server and networking tools)             
+                                                                         
+       SSH session to root@172.21.6.101                                 
+         SSH compression :                                             
+         SSH-browser     :                                             
+         X11-forwarding  :   (remote display is forwarded through SSH) 
+         DISPLAY         :   (automatically set on remote server)      
+                                                                         
+       For more info, ctrl+click on help or visit our website           
+     
+
+Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.15.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+108 packages can be updated.
+0 updates are security updates.
+
+Last login: Wed May  8 14:18:40 2019 from 172.21.16.35
+root@core:~# uessh
+Last login: Wed May  8 01:32:01 2019 from 192.169.4.10
+[root@ue ~]# cd .env/latest/uesim
+[root@ue uesim]# ls
+uesim  uesim_cfg.txt  ys_cfg.txt
+[root@ue uesim]# ./uesim
+loopCnt1[0]: D
+loopCnt1[1]: D
+loopCnt1[2]: D
+loopCnt1[3]: S
+SlotFormatIdx is set to 3
+ Mod Order 0 
+ GNB_MAX_NSI 1 
+ UE_MULTI_CELL 0 
+ *** before UE_IP_START = 1050a0a
+ UE_5GNR_DUPLEX_MODE 1 
+
+Printing SLOT pattern for Mu 3 numSlot 80
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+0 0 0 3 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+Sr Cfg: ueId 0 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 20 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+Sr Cfg: ueId 0 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 20 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+Sr Cfg: ueId 1 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 20 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+Sr Cfg: ueId 1 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 20 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+Sr Cfg: ueId 2 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 20 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+Sr Cfg: ueId 2 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 20 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+Sr Cfg: ueId 3 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 20 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+Sr Cfg: ueId 3 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 20 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 20 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+Sr Cfg: ueId 4 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 4 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 4 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 4 srPrdcty 20 srOffset 7 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+Sr Cfg: ueId 4 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 4 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 4 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 4 srPrdcty 20 srOffset 7 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+Sr Cfg: ueId 5 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 5 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 5 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 5 srPrdcty 20 srOffset 7 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+Sr Cfg: ueId 5 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 5 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 5 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 5 srPrdcty 20 srOffset 7 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+Sr Cfg: ueId 6 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 6 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 6 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 6 srPrdcty 20 srOffset 7 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+Sr Cfg: ueId 6 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 6 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 6 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 6 srPrdcty 20 srOffset 7 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+Sr Cfg: ueId 7 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 7 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 7 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 7 srPrdcty 20 srOffset 7 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+Sr Cfg: ueId 7 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 7 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 7 srPrdcty 20 srOffset 7 
+Sr Cfg: ueId 7 srPrdcty 20 srOffset 7 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 32 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     Creating thread with RT priority
+Set priority 99
+Creating RT thread #######################
+Set priority - for data Gen Thread 99
+ueId = 0 Mapping_ueIDToCellId=1
+ueId = 1 Mapping_ueIDToCellId=1
+ueId = 2 Mapping_ueIDToCellId=1
+ueId = 3 Mapping_ueIDToCellId=1
+ueId = 4 Mapping_ueIDToCellId=1
+ueId = 5 Mapping_ueIDToCellId=1
+ueId = 6 Mapping_ueIDToCellId=1
+ueId = 7 Mapping_ueIDToCellId=1
+Ring Buffer Created with id =2 rSize:8000 eSize:16 1af2760
+Creating thread with RT priority
+Set priority 99
+
+
+**********MT Task Handler********
+z================ RACH on NR UL ==========================
+
+Triggering rach for with slot 19
+else pdcchOder RAPID =0 cell->preamble =0 ueCb->ueId =0
+RachInd::::rachReq->cellId =1 ueCb->ueId =0
+RACH on NUL
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+----> Sending MSG 1 for RAPID 0 ulcarrier 0 
+RAPID is 0 for ue 0x9d44f0 
+In ueMacHndlRach :: rachReq->nmbOfPream is 1 
+ueMacHndlRach:3313
+DEBUG Processing RAR ra-rnti:274 RgLiTfuDatReq:4030
+ueMacHndlRaGrnt::rapId =0, cellId[1]
+ueMacHndlRaGrnt::cell->ueArr[i].mac.preambleId =0
+preambid is 0 uecb 9d44f0 hdnling rar 
+UEID [17017] RAPID: 0 PREAMBLEID[0]
+ISSUE !!! setting preamble id to 0xff 
+RAGRANT ueCb->rnti = 17017 and tempCrnti:0
+RAGRANT received for cellId 1 ueId 17017 and tempCrnti:0
+CCCH MSG3 : ueCb->rnti 17017 
+  ueMacAddUlDat:: UL Data Addition FAILED, reason : DL_SLOT tmInfo.subframe=13
+
+DL Slot 13, Can not transmit UL data
+ ueMacAddUlDat:: UL Data Addition FAILED, reason : DL_SLOT tmInfo.subframe=13
+z================ RACH on NR UL ==========================
+
+Triggering rach for with slot 19
+else pdcchOder RAPID =1 cell->preamble =0 ueCb->ueId =1
+RachInd::::rachReq->cellId =1 ueCb->ueId =1
+RACH on NUL
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 40 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 42 
+----> Sending MSG 1 for RAPID 1 ulcarrier 0 
+RAPID is 1 for ue 0x9e0528 
+In ueMacHndlRach :: rachReq->nmbOfPream is 1 
+ueMacHndlRach:3313
+DEBUG Processing RAR ra-rnti:274 RgLiTfuDatReq:4030
+ueMacHndlRaGrnt::rapId =1, cellId[1]
+ueMacHndlRaGrnt::cell->ueArr[i].mac.preambleId =255
+preambid is 255 uecb 9d44f0 hdnling rar 
+ueMacHndlRaGrnt::cell->ueArr[i].mac.preambleId =1
+preambid is 1 uecb 9e0528 hdnling rar 
+UEID [17018] RAPID: 1 PREAMBLEID[1]
+ISSUE !!! setting preamble id to 0xff 
+RAGRANT ueCb->rnti = 17018 and tempCrnti:0
+RAGRANT received for cellId 1 ueId 17018 and tempCrnti:0
+CCCH MSG3 : ueCb->rnti 17018 
+  ueMacAddUlDat:: UL Data Addition FAILED, reason : DL_SLOT tmInfo.subframe=9
+
+DL Slot 9, Can not transmit UL data
+ ueMacAddUlDat:: UL Data Addition FAILED, reason : DL_SLOT tmInfo.subframe=9
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+^C
+
+mtss(posix) ends
+ticks: 115268
+[root@ue uesim]# ls
+uesim  uesim_cfg.txt  ys_cfg.txt
+[root@ue uesim]# ls
+uesim  uesim_cfg.txt  ys_cfg.txt
+[root@ue uesim]# lcd ..
+[root@ue latest]# ls
+5gc  cu  du  uesim
+[root@ue latest]# cd
+[root@ue ~]# ls
+anaconda-ks.cfg  env                             latest                              ue-inside-127.0.0.1.pcap  ue-out.pcap             ue-pal.pcap  uesim_test2
+build.tar.gz     htop-1.0.3-1.el7.rf.x86_64.rpm  traceroute-2.0.22-2.el7.x86_64.rpm  ue-out-10.10.5.10.pcap    ue-pal-10.10.6.20.pcap  uesim        uesim_test2-raw
+[root@ue ~]# cd latest/
+[root@ue latest]# cd env
+-bash: cd: env: No such file or directory
+[root@ue latest]# lcd
+[root@ue ~]# cd env/cd latest
+[root@ue latest]# la
+-bash: la: command not found
+[root@ue latest]# ls
+uesim  uesim_cfg.orig.txt  uesim_cfg.txt  ys_cfg.txt
+[root@ue latest]# crm -rf latestcd
+[root@ue ~]# rm -rp latest
+rm: invalid option -- 'p'
+Try 'rm --help' for more information.
+[root@ue ~]# rm -rp latest latestf latest
+[root@ue ~]# ls
+anaconda-ks.cfg  env                             traceroute-2.0.22-2.el7.x86_64.rpm  ue-out-10.10.5.10.pcap  ue-pal-10.10.6.20.pcap  uesim        uesim_test2-raw
+build.tar.gz     htop-1.0.3-1.el7.rf.x86_64.rpm  ue-inside-127.0.0.1.pcap            ue-out.pcap             ue-pal.pcap             uesim_test2
+[root@ue ~]# cd env/latest/
+[root@ue latest]# ls
+5gc  cu  du  uesim  uesim_Haipeng
+[root@ue latest]# cd uesim_Haipeng/
+[root@ue uesim_Haipeng]# ls
+uesim  uesim_cfg.orig.txt  uesim_cfg.txt  ys_cfg.txt
+[root@ue uesim_Haipeng]# chomod +x uesim
+[root@ue uesim_Haipeng]# ls
+uesim  uesim_cfg.orig.txt  uesim_cfg.txt  ys_cfg.txt
+[root@ue uesim_Haipeng]# ls -l
+total 9444
+-rwxr-xr-x 1 root root 9657245 5   8 03:19 uesim
+-rw-r--r-- 1 root root    2642 5   8 03:19 uesim_cfg.orig.txt
+-rw-r--r-- 1 root root    2644 5   8 03:19 uesim_cfg.txt
+-rw-r--r-- 1 root root    1115 5   8 03:19 ys_cfg.txt
+[root@ue uesim_Haipeng]# ls
+uesim  uesim_cfg.orig.txt  uesim_cfg.txt  ys_cfg.txt
+[root@ue uesim_Haipeng]# pwd
+/root/env/latest/uesim_Haipeng
+[root@ue uesim_Haipeng]# ./uesim
+loopCnt1[0]: D
+loopCnt1[1]: D
+loopCnt1[2]: D
+loopCnt1[3]: S
+loopCnt1[4]: U
+SlotFormatIdx is set to 2
+ Mod Order 0 
+ GNB_MAX_NSI 1 
+ UE_MULTI_CELL 0 
+ *** before UE_IP_START = 1050a0a
+ UE_5GNR_DUPLEX_MODE 1 
+
+Printing SLOT pattern for Mu 1 numSlot 20
+0 0 0 3 1 
+0 0 0 3 1 
+0 0 0 3 1 
+0 0 0 3 1 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+Sr Cfg: ueId 0 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 10 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+Sr Cfg: ueId 0 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 0 srPrdcty 10 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+Sr Cfg: ueId 1 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 10 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+Sr Cfg: ueId 1 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 1 srPrdcty 10 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+Sr Cfg: ueId 2 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 10 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+Sr Cfg: ueId 2 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 2 srPrdcty 10 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+Sr Cfg: ueId 3 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 10 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+Sr Cfg: ueId 3 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 10 srOffset 3 
+Sr Cfg: ueId 3 srPrdcty 10 srOffset 3 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+Sr Cfg: ueId 4 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 4 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 4 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 4 srPrdcty 10 srOffset 8 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+Sr Cfg: ueId 4 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 4 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 4 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 4 srPrdcty 10 srOffset 8 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+Sr Cfg: ueId 5 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 5 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 5 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 5 srPrdcty 10 srOffset 8 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+Sr Cfg: ueId 5 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 5 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 5 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 5 srPrdcty 10 srOffset 8 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+Sr Cfg: ueId 6 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 6 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 6 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 6 srPrdcty 10 srOffset 8 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+Sr Cfg: ueId 6 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 6 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 6 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 6 srPrdcty 10 srOffset 8 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+
+ TFU_DCI_FORMAT_1_0 1 bwp->dciSize.dedSize[TFU_DCI_FORMAT_1_0] 44 
+Sr Cfg: ueId 7 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 7 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 7 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 7 srPrdcty 10 srOffset 8 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+Sr Cfg: ueId 7 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 7 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 7 srPrdcty 10 srOffset 8 
+Sr Cfg: ueId 7 srPrdcty 10 srOffset 8 
+
+ TFU_DCI_FORMAT_0_0 2 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_0] 36 
+
+ TFU_DCI_FORMAT_0_1 4 bwp->dciSize.dedSize[TFU_DCI_FORMAT_0_1] 45 
+
+msg: qlen: 0001 mlen: 0006   00-->00 region: 00
+dat: 10 00 00 00 00 67                               .....g
+     Creating thread with RT priority
+Set priority 99
+Creating RT thread #######################
+Set priority - for data Gen Thread 99
+ueId = 0 Mapping_ueIDToCellId=1
+ueId = 1 Mapping_ueIDToCellId=1
+ueId = 2 Mapping_ueIDToCellId=1
+ueId = 3 Mapping_ueIDToCellId=1
+ueAppPktReceiver:Processing the received  Ethernet Packet
+ueId = 4 Mapping_ueIDToCellId=1
+ueId = 5 Mapping_ueIDToCellId=1
+ueId = 6 Mapping_ueIDToCellId=1
+ueId = 7 Mapping_ueIDToCellId=1
+Ring Buffer Created with id =2 rSize:8000 eSize:16 1dbf760
+Creating thread with RT priority
+Set priority 99
+
+ueAppHndlARPResponse:Received ARP Response
+s=================call ueAppRbufSndIpPkt!================
+ [UeSim Console]
+tti_duration  : 0.0000 ms
+*********************** TP Summary *********************
+NSI   RNTI    CellIdx(0)  TotalDL | CellIdx(0)  TotalUL   
+0     17017   0.00        0.00    | 93454545.45  93454545.45
+0     17018   0.00        0.00    | 93454545.45  93454545.45
+0     17019   0.00        0.00    | 0.00        0.00   
+0     17020   0.00        0.00    | 0.00        0.00   
+0     17021   0.00        0.00    | 0.00        0.00   
+0     17022   0.00        0.00    | 0.00        0.00   
+0     17023   0.00        0.00    | 0.00        0.00   
+0     17024   0.00        0.00    | 0.00        0.00   
+
+Cell Tpt:     0.00        0.00      186909090.91  186909090.91 
+0         0                 186909090 
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+ueAppHndlARPResponse:Received ARP Response
+^C
+
+mtss(posix) ends
+ticks: 56895
+[root@ue uesim_Haipeng]# 

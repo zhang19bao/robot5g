@@ -1,0 +1,4 @@
+start TMA
+Start TMA OK
+Check Port 5003 OK
+Check Port 5030 OK

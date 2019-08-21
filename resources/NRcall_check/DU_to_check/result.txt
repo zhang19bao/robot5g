@@ -1,0 +1,17 @@
+NR_RACH_DBG: RA REQ IND Received 
+NR_RACH_DBG: RA REQ IND rapid 0 
+NR_RACH_DBG : RA REQ : MSG 1 : Rcvd : raRnti 162 RAPID 0  ulcarrier 0 
+NR_RACH_DBG: Processing MSG2 for raRnti 162 rapid 0 
+NR_RACH_DBG: Processing MSG2 SUCCESS for raRnti 162 num rapid 1 
+NR_RACH_DBG : Processing MSG3 grant for raRnti 162 rapId 0 
+gUeCb is created with ueIdx 0 and Crnti 17017 batchBitPos 1 batchBitIdx 0
+RNTI:162 Scheduled RAR @ (493,16) NR_RACH_DBG: MSG3 received as CCCH SDU 
+NR_RACH_DBG: MSG3 RECVED !!!
+NR_RACH_DBG: MSG3 RECVED is CCCH SDU!!!
+NR_RACH_DBG: Alloc MSG4 for rnti 17017 
+PDCCH Allocation is done 
+PUCCH Allocation is done 
+DMRS Allocation is done 
+RB Allocation is done 
+NR_RACH_DBG: RGSCH_RA_MSG4_DONE Before UE Configuration!!!
+SA UE CONTEXT ADDITION SUCCESSFULL[17017]
