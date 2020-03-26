@@ -1,4 +1,9 @@
 *** Variables ***
+${USERNAME}       root
+${PASSWORD}       123456
+${local_password}    123456
+${HOST}    172.21.6.102
+${physical_ip}  172.21.6.20
 ${startxfe}   cd /opt/fesw/bin && ./startupmgrd.exe
 ${startupf}   cd /root/upf-1.7 && ./upf
 ${startsmf}  cd /root/5gc-1.7-e500&&./smf

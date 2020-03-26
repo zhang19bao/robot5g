@@ -1,0 +1,243 @@
+# TMA Child Script
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+SETP L1_NR_TEMP_SSB_DEFAULT_PERIODICITY_20ms_delete_when_redundent 1
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+SETP DE_RDA_VERBOSITY 5
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+SETP RRC_TEST_LOG_PCO_MSG_TO_MCI 1
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+SETP NR_L0_UL_CTRL_DISABLE_HARQ_ACK_OVER_PUSCH 1
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+SETP L2_MAC_NR_UL_DL_SLOT_OFFSET 2
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+SETP L2_MAC_NR_UL_DL_PUCCH_OFFSET 2
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+SETP L2_MAC_NR_ENABLE_PUCCH_TX 1
+SETP L2_MAC_NR_ENABLE_HARQ_CONTENTION_CHECK 0
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+SETP L1_NR_MAX_NUM_SIMULTANEOUS_BLIND_DETECTS 9999
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+SETP MTE_NR_3GPP_SEP18_SUPPORTED 1
+SETP L1_NR_3GPP_SEP18_SUPPORTED 1
+SETP L2_NR_3GPP_SEP18_SUPPORTED 1
+SETP L0_DL_CTRL_NR_3GPP_SEP18_SUPPORTED 1
+SETP L0_UL_CTRL_NR_3GPP_SEP18_SUPPORTED 1
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+setp NAS_TEST_ENABLE_INVALID_EVENT_LOGGING_TO_MCI 1
+setp RRC_TEST_ENABLE_INVALID_EVENT_LOGGING_TO_MCI 1
+setp RRC_TEST_ENABLE_ASN1_VIOLATION_INDS_TO_MCI 1
+setp RRC_TEST_UL_DELIVERY_INDS_REQUIRED 0
+setp RRC_TEST_OVERRIDE_INITIAL_UE_ID 0
+setp RRC_TEST_LOG_PCO_MSG_TO_MCI 1
+setp ENABLE_NAS_APN_DECODING 0
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+#forw mte NrSetMueRadioContextCell 0 1 26000 100 [] [] [2] [25508.6 26000]
+#forw mte NrSetMueRadioContextCell 0 1 26000 100 [] [] [2] [25508.6 26000] [0]
+#forw mte NrSetMueRadioContextCell 0 1 25657.5 100 [] [] [2] [25166.1 25657.5] [0]
+#forw mte NrSetMueRadioContextCell 0 1 25657.5 100 [] [] [2] [25166.1 25202.1] [0] [1]
+#forw mte NrSetMueRadioContextCell 0 1 25668.9 100 [] [] [2] [25177.5 25213.5] [0] [1]
+forw mte NrSetMueRadioContextCell 0 1 25668.9 100 [] [] [2] [25177.5 25213.5] [0] [1]
+#--
+
+#########################
+# test step: select ues #
+#########################
+
+# Subsequent commands are repeated as necessary for UEs
+# 0
+
+#-----------------------
+# Defines a set of UEs.
+#-----------------------
+# PARAMETERS
+# 1. UE Group Id
+# 2. UE Group Type
+# 3. Number of entries
+# 4. UE Context Id
+#-----------------------
+#                         1 2 3 4
+#                         | | | |
+forw mte MtsConfigUeGroup 0 0 1{0}
+#-----------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 0
+#----------------------------
+
+#############################
+# test step: configure usim #
+#############################
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1.  USIM Type
+# 2.  IMSI
+# 3.  MNC Length
+# 4.  Authentication Key
+# 5.  OP
+# 6.  C1
+# 7.  C2
+# 8.  C3
+# 9.  C4
+# 10. C5
+# 11. R1
+# 12. R2
+# 13. R3
+# 14. R4
+# 15. R5
+#---------------------
+#                                                                                                                                                                                                                                                                     1                                1  1 1  1  1
+#                   1  2               3                      4                                  5                                6                                7                                8                                9                                0                                1  2 3  4  5
+#                   |  |               |                      |                                  |                                |                                |                                |                                |                                |                                |  | |  |  |
+forw mte UsimConfig 1([311480000000179 2] [] [] [] []) [] [] [12345678123456781234567812345678] [4DC34FD479D23E5D173871C6C997B5E3 00000000000000000000000000000000 00000000000000000000000000000001 00000000000000000000000000000002 00000000000000000000000000000004 00000000000000000000000000000008 64 0 32 64 96 []] [] []
+#---------------------
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+forw mte NrPhyConfigSysCap
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+forw mte RrcAptConfigCapability [1]
+#forw mte RrcAptConfigCapability [2]
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+forw mte NrNasAptConfigCapability 0 [0] [] []
+#forw mte NrNasAptConfigCapability 0 [] [] []
+#--
+
+###############################
+# test step: raw text command #
+###############################
+
+#--
+FORW MTE RRCAPTCONFIGCELLSELECTION 2521350 [1]
+#--
+
+###########################################
+# test step: configure nas plmn selection #
+###########################################
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1
+#                                  |
+forw mte NasAptConfigPlmnSelection 31148
+#----------------------------------------------
+
+#####################################
+# test step: activate configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+#--------------------------------
+#                 1
+#                 |
+forw mte Activate -1
+#--------------------------------
+
+#--------------------------
+# Wait for set of messages
+#--------------------------
+# PARAMETERS
+# 1. Message
+#--------------------------
+#        1
+#        |
+WAIT FOR "ACTIVATE"
+#--------------------------
+

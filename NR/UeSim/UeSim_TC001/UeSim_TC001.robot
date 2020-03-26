@@ -8,15 +8,15 @@ Documentation
 ...  History:
      ...    2019.08.21 First Template.
 ...  *How To execute test case:*
-...  cd ~/robot5g
-...  pybot -t Nr_case1_attach  -d /results -L Trace --debug debug NR/
+...  cd /home/robot5g
+...  robot -t 'Nr_case1_attach' --variable config:102 -d results -L Trace --debug debug NR/
 
 Resource             ${CURDIR}${/}keywords.robot
 
 Force Tags      5GNR  uesim
 
 Suite Setup          NR Test Suite Common Setup
-Test Setup           Testline Setup    # testline launch
+Test Setup           Testline Setup   # testline launch
 Test Teardown        Testline Close    # testline close
 Suite Teardown       NR Test Suite Teardown
 

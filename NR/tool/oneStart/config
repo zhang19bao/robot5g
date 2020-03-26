@@ -1,0 +1,17 @@
+[ONESTART]
+sequence=("smf" "amf" "CU" "L1" "DU" )
+#sequence=("smf" "amf" "CU" )
+startsmf="cd /root/check_E500_V1.6/5gc-v1.6-cpe/ && ./smf_1015"
+passsmf="HTTP2 Server"
+startamf="cd /root/check_E500_V1.6/5gc-v1.6-cpe/ && ./amf_1106"
+passamf="version: 1.6 branch"
+startL1="cd /home/ccy/auto_start/phy_20191230_1221/ &&./phystart.sh"
+passL1="welcome to application console"
+startCU="cd /home/mxw/cpe_firstcall/cu_cpe/cu && ./gnb_cu_1112_cipher_rbid 2>&1 | tee cu_console.log"
+passCU="Running SCTP server"
+startDU="cd /home/wanglei/du-confd/du_bin/bin && ./start_du.sh"
+passDU="TTI received"
+ipsmf="172.21.6.101"
+passwdsmf="certusnet@101"
+ipamf="172.21.6.101"
+passwdamf="certusnet@101"

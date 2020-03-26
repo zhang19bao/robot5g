@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f789e40d-1f6d-475d-94d9-f964ba17967c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/E500_temp.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/config_modify.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/keywords.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/resources/E500_script/5G_SA_Registration_ok_version_2_version_2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/resources/E500_script/DeRegistration.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/resources/E500_script/GetStats.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/resources/E500_script/Init.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/resources/E500_script/LogMask.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/resources/E500_script/Registration.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/resources/auto_logs.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/E500/E500_temp/variables.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/UeSim/SetupTlForManual/SetupTlForManual.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/UeSim/SetupTlForManual/config_modify.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/UeSim/SetupTlForManual/helloworld.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/UeSim/SetupTlForManual/keywords.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/UeSim/SetupTlForManual/variables.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/resources/common.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/resources/nr_E500.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/resources/testline_fixed_parameters.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/tool/get_nr_log_E500.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/tool/send_udp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NR/tool/send_udp_no_sleep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/DU_to_check/criteria.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/DU_to_check/du_check.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/DU_to_check/log/DU.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/DU_to_check/result.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/NGAP_to_check/criteria.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/NGAP_to_check/log/AMF.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/NGAP_to_check/ngap_check.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/NGAP_to_check/result.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/UESim_to_check/criteria.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/UESim_to_check/log/uesim.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/UESim_to_check/result.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/NRcall_check/UESim_to_check/uesim_check.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Multi cell/CIT_MC/cit1/cit_1.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Multi cell/CIT_MC/cit2/cit_2.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Multi cell/CIT_MC/cit3/cit_3.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Multi cell/OAM_MC/Robustness/cu_du_setup_in_loop.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Multi cell/OAM_MC/Robustness/du setup_in_loop.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Multi cell/Telecom_MC/peak_tput/peak_tput.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Multi cell/Telecom_MC/tput_simultaneous/tput_simultaneous_vm.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Multi cell/Telecom_MC/ue_idle/UE_idle.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/OAM/Robustness/cu_du_setup_in_loop.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/OAM/Robustness/du setup_in_loop.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/SCH_UE_PER_TTI/SCH_UE_PER_TTI with 1_8.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/SCH_UE_PER_TTI/SCH_UE_PER_TTI with 4_4.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/SCH_UE_PER_TTI/SCH_UE_PER_TTI with 8_1.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/SCH_UE_PER_TTI/iperf_dl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/SCH_UE_PER_TTI/iperf_dl_server.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/SCH_UE_PER_TTI/iperf_ul.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/SCH_UE_PER_TTI/iperf_ul_server.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/SCH_UE_PER_TTI/ping_dl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/SCH_UE_PER_TTI/ping_ul.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/UE context/ue_context_release_by_amf.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/UE context/ue_context_release_by_ue.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/multi_ue/iperf_dl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/multi_ue/iperf_dl_server.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/multi_ue/iperf_ul.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/multi_ue/iperf_ul_server.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/multi_ue/multi_ue_attach_dettach.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/multi_ue/multi_ue_tput_simultaneous.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/multi_ue/multi_ue_traffic.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/multi_ue/ping_dl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/multi_ue/ping_ul.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/peak_tput/peak_tput_phy.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/peak_tput/peak_tput_vm.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/rrc_reestab/rrc_reestab_1.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/rrc_reestab/rrc_reestab_2.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/tput_simultaneous/iperf_dl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/tput_simultaneous/iperf_dl_server.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/tput_simultaneous/iperf_ul.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/tput_simultaneous/iperf_ul_server.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/tput_simultaneous/ping_dl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/tput_simultaneous/ping_ul.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/tput_simultaneous/tput_simultaneous_phy.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/tput_simultaneous/tput_simultaneous_vm.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/Beijing/102/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/Beijing/102/variables.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/Beijing/20/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/Beijing/20/variables.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myprogram/ssh_func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/robot5g.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/robot5g.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/E500_TC001.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/config_modify.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/keywords.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/CONNECT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/DEREGISTER.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/GETSTATS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/LOGMASK-DATA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/LOGMASK.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/NRCELLSEARCH.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/REGISTER.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/SA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/case_syslog_ignore_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/resources/mmt_loop_mmt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/E500_TC001/variables.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/E500/tm500_nas_mode.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/UeSim_TC001.robot" beforeDir="false" afterPath="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/UeSim_TC001.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/variables.robot" beforeDir="false" afterPath="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/variables.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/resources/nr_uesim.robot" beforeDir="false" afterPath="$PROJECT_DIR$/NR/resources/nr_uesim.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NR/resources/test_keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/NR/resources/test_keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/CIT_SWR/cit_swr.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/CIT_SWR/cit_swr.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/cit1/cit_1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/cit1/cit_1.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/cit2/cit_2.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/cit2/cit_2.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/cit3/cit_3.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/cit3/cit_3.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_100MHz_Default.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_100MHz_Default.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_100MHz_Left.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_100MHz_Left.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_100MHz_Mid.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_100MHz_Mid.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_100MHz_Right.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_100MHz_Right.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_60MHz_Left.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_60MHz_Left.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_60MHz_Mid.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_60MHz_Mid.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_60MHz_Right.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_60MHz_Right.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_80MHz_Left.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_80MHz_Left.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_80MHz_Mid.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_80MHz_Mid.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_80MHz_Right.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N41_CFG_80MHz_Right.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_100MHz.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_100MHz.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_60MHz_Left.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_60MHz_Left.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_60MHz_Mid.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_60MHz_Mid.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_60MHz_Right.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_60MHz_Right.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_80MHz_Left.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_80MHz_Left.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_80MHz_Mid.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_80MHz_Mid.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_80MHz_Right.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3300_CFG_80MHz_Right.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_100MHz.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_100MHz.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_60MHz_Left.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_60MHz_Left.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_60MHz_Mid.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_60MHz_Mid.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_60MHz_Right.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_60MHz_Right.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_80MHz_Left.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_80MHz_Left.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_80MHz_Mid.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_80MHz_Mid.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_80MHz_Right.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Config/N78_3400_CFG_80MHz_Right.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/OAM/cell_setup_in_loop.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/OAM/cell_setup_in_loop.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/add_drb_setup/add_drb_setup.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/add_drb_setup/add_drb_setup.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/mr_report/mr.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/mr_report/mr.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/peak_tput/peak_tput.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/peak_tput/peak_tput.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/random_access/backup/random_access.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/random_access/backup/random_access.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/random_access/random_access.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/random_access/random_access.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/rrc_reestab/rrc_reestab.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/rrc_reestab/rrc_reestab.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/ue_idle/UE_idle.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/ue_idle/UE_idle.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/ue_inactive/loop_ue_inactivity.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/ue_inactive/loop_ue_inactivity.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/ue_inactive/multi_ue_inactivity.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/ue_inactive/multi_ue_inactivity.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/ue_inactive/ue_keep_in_connected_mode.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/Telecom/ue_inactive/ue_keep_in_connected_mode.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/CIT_MC/cit1/cit_1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/CIT_MC/cit1/cit_1.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/CIT_MC/cit2/cit_2.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/CIT_MC/cit2/cit_2.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/CIT_MC/cit3/cit_3.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/CIT_MC/cit3/cit_3.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/OAM_MC/cell_setup_in_loop.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/OAM_MC/cell_setup_in_loop.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/Telecom_MC/peak_tput/peak_tput.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/Telecom_MC/peak_tput/peak_tput.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/Telecom_MC/ue_idle/UE_idle.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.6/multi cell/Telecom_MC/ue_idle/UE_idle.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.7/CIT/cit1/cit_1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/CIT/cit1/cit_1.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.7/CIT/cit2/cit_2.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/CIT/cit2/cit_2.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.7/CIT/cit3/cit_3.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/CIT/cit3/cit_3.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.7/OAM/cu_du_setup_in_loop.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/OAM/cu_du_setup_in_loop.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.7/OAM/du setup_in_loop.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/OAM/du setup_in_loop.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/peak_tput/peak_tput.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/peak_tput/peak_tput.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/random_access/random_access.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/random_access/random_access.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/rrc_reestab/rrc_reestab.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/rrc_reestab/rrc_reestab.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/ue_idle/UE_idle.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/radisys-1.7/Telecom/ue_idle/UE_idle.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Beijing/CLOUDNR001/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/Beijing/CLOUDNR001/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/conLibs.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/conLibs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/connections.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/connections.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/e500_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/e500_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/stdout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprogram/my.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprogram/my.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements/dcm_libs.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/dcm_libs.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/NRcall_check/DU_to_check/criteria.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/NRcall_check/DU_to_check/criteria.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/NRcall_check/DU_to_check/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/NRcall_check/DU_to_check/result.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/NRcall_check/NGAP_to_check/criteria.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/NRcall_check/NGAP_to_check/criteria.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/NRcall_check/NGAP_to_check/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/NRcall_check/NGAP_to_check/result.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/NRcall_check/UESim_to_check/criteria.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/NRcall_check/UESim_to_check/criteria.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/NRcall_check/UESim_to_check/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/NRcall_check/UESim_to_check/result.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/suite_keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/suite_keywords.robot" afterDir="false" />
+    </list>
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="robot5g">
+      <favorite_root url="file://$PROJECT_DIR$/myprogram/map.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NR/resources/nr_uesim.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2400">
+              <caret line="82" column="74" selection-start-line="82" selection-start-column="74" selection-end-line="82" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NR/tool/get_nr_log_E500.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Robot Test Suite" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Write</find>
+      <find>Close</find>
+      <find>close all connections</find>
+      <find>E500_host</find>
+      <find>{E500_user}</find>
+      <find>SSHLibrary</find>
+      <find>all</find>
+      <find>E500_user</find>
+      <find>taskkill</find>
+      <find>${ssh_index}</find>
+      <find>Telnet.Open Connection</find>
+      <find>kill out</find>
+      <find>ss</find>
+      <find>Telnet</find>
+      <find>Dialogs.Pause Execution</find>
+      <find>Write log to text</find>
+      <find>run keyword if</find>
+      <find>NR Test Suite Common Setup</find>
+      <find>HOST</find>
+      <find>stop logging</find>
+      <find>${USERNAME}</find>
+      <find>${PASSWORD}</find>
+      <find>${local_password}</find>
+      <find>set</find>
+      <find>make_info</find>
+      <find>TMA Stop</find>
+      <find>Until</find>
+      <find>${e500_shernick_user}</find>
+      <find>StartTcpdump</find>
+      <find>kill</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>=</replace>
+      <replace>env</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/NR/resources/common_keywords.robot" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_TC001/case_keyword.robot" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_TC001/case_sdata_modify.robot" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_TC001/confi_modify.robot" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_TC001/keywords.robot" />
+        <option value="$PROJECT_DIR$/requirements/dcm_libs.cfg" />
+        <option value="$PROJECT_DIR$/config/Beijing/CLOUDNR001/variables.py" />
+        <option value="$PROJECT_DIR$/libraries/stdout.txt" />
+        <option value="$PROJECT_DIR$/libraries/e500_process.py" />
+        <option value="$PROJECT_DIR$/resources/suite_keywords.robot" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/CONNECT.txt" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_TC001/E500_TC001.robot" />
+        <option value="$PROJECT_DIR$/NR/resources/test_keywords.robot" />
+        <option value="$PROJECT_DIR$/libraries/connections.py" />
+        <option value="C:/Python27/Lib/site-packages/e500/__init__.py" />
+        <option value="$PROJECT_DIR$/config/Beijing/CLOUDNR001/__init__.py" />
+        <option value="$PROJECT_DIR$/myprogram/map.py" />
+        <option value="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/cit2/cit_2.robot" />
+        <option value="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/config_modify.robot" />
+        <option value="$PROJECT_DIR$/TestCase/radisys-1.6/CIT/cit1/cit_1.robot" />
+        <option value="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/resources/auto_logs.sh" />
+        <option value="$PROJECT_DIR$/myprogram/apramiko.py" />
+        <option value="$PROJECT_DIR$/NR/UeSim/SetupTlForManual/keywords.robot" />
+        <option value="$PROJECT_DIR$/NR/UeSim/SetupTlForManual/variables.robot" />
+        <option value="$PROJECT_DIR$/config/Beijing/TL24/__init__.py" />
+        <option value="$PROJECT_DIR$/NR/UeSim/SetupTlForManual/SetupTlForManual.robot" />
+        <option value="$PROJECT_DIR$/myprogram/my.py" />
+        <option value="$PROJECT_DIR$/NR/tool/send_udp_no_sleep.py" />
+        <option value="$PROJECT_DIR$/NR/E500/tm500_nas_mode.robot" />
+        <option value="$PROJECT_DIR$/NR/resources/testline_fixed_parameters.robot" />
+        <option value="$PROJECT_DIR$/config/Beijing/102/__init__.py" />
+        <option value="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/keywords.robot" />
+        <option value="$PROJECT_DIR$/NR/UeSim/SetupTlForManual/helloworld.robot" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_temp/UeSim_TC001.robot" />
+        <option value="F:/文档/新建文件夹/robotlte/testsuite/DCM/dv_lrc/CPRI_delay/CPRI_delay/case_keyword.robot" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_temp/keywords.robot" />
+        <option value="$PROJECT_DIR$/config/Beijing/104/variables.robot" />
+        <option value="$PROJECT_DIR$/myprogram/ssh_func.py" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_TC001/variables.robot" />
+        <option value="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/UeSim_TC001.robot" />
+        <option value="$PROJECT_DIR$/NR/UeSim/UeSim_TC001/variables.robot" />
+        <option value="$PROJECT_DIR$/NR/resources/common.robot" />
+        <option value="$PROJECT_DIR$/config/Beijing/20/variables.robot" />
+        <option value="$PROJECT_DIR$/config/Beijing/22/variables.robot" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_temp/E500_temp.robot" />
+        <option value="$PROJECT_DIR$/NR/E500/E500_temp/variables.robot" />
+        <option value="$PROJECT_DIR$/NR/resources/nr_E500.robot" />
+        <option value="$PROJECT_DIR$/config/Beijing/102/variables.robot" />
+        <option value="$PROJECT_DIR$/NR/tool/get_nr_log.sh" />
+        <option value="$PROJECT_DIR$/NR/resources/nr_uesim.robot" />
+        <option value="$PROJECT_DIR$/NR/tool/get_nr_log_E500.sh" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1904" />
+    <option name="height" value="1002" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="F:/文档/新建文件夹/robotlte" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/NR/tool" />
+      <recent name="$PROJECT_DIR$/NR/E500" />
+      <recent name="$PROJECT_DIR$/NR/resources" />
+      <recent name="$PROJECT_DIR$/config/Beijing" />
+      <recent name="$PROJECT_DIR$/config/Beijing/102" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\robot5g\NR\E500\E500_temp\resources" />
+      <recent name="E:\robot5g" />
+      <recent name="D:\robot5g\config\Beijing" />
+      <recent name="D:\robot5g\libraries" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.connections">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="robot5g" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="connections" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libraries" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libraries/connections.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="e500_process" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libraries" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libraries/e500_process.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/myprogram" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/myprogram/my.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="srio" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libraries" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\robot5g\libraries\srioWeb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ssh_func" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/myprogram" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/myprogram/ssh_func.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <module name="robot5g" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.connections" />
+      <item itemvalue="Python.e500_process" />
+      <item itemvalue="Python.my" />
+      <item itemvalue="Python.srio" />
+      <item itemvalue="Python.ssh_func" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ssh_func" />
+        <item itemvalue="Python.srio" />
+        <item itemvalue="Python.my" />
+        <item itemvalue="Python.e500_process" />
+        <item itemvalue="Python.connections" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f789e40d-1f6d-475d-94d9-f964ba17967c" name="Default Changelist" comment="" />
+      <created>1556444873502</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556444873502</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1904" height="1002" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19346195" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/NR/UeSim/SetupTlForManual/UeSim_TC001.robot" />
+    <entry file="file://$PROJECT_DIR$/Resource/NRcall_check/UESim_to_check/uesim_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1671" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/radisys-1.7/Multi cell/CIT_MC/cit1/cit_1.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5667" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/radisys-1.7/OAM/cu_du_setup_in_loop.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/radisys-1.7/CIT/cit1/cit_1.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/UeSim/SetupTlForManual/variables.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/tool/send_udp_no_sleep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/UeSim/SetupTlForManual/keywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Beijing/102/variables.py" />
+    <entry file="file://$PROJECT_DIR$/NR/E500/tm500_nas_mode.robot" />
+    <entry file="file://$PROJECT_DIR$/NR/UeSim/SetupTlForManual/helloworld.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Beijing/102/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/tool/send_udp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/UeSim/UeSim_TC001/resources/auto_logs.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/E500/E500_TC001/keywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/resources/testline_fixed_parameters.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/E500/E500_TC001/config_modify.robot">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/E500/E500_TC001/resources/RAW/CONNECT.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="18" selection-start-line="1" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/e500_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/E500/E500_TC001/E500_TC001.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements/dcm_libs.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/suite_keywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="19" selection-start-line="5" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/文档/新建文件夹/robotlte/testsuite/DCM/dv_lrc/CPRI_delay/CPRI_delay/case_keyword.robot" />
+    <entry file="file://$PROJECT_DIR$/NR/resources/test_keywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/E500/E500_temp/keywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Beijing/CLOUDNR001/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/E500/E500_temp/resources/E500_script/Init.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myprogram/my.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Beijing/104/variables.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/radisys-1.6/CIT/cit1/cit_1.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/E500/E500_TC001/variables.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/UeSim/UeSim_TC001/config_modify.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myprogram/ssh_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/UeSim/UeSim_TC001/keywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/UeSim/UeSim_TC001/variables.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/resources/common.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="100" column="31" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/resources/nr_E500.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Beijing/20/variables.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Beijing/20/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Beijing/22/variables.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/tool/get_nr_log.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" selection-start-line="11" selection-end-line="13" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/E500/E500_temp/E500_temp.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/UeSim/UeSim_TC001/UeSim_TC001.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Beijing/102/variables.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/E500/E500_temp/variables.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/resources/nr_uesim.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="82" column="74" selection-start-line="82" selection-start-column="74" selection-end-line="82" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NR/tool/get_nr_log_E500.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -16,7 +16,7 @@ if __name__=='__main__':
     packet_size = int(args[3])
     ori_str = "udp packet"
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    i = 0;
+    i = 0
     while True:
         order_str = "%s %d !" % (ori_str, i)
         pad_str = ''

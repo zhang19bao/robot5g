@@ -1,69 +1,33 @@
 *** Settings ***
 Documentation
-Library        OperatingSystem
-Library        SSHLibrary
-Library        DateTime
-Library        String
+Resource      .${/}common.robot
+
 
 *** Variables ***
-${HOST}           172.21.6.107
-${USERNAME}       root
-${PASSWORD}       123456
-${cu_console_log}    /root/radisys-new/radisys-cu-1.6-E500/bin/cu.log
-${du_console_log}    /root/radisys-new/radisys-du-1.6-E500/bin/du.log
+#${USERNAME}       root
+#${PASSWORD}       123456
+#${local_password}    123456
+${cu_console_log}    */cu.log
+${du_console_log}    */du.log
 ${upfssh}   sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.5
 ${coressh}  sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.10
 ${cussh}    sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.20
 ${dussh}    sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.30
 ${uessh}    sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.30
 ${uecssh}   sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.40
-${startxfe}   cd /opt/fesw/bin && ./startupmgrd.exe
-${startupf}   cd /root/upf-1.7 && ./upf
-${startsmf}  cd /root/5gc-1.7-e500&&./smf
-${startamf}  cd /root/5gc-1.7-e500&&./amf
-${startcu}   cd /home/radisys-cu-1.7-e500/bin && ./gnb_cu_0903
-#${startdu}   cd /root/radisys-du-1.6-E500/bin&&./gnb_du_801 -f ../config/ssi_mem
-${startdu}   cd /root/radisys-du-1.7-E500/bin &&./gnb_du_1.7_0902 -f ../config/ssi_mem
-${startue}   cd /root/uesim-1.7-E500  &&./uesim
-
 *** Keywords ***
-Get Timestamp String
-    [Documentation]          get current timestamp information
-    ...                      \n return:(String)-current timestamp in YYYYMMDD_HHMMSS type
-	...                      \n e.g. ${date_time}      Get Timestamp String
-
-    ${date_time}             Builtin.Get Time
-    ${date_time}             Replace String            ${date_time}    -          ${EMPTY}   6
-    ${date_time}             Replace String            ${date_time}    ${SPACE}   _          2
-    ${date_time}             Replace String            ${date_time}    :          ${EMPTY}   3
-    [Return]                 ${date_time}
-
-NR Test Suite Common Setup
-    ${start_time}=	Get Timestamp String
-    Set Global Variable  ${TESTSUITE_LOG_DIR}  ${OUTPUT_DIR}${/}${start_time}
-    Log To Console         ******************************************************************************
-    Log To Console         *****************************Test Log Directory:******************************
-    Log To Console         ${TESTSUITE_LOG_DIR}
-    Log To Console         ******************************************************************************
-    Log To Console         ******************************************************************************
-    ${path_not_exist}      Run Keyword And Return Status
-    ...                    OperatingSystem.Directory Should Not Exist   ${TESTSUITE_LOG_DIR}
-    Run Keyword If         ${path_not_exist}
-    ...                    OperatingSystem.Create Directory             ${TESTSUITE_LOG_DIR}
-
-NR Test Suite Teardown
-    log to console   testsuite teardown
 
 Testline Setup
-    Testline Close
-#    :FOR  ${index}  IN Range  ${3}
-#    \   ${stat}     run keyword and return status    xfe setup
-#    \   Exit For Loop If	 ${stat} == True
-#    \   xfe close
-#    upf setup
+    Testline Close  1   #close tl wirhout catch log
+    clean log
+    :FOR  ${index}  IN RANGE  ${3}
+    \   ${stat}     run keyword and return status    xfe setup
+    \   Exit For Loop If	 ${stat} == True
+    \   xfe close
+    upf setup
     smf setup
     amf setup
-    #log setup
+    log setup
     cu setup
     du setup
 
@@ -107,31 +71,35 @@ amf setup
     log to console  amf start completed
 
 log setup
+    [Arguments]   ${log_name}=none
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
-    Write    ./auto_logs.sh start
+    Write    /home/get_nr_log_E500.sh start
     ${output}=    Read    delay=30s
     Should Contain    ${output}=    tcpdump: listening on
     log to console  start to catch log
+
+clean log
+    Open Connection    ${HOST}
+    Login    ${USERNAME}    ${PASSWORD}
+    Write    /home/get_nr_log_E500.sh clcore
+    sleep    3s
+    Write    /home/get_nr_log_E500.sh clconsole
+    sleep    10s
 
 cu setup
     log to console  start to setup cu
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${cussh}
+    sleep    3s
     Write    ulimit -c unlimited
-    ${delay}   set variable    ${20}
-    :FOR  ${index}  IN Range  ${9}
-    \   Write    ${startcu}
-    \   ${output}=	Read	delay=${delay}
-    \   ${stat}     run keyword and return status    Should Contain    ${output}=    STARTING GNB CONFIGURATION
-    \   Exit For Loop If	 ${stat} == True
-    \   ${delay}=  evaluate  ${delay}+${10}
-    \   cu close
-#    Write    ${startcu}
-#    ${output}=	Read	delay=20s
-#    Write log to text   cu.log   ${output}
-#    Should Contain    ${output}=    STARTING GNB CONFIGURATION
+    Write    ${startcu}
+    ${output}=	Read   delay=20s
+#    ${output}=	read until   STARTING GNB CONFIGURATION
+#    OperatingSystem.Append To File  ${TESTSUITE_LOG_DIR}${/}cu_setup.log  ${output}  encoding=bytes
+    Write log to text   cu_setup.log   ${output}
+    Should Contain    ${output}=    STARTING GNB CONFIGURATION
     log to console  cu start completed
 
 du setup
@@ -139,86 +107,102 @@ du setup
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${dussh}
+    sleep  3s
     Write    ulimit -c unlimited
+    sleep  3s
     Write    ${startdu}
-    ${output}=    Read    delay=20s
+    ${output}=    Read    delay=30s
+    Write log to text   du_setup.log   ${output}
     Should Contain    ${output}=    CELL[1] is UP
-    Should Contain    ${output}=    Num Ue Per TTI stats
+    Write Bare    0
     log to console  du start completed
 
 Testline Close
+    [Arguments]  ${if_init}=0
     ue close
     du close
     cu close
-    #stop logging
+    run keyword if      ${if_init}==0
+    ...        stop logging
     amf close
     smf close
-#    upf close
-#    xfe close
+    upf close
+    xfe close
+    run keyword if      ${if_init}==0
+    ...        download log to folder    ${log_folder}
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write   pkill -9 sshpass
     close all connections
 
+download log to folder
+    [Arguments]  ${TESTSUITE_LOG_DIR}
+    ${rc} =	OperatingSystem.Run and Return RC  sshpass -p ${PASSWORD} scp root@${HOST}:/tmp/nr_log_tmp/* ${TESTSUITE_LOG_DIR}
+    log to console  download logs to ${TESTSUITE_LOG_DIR}
+    sleep   10s
+    OperatingSystem.run   sshpass -p ${PASSWORD} ssh root@${HOST} rm -f /tmp/nr_log_tmp/*
+
+
 stop logging
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
-    Write    ./auto_logs.sh all
-    ${output}=    Read    delay=200s
-    Should Contain    ${output}=    all done
+    Write    /home/get_nr_log_E500.sh stop
+    sleep   30s
+    Write    /home/get_nr_log_E500.sh console
+    sleep  5s
+#    ${output}=    Read    delay=2s
+#    Should Contain    ${output}=    all done
     log to console  logging stopped
 
 xfe close
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${upfssh}
-    Write    pkill -9 xfe
+    Write    pkill -2 startupmgrd.exe
     log to console  xfe stopped
 
 upf close
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${upfssh}
+    Write    pkill -2 upf
     Write    pkill -9 upf
     log to console  upf stopped
 
 smf close
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
+    Write    pkill -2 smf
     Write    pkill -9 smf
     log to console  smf stopped
 
 amf close
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
-    Write    pkill -9 amf
+    Write    pkill -2 amf&&pkill -9 amf
     log to console  amf stopped
 
 cu close
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${cussh}
-    Write    pkill -9 gnb_cu
+    Write    pkill -2 gnb_cu&&pkill -9 gnb_cu
     log to console  cu stopped
 
 du close
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${dussh}
-    Write    pkill -9 gnb_du
+    Write    pkill -2 gnb_du&&pkill -9 gnb_du
     log to console  du stopped
 
 ue close
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${uessh}
-    Write    pkill -9 uesim
+    Write    pkill -2 uesim&&pkill -9 uesim
     log to console  ue closed
 
-Write log to text
-    [Documentation]   write log to specified file
-    [Arguments]       ${log_name}  ${context}
-    OperatingSystem.Append To File  ${TESTSUITE_LOG_DIR}${/}${log_name}  ${context}  encoding=UTF-8
 
 check UE attach
     [Arguments]    ${Ue_Num}=1
@@ -228,11 +212,11 @@ check UE attach
     Write    ${startue}
     ${output}=    Read    delay=10s
     Should Contain    ${output}=    MT Task Handler
-    :For  ${index}  in range  ${Ue_Num}
+    :For  ${index}  IN RANGE  ${Ue_Num}
     \  Write Bare    z
-    \  ${output}=    Read    delay=15s
-    \   sleep   10s
-    \  Should Contain    ${output}=    UE IPv4 ADDR allocated
+    \  ${output}=    Read    delay=20s
+    \   sleep   20s
+#    \  Should Contain    ${output}=    UE IPv4 ADDR allocated
     \  Should Contain    ${output}=    RRC Reconfiguration Complete
     \  log to console   ue ${index} attach complete
 
@@ -247,27 +231,29 @@ check ping traffic
     log to console   ping successful
 
 check DL UDP traffic
+    [Arguments]  ${bandwidth}=2M  ${time}=30  ${len}=1360
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${uecssh}
     Write    iperf3 -s -B 10.10.5.1 -p 5001
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
-    Write    iperf3 -u -c 10.10.5.1 -B 12.12.12.13 -p 5001 -b 2M -l 1024 -t 30
-    ${output}=    Read    delay=50s
+    Write    iperf3 -u -c 10.10.5.1 -B 12.12.12.13 -p 5001 -b ${bandwidth} -l ${len} -t ${time}
+    ${output}=    Read    delay=${time}s
     Write log to text   DL traffic.txt  ${output}
-    Should Contain    ${output}=    iperf Done
+#    Should Contain    ${output}=    iperf Done
     log to console  start DL UDP traffic successful
 
 check UL UDP traffic
+    [Arguments]  ${bandwidth}=2M  ${time}=30  ${len}=1360
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    iperf3 -s -B 12.12.12.13 -p 5001
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${uecssh}
-    Write    iperf3 -u -c 12.12.12.13 -B 10.10.5.1 -p 5001 -b 2M -l 1024 -t 30
-    ${output}=    Read    delay=50s
+    Write    iperf3 -u -c 12.12.12.13 -B 10.10.5.1 -p 5001 -b ${bandwidth} -l ${len} -t ${time}
+    ${output}=    Read    delay=${time}s
     Write log to text   UL traffic.txt  ${output}
-    Should Contain    ${output}=    iperf Done
+#    Should Contain    ${output}=    iperf Done
     log to console  start UL UDP traffic successful

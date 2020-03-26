@@ -1,228 +1,403 @@
 *** Settings ***
 Documentation
-Library        OperatingSystem
-Library        SSHLibrary
-Library        DateTime
-Library        String
+...  common keywords for E500 TL
+...  "Author: zhangbr@certusnet.com.cn"
+
+Library       Telnet
 Resource      .${/}common.robot
+Resource      .${/}PowerSwitchControl.robot
 
 
 *** Variables ***
-${cu_console_log}    /root/radisys-new/radisys-cu-1.6-E500/bin/cu.log
-${du_console_log}    /root/radisys-new/radisys-du-1.6-E500/bin/du.log
+#${USERNAME}       root
+#${PASSWORD}       123456
+#${local_password}    123456
+${psexec_tool_dir_cygwin}  /cygdrive/c/
+${E500_main_folder}    C:\\Program Files (x86)
+${E500_version}     5G NR - NLA 4.18.0
+${E500_host}  172.21.6.60
+${E500_user}  E500
+${E500_password}  12345688
 ${upfssh}   sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.5
 ${coressh}  sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.10
 ${cussh}    sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.20
-${dussh}    sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.30
-${uessh}    sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.30
-${uecssh}   sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.40
+
 *** Keywords ***
 
-Testline Setup
-    Testline Close
-#    :FOR  ${index}  IN Range  ${3}
-#    \   ${stat}     run keyword and return status    xfe setup
-#    \   Exit For Loop If	 ${stat} == True
-#    \   xfe close
-#    upf setup
-    smf setup
-    amf setup
-    #log setup
-    cu setup
-    du setup
+E500 Testline Setup
+    E500 Testline Close  1
+    :FOR  ${index}  IN RANGE  ${3}
+    \   ${stat}     run keyword and return status    E5000 xfe setup
+    \   Exit For Loop If	 ${stat} == True
+    \   E500 xfe close
+    E500 clean log
+    E500 upf setup
+    E500 smf setup
+    E500 amf setup
+    E500 cu setup
+    E500 phy setup
+    E500 log setup  cell_setup
+    sleep  5s
+    E500 du setup
+    E500 log stop
+    Sleep      3s
+    E500 Start To NAS Mode
+    Sleep          10s
 
-xfe setup
-#    [Documentation]     start xfe
-#    [Arguments]  ${HOST}  ${USERNAME}    ${PASSWORD}
-    Open Connection   ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${upfssh}
-    Write    modprobe uio_pci_generic
+E5000 xfe setup
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Switch Connection        ${ssh_index}
+    SSHLibrary.Write    ${upfssh}
+    SSHLibrary.Write    modprobe uio_pci_generic
     sleep    3s
-    Write    ${startxfe}
-    ${output}=    Read    delay=120s
+    SSHLibrary.Write    ${startxfe}
+    ${output}=    SSHLibrary.Read    delay=120s
+#    log to console   ${output}
     Should Contain    ${output}=    FE startup successful
 
-upf setup
+E500 upf setup
     log to console  start to setup upf
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${upfssh}
-    Write    ${startupf}
-    ${output}=    Read    delay=20s
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Switch Connection        ${ssh_index}
+    SSHLibrary.Write    ${upfssh}
+    SSHLibrary.Write    ${startupf}
+    ${output}=    SSHLibrary.Read    delay=20s
+#    log to console   ${output}
     Should Contain    ${output}=    xFEIngress
     log to console  upf start completed
 
-smf setup
+E500 smf setup
     log to console  start to setup smf
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${startsmf}
-    ${output}=    Read    delay=10s
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Switch Connection        ${ssh_index}
+    SSHLibrary.Write    ${startsmf}
+    ${output}=    SSHLibrary.Read    delay=10s
+#    log to console   ${output}
     Should Contain    ${output}=    10.10.8.20
     log to console  smf start completed
 
-amf setup
+E500 amf setup
     log to console  start to setup amf
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${startamf}
-    ${output}=    Read    delay=10s
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Switch Connection        ${ssh_index}
+    SSHLibrary.Write    ${startamf}
+    ${output}=    SSHLibrary.Read    delay=10s
+#    log to console   ${output}
     log to console  amf start completed
 
-log setup
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ./auto_logs.sh start
-    ${output}=    Read    delay=30s
-    Should Contain    ${output}=    tcpdump: listening on
-    log to console  start to catch log
-
-cu setup
+E500 cu setup
     log to console  start to setup cu
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${cussh}
-    Write    ulimit -c unlimited
-    Write    ${startcu}
-    ${output}=	Read	delay=20s
-    Write log to text   cu.log   ${output}
-    Should Contain    ${output}=    STARTING GNB CONFIGURATION
+    ${ssh_index}  Create Ssh Connection    ${NRHOST}   ${NRUSR}    ${NRPWD}
+    SSHLibrary.Write    ulimit -c unlimited
+    SSHLibrary.Write    ${confd}
+    sleep  30s
+    SSHLibrary.Write    ps -ef|grep confd
+    sleep  3s
+    SSHLibrary.Write    ${startcu}
+    ${output}=	SSHLibrary.Read	delay=20s
+#    log to console   ${output}
+#    Write log to text   cu.log   ${output}
+#    Should Contain    ${output}=    STARTING GNB CONFIGURATION
     log to console  cu start completed
 
-du setup
+E500 phy setup
+    log to console  start to setup phy
+    ${phy_ssh_index}  Create Ssh Connection    ${NRHOST}   ${NRUSR}    ${NRPWD}
+    set global variable   ${phy_ssh_index}
+    SSHLibrary.Write    ${startphy}
+    ${output}=    SSHLibrary.Read    delay=20s
+#    log to console   ${output}
+    Should Contain    ${output}=    welcome to application console
+    log to console  phy start completed
+
+E500 du setup
     log to console  start to setup du
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${dussh}
-    Write    ulimit -c unlimited
-    Write    ${startdu}
-    ${output}=    Read    delay=20s
+    ${ssh_index}  Create Ssh Connection    ${NRHOST}   ${NRUSR}    ${NRPWD}
+    SSHLibrary.Write    ulimit -c unlimited
+    SSHLibrary.Write    ${startdu}
+    ${output}=    SSHLibrary.Read    delay=20s
+#    log to console   ${output}
     Should Contain    ${output}=    CELL[1] is UP
     log to console  du start completed
 
-Testline Close
-    ue close
-    du close
-    cu close
-    #stop logging
-    amf close
-    smf close
-#    upf close
-#    xfe close
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write   pkill -9 sshpass
-    close all connections
+E500 Testline Close
+    [Arguments]  ${if_init}=0
+    EM500 Stop
+    E500 phy close
+    E500 du close
+    E500 cu close
+    E500 amf close
+    E500 smf close
+    E500 upf close
+    E500 xfe close
+    run keyword if      ${if_init}==0
+    ...        E500 get console log
+    run keyword if      ${if_init}==0
+    ...        E500 download log to folder  ${TESTSUITE_LOG_DIR}
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Switch Connection        ${ssh_index}
+    SSHLibrary.Write   pkill -9 sshpass
+    sleep  1s
+    SSHLibrary.Write   pkill -2 get_nr_log_E500
+    SSHLibrary.close all connections
 
-stop logging
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ./auto_logs.sh all
-    ${output}=    Read    delay=200s
-    Should Contain    ${output}=    all done
+E500 log setup
+    [Arguments]  ${logname}=${empty}
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Switch Connection        ${ssh_index}
+    SSHLibrary.Write    /home/get_nr_log_E500.sh start ${logname}
+    sleep   10s
+    ${output}=    SSHLibrary.Read    delay=30s
+    Should Contain    ${output}=    tcpdump: listening on
+    log to console  start to catch log
+
+E500 clean log
+    ${rc} =	OperatingSystem.Run and Return RC  sshpass -p ${PASSWORD} ssh root@${HOST} rm -rf /tmp/nr_loh_tmp/*
+    sleep   3s
+    ${rc} =	OperatingSystem.Run and Return RC  sshpass -p ${PASSWORD} ssh root@${HOST} /home/get_nr_log_E500.sh clcore
+    sleep   5s
+    ${rc} =	OperatingSystem.Run and Return RC  sshpass -p ${PASSWORD} ssh root@${HOST} /home/get_nr_log_E500.sh clconsole
+    sleep   5s
+
+E500 log stop
+    ${rc} =	OperatingSystem.Run and Return RC  sshpass -p ${PASSWORD} ssh root@${HOST} /home/get_nr_log_E500.sh stop
+    sleep   30s
+    log to console  tcpdump log stopped
+
+E500 get console log
+    ${rc} =	OperatingSystem.Run and Return RC  sshpass -p ${PASSWORD} ssh root@${HOST} /home/get_nr_log_E500.sh console
+    sleep  40s
     log to console  logging stopped
 
-xfe close
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${upfssh}
-    Write    pkill -9 xfe
+E500 download log to folder
+    [Arguments]  ${log_folder}=${TESTSUITE_LOG_DIR}
+    ${rc} =	OperatingSystem.Run and Return RC  sshpass -p ${PASSWORD} scp root@${HOST}:/tmp/nr_log_tmp/* ${log_folder}
+    log to console  download logs to ${log_folder}
+    sleep   20s
+    OperatingSystem.run   sshpass -p ${PASSWORD} ssh root@${HOST} rm -f /tmp/nr_log_tmp/*
+
+E500 xfe close
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Switch Connection        ${ssh_index}
+    SSHLibrary.Write    ${upfssh}
+    SSHLibrary.Write    pkill -9 startupmgrd.exe
+    sleep  3s
     log to console  xfe stopped
 
-upf close
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${upfssh}
-    Write    pkill -9 upf
+E500 upf close
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Switch Connection        ${ssh_index}
+    SSHLibrary.Write    ${upfssh}
+    SSHLibrary.Write    pkill -9 upf
     log to console  upf stopped
 
-smf close
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    pkill -9 smf
+E500 smf close
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Write    pkill -9 smf
     log to console  smf stopped
 
-amf close
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    pkill -9 amf
+E500 amf close
+    ${ssh_index}  Create Ssh Connection    ${HOST}   ${USERNAME}   ${PASSWORD}
+    SSHLibrary.Switch Connection        ${ssh_index}
+    SSHLibrary.Write    pkill -9 amf
+    sleep  1s
+    SSHLibrary.Write    pkill -9 tcpdunp
     log to console  amf stopped
 
-cu close
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${cussh}
-    Write    pkill -9 gnb_cu
+E500 cu close
+    ${ssh_index}  Create Ssh Connection    ${NRHOST}   ${NRUSR}    ${NRPWD}
+    SSHLibrary.Write    pkill -9 gnb_cu
+    sleep  1s
+    SSHLibrary.Write    pkill -9 tcpdunp
     log to console  cu stopped
 
-du close
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${dussh}
-    Write    pkill -9 gnb_du
+E500 phy close
+    ${ssh_index}  Create Ssh Connection    ${NRHOST}   ${NRUSR}    ${NRPWD}
+    SSHLibrary.Write    pkill -2 l1app
+    sleep  5s
+    SSHLibrary.Write    pkill -9 l1app
+    log to console  phy stopped
+
+E500 du close
+    ${ssh_index}  Create Ssh Connection    ${NRHOST}   ${NRUSR}    ${NRPWD}
+    SSHLibrary.Write    pkill -2 gnb_du
+    sleep  3s
+    SSHLibrary.Write    pkill -9 gnb_du
     log to console  du stopped
 
-ue close
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${uessh}
-    Write    pkill -9 uesim
-    log to console  ue closed
+E500 Start To NAS Mode
+    [Documentation]         Start tm500 service
+    Log To Console          -----------TM500 Start-------------
+    Run Keyword And Return Status                               TMA Stop          make_info=False
+    ${ssh_index}            SSHLibrary.Open Connection    ${E500_host}    timeout=30    encoding=GBK
+    SSHLibrary.Login    ${E500_user}    ${E500_password}
+#    ${ssh_cmd_send}         Set variable                        ${psexec_tool_dir_cygwin}/psExec/PsExec.exe -i 1 -d -u ${E500_user} -p ${E500_password} "${E500_main_folder}\\Aeroflex\\TM500\\${E500_version}\\Test Mobile Application\\TMA.exe" /u E500 /c y /p 5003 /l n /a y /ea y /pa
+    ${ssh_cmd_send}         Set variable                        ${psexec_tool_dir_cygwin}/PsExec/PsExec.exe -i 2 -d -u ${E500_user} -p ${E500_password} "${E500_main_folder}\\Aeroflex\\TM500\\${E500_version}\\Test Mobile Application\\TMA.exe" /u "Default User" /c y /p 5003 /l n /a y /ea y /pa
+    Ssh Execute Cmd         ${ssh_index}                        ${ssh_cmd_send}
+    sleep  30s
+    SSHLibrary.Close Connection
 
-Write log to text
-    [Documentation]   write log to specified file
-    [Arguments]       ${log_name}  ${context}
-    OperatingSystem.Append To File  ${TESTSUITE_LOG_DIR}${/}${log_name}  ${context}  encoding=UTF-8
+    sleep  10s
+    Telnet.Open Connection              ${E500_host}            port=5003      timeout=180
+    Log To Console      start to connect to TM500
+    Telnet.Write Bare                   script "D:\\E500_script\\connect.txt"\n\r
+    ${output}                           Telnet.Read Until Regexp    I: TMAE 0x0 Information - RDA Connection complete
+    Write log to text  E500_start_cmdl.log  ${output}
+#    #m2
+#    Telnet.Write Bare                   \#$$CONNECT\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: CONNECT 0x00 ok
+#    sleep      2s
+#    Telnet.Write Bare                   GSTS\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: GSTS 0x00 Ok Reset
+#    sleep      1s
+#    Telnet.Write Bare                   ABOT 0 0 0\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: ABOT 0x00 Ok 0x0000001e
+#    sleep      1s
+#    Telnet.Write Bare                   MULT 192.168.10.9\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: MULT 0x00 Ok
+#    sleep      1s
+#    Telnet.Write Bare                   SCXT 0 LTE\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: SCXT 0x00 Ok
+#    sleep      1s
+#    Telnet.Write Bare                   SCXT 1 NR\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: SCXT 0x00 Ok
+#    sleep      1s
+#    Telnet.Write Bare                   SCFG SWL\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: SCFG 0x00 Ok SWL
+#    sleep      1s
+#    Telnet.Write Bare                   STRT\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: STRT 0x00 Ok
+#    sleep      1s
+#    Telnet.Write Bare                   forw swl setlicenseserver none\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: FORW 0x00 Ok SWL
+#    sleep      1s
+#	Telnet.Write Bare                   RSET\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: RSET 0x00 Ok
+#    sleep      1s
+#	Telnet.Write Bare                   MULT 192.168.10.9\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: MULT 0x00 Ok
+#    sleep      1s
+#	Telnet.Write Bare                   SCXT 0 LTE\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: SCXT 0x00 Ok
+#    sleep      2s
+#	Telnet.Write Bare                   SCXT 1 NR\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: SCXT 0x00 Ok
+#    sleep      1s
+##	Telnet.Write Bare                   SELR 0 1 RC2 1 DEDICATED\n\r
+#    Telnet.Write Bare                   SELR 0 1 RC1 1 DEDICATED\n\r
+#    ${output}                           Telnet.Read Until Regexp           C: SELR 0x00 Ok
+#    sleep      1s
+#	Telnet.Write Bare                   CFGR 0 SCS 1 1\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: CFGR 0x00 Ok
+#    sleep      1s
+#	Telnet.Write Bare                   EREF 0 1 0\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: EREF 0x00 Ok
+#    sleep      1s
+#	Telnet.Write Bare                   GETR\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: GETR 0x00 Ok
+#    sleep      1s
+#	Telnet.Write Bare                  SCFG NAS_MODE\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: SCFG 0x00 Ok NAS_MODE
+#    sleep      1s
+#	Telnet.Write Bare                   STRT\n\r
+#    ${output}                           Telnet.Read Until Regexp            C: STRT 0x00 Ok
+#    sleep      1s  #m2
 
-check UE attach
-    [Arguments]    ${Ue_Num}=1
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${uessh}
-    Write    ${startue}
-    ${output}=    Read    delay=10s
-    Should Contain    ${output}=    MT Task Handler
-    :For  ${index}  IN RANGE  ${Ue_Num}
-    \  Write Bare    z
-    \  ${output}=    Read    delay=20s
-    \   sleep   20s
-    \  Should Contain    ${output}=    UE IPv4 ADDR allocated
-    \  Should Contain    ${output}=    RRC Reconfiguration Complete
-    \  log to console   ue ${index} attach complete
+    Telnet.Close Connection
+    Log To Console          -----------TM500 Finished-------------
 
-check ping traffic
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${uecssh}
-    Write    ping 12.12.12.13 -c 10
-    ${output}=    Read    delay=12s
-    Write log to text   ping.txt  ${output}
-    Should Contain    ${output}=    64 bytes from 12.12.12.13
-    log to console   ping successful
+E500 sheck status
+    Telnet.Open Connection              ${E500_host}           port=5003      timeout=30
+    Telnet.Write Bare                   FORW MTE CLEARSTATS\n\r
+    Sleep                               5s
+    Telnet.Write Bare                   FORW MTE GETSTATS [0] [0] [0]\n\r
+    Sleep                               5s
+    Telnet.Write Bare                   FORW MTE GETSTATS [0] [0] [0]\n\r
+    Sleep                               5s
+    Telnet.Write Bare                   FORW MTE GETSTATS [0] [0] [0]\n\r
+    Sleep                               5s
+    ${output}=   Telnet.Read
+    Write log to text   E500_ststus.log   ${output}
+    Sleep                               10s
+    Telnet.Close Connection
 
-check DL UDP traffic
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${uecssh}
-    Write    iperf3 -s -B 10.10.5.1 -p 5001
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    iperf3 -u -c 10.10.5.1 -B 12.12.12.13 -p 5001 -b 2M -l 1024 -t 30
-    ${output}=    Read    delay=50s
-    Write log to text   DL traffic.txt  ${output}
-    Should Contain    ${output}=    iperf Done
-    log to console  start DL UDP traffic successful
+E500 Send Script
+    [Documentation]        Send cmd to tm500
+    [Arguments]             #${tm500_script}     ${timeout}=30
 
-check UL UDP traffic
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    iperf3 -s -B 12.12.12.13 -p 5001
-    Open Connection    ${HOST}
-    Login    ${USERNAME}    ${PASSWORD}
-    Write    ${uecssh}
-    Write    iperf3 -u -c 12.12.12.13 -B 10.10.5.1 -p 5001 -b 2M -l 1024 -t 30
-    ${output}=    Read    delay=50s
-    Write log to text   UL traffic.txt  ${output}
-    Should Contain    ${output}=    iperf Done
-    log to console  start UL UDP traffic successful
+    Telnet.Open Connection              ${E500_host}           port=5003      timeout=30    #${timeout}
+#    Telnet.Write Bare    \#$$START_LOGGING\n\r
+#    sleep   5s
+    Telnet.Write Bare                   script "D:\\E500_script\\5G_SA_Registration_ok_version_2_version_2.txt"\n\r
+    Sleep                               20s
+    ${output}                           Telnet.Read
+    Write log to text  E500_send_Script_cmdl.log  ${output}
+    Should Contain    ${output}  Registration Result: 3GPP Access Only  msg=attach fail
+    Sleep                               10s
+#    Telnet.Write Bare    \#$$STOP_LOGGING\n\r
+    Telnet.Close Connection
+
+EM500 Stop
+    Run Keyword And Return Status                               TMA Stop           make_info=True
+
+
+TMA Stop
+    [Arguments]             ${make_info}=${True}
+    Run Keyword If          ${make_info}==${True}               Log To Console          -----------TM500 Stop Starting-------------
+
+    Telnet.Open Connection              ${E500_host}           port=5003      timeout=15
+    Telnet.Write Bare                   \#$$DISCONNECT\n\r
+    Sleep                               2s
+    Telnet.Close Connection
+    sleep   3s
+    SSHLibrary.Open Connection    ${E500_host}    timeout=30    encoding=GBK
+    SSHLibrary.Login    ${E500_user}    ${E500_password}
+    ${ssh_cmd_send}         Set variable                        taskkill /f /t /im TMA.exe /im TmaApplication.exe
+    SSHLibrary.Write    ${ssh_cmd_send}
+    SSHLibrary.Close Connection
+    Run Keyword If          ${make_info}==${True}               Log To Console          -----------TM500 Stop Finished-------------
+
+
+E500 Shernick Login
+    [Documentation]         Shernick login
+    ${cmd_read_prompt}      Set Variable                    cli@diversifEye:~$
+    SSHLibrary.Write                ssh cli@192.168.10.200
+    Sleep                           1
+    ${output}=    SSHLibrary.Read    delay=20s
+    Should Contain    ${output}=   password
+#    SSHLibrary.Read Until           Password:
+    SSHLibrary.Write                diversifEye
+    Sleep                           1
+    SSHLibrary.Read Until           ${cmd_read_prompt}
+
+
+E500 Shernick Start
+    [Documentation]         Start Shernick via cli
+    ${test_group_name}      Set Variable    //1UE-UDP-FTP
+    ${ssh_index}     SSHLibrary.Open Connection    ${E500_host}    timeout=30    encoding=utf-8
+    SSHLibrary.Login    ${E500_user}    ${E500_password}
+    E500 Shernick Login
+    SSHLibrary.Write                cli -u tm500 -p 1 stopTestGroup
+    Sleep                           5
+    SSHLibrary.Write                cli -u tm500 -p 1 startTestGroup ${test_group_name}
+    ${output}=    SSHLibrary.Read    delay=10s
+    Should Contain    ${output}=    tm500@localhost/1: Test group configuration complete
+#    SSHLibrary.Read Until           tm500@localhost/2: Test group configuration complete
+    Sleep                           3
+    SSHLibrary.Write                exit
+    Sleep                           1
+    SSHLibrary.Close Connection
+
+E500 Shernick Stop
+    [Documentation]         Stop Shernick via cli
+    ${ssh_index}     SSHLibrary.Open Connection    ${E500_host}    timeout=30    encoding=utf-8
+    SSHLibrary.Login    ${E500_user}    ${E500_password}
+    E500 Shernick Login
+    SSHLibrary.Write                cli -u tm500 -p 1 stopTestGroup
+    ${output}=    SSHLibrary.Read    delay=3s
+    Should Contain    ${output}=   tm500@localhost/1: All test entities stopped
+#    SSHLibrary.Read Until          tm500@localhost/2: All test entities stopped
+    Sleep                           3
+    SSHLibrary.Write                exit
+    Sleep                           1
+    SSHLibrary.Close Connection
