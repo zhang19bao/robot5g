@@ -6,7 +6,7 @@ Library        DateTime
 Library        String
 
 *** Variables ***
-${HOST}           172.21.6.102
+${HOST}           172.21.6.107
 ${USERNAME}       root
 ${PASSWORD}       123456
 ${cu_console_log}    /root/radisys-new/radisys-cu-1.6-E500/bin/cu.log
@@ -18,12 +18,13 @@ ${dussh}    sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.30
 ${uessh}    sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.30
 ${uecssh}   sshpass -p 123456 ssh -o StrictHostKeyChecking=no root@192.169.4.40
 ${startxfe}   cd /opt/fesw/bin && ./startupmgrd.exe
-${startupf}   cd /root/upf-1.6-e500 && ./upf
-${startsmf}  cd /root/5gc-v1.6-e500-new&&./smf_0626
-${startamf}  cd /root/5gc-v1.6-e500-new&&./amf_0702
-${startcu}   cd /root/radisys-cu-1.6-E500/bin&&./gnb_cu_0708_um
-${startdu}   cd /root/radisys-du-1.6-E500/bin&&./gnb_du_801 -f ../config/ssi_mem
-${startue}   cd /root/uesim-1.6-E500&&./uesim
+${startupf}   cd /root/upf-1.7 && ./upf
+${startsmf}  cd /root/5gc-1.7-e500&&./smf
+${startamf}  cd /root/5gc-1.7-e500&&./amf
+${startcu}   cd /home/radisys-cu-1.7-e500/bin && ./gnb_cu_0903
+#${startdu}   cd /root/radisys-du-1.6-E500/bin&&./gnb_du_801 -f ../config/ssi_mem
+${startdu}   cd /root/radisys-du-1.7-E500/bin &&./gnb_du_1.7_0902 -f ../config/ssi_mem
+${startue}   cd /root/uesim-1.7-E500  &&./uesim
 
 *** Keywords ***
 Get Timestamp String
@@ -39,10 +40,10 @@ Get Timestamp String
 
 NR Test Suite Common Setup
     ${start_time}=	Get Timestamp String
-    Set Global Variable  ${TEST_LOG_OUTPUT_DIR}  ${OUTPUT_DIR}${/}${start_time}
+    Set Global Variable  ${TESTSUITE_LOG_DIR}  ${OUTPUT_DIR}${/}${start_time}
     Log To Console         ******************************************************************************
     Log To Console         *****************************Test Log Directory:******************************
-    Log To Console         ${TEST_LOG_OUTPUT_DIR}
+    Log To Console         ${TESTSUITE_LOG_DIR}
     Log To Console         ******************************************************************************
     Log To Console         ******************************************************************************
     ${path_not_exist}      Run Keyword And Return Status
@@ -50,13 +51,16 @@ NR Test Suite Common Setup
     Run Keyword If         ${path_not_exist}
     ...                    OperatingSystem.Create Directory             ${TESTSUITE_LOG_DIR}
 
+NR Test Suite Teardown
+    log to console   testsuite teardown
+
 Testline Setup
     Testline Close
-    :FOR  ${index}  IN Range  ${3}
-    \   ${stat}     run keyword and return status    xfe setup
-    \   Exit For Loop If	 ${stat} == True
-    \   xfe close
-    upf setup
+#    :FOR  ${index}  IN Range  ${3}
+#    \   ${stat}     run keyword and return status    xfe setup
+#    \   Exit For Loop If	 ${stat} == True
+#    \   xfe close
+#    upf setup
     smf setup
     amf setup
     #log setup
@@ -81,7 +85,7 @@ upf setup
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${upfssh}
     Write    ${startupf}
-    ${output}=    Read    delay=10s
+    ${output}=    Read    delay=20s
     Should Contain    ${output}=    xFEIngress
     log to console  upf start completed
 
@@ -116,9 +120,18 @@ cu setup
     Login    ${USERNAME}    ${PASSWORD}
     Write    ${cussh}
     Write    ulimit -c unlimited
-    Write    ${startcu}
-    ${output}=    Read    delay=20s
-    Should Contain    ${output}=    STARTING GNB CONFIGURATION
+    ${delay}   set variable    ${20}
+    :FOR  ${index}  IN Range  ${9}
+    \   Write    ${startcu}
+    \   ${output}=	Read	delay=${delay}
+    \   ${stat}     run keyword and return status    Should Contain    ${output}=    STARTING GNB CONFIGURATION
+    \   Exit For Loop If	 ${stat} == True
+    \   ${delay}=  evaluate  ${delay}+${10}
+    \   cu close
+#    Write    ${startcu}
+#    ${output}=	Read	delay=20s
+#    Write log to text   cu.log   ${output}
+#    Should Contain    ${output}=    STARTING GNB CONFIGURATION
     log to console  cu start completed
 
 du setup
@@ -140,8 +153,8 @@ Testline Close
     #stop logging
     amf close
     smf close
-    upf close
-    xfe close
+#    upf close
+#    xfe close
     Open Connection    ${HOST}
     Login    ${USERNAME}    ${PASSWORD}
     Write   pkill -9 sshpass
@@ -202,6 +215,11 @@ ue close
     Write    pkill -9 uesim
     log to console  ue closed
 
+Write log to text
+    [Documentation]   write log to specified file
+    [Arguments]       ${log_name}  ${context}
+    OperatingSystem.Append To File  ${TESTSUITE_LOG_DIR}${/}${log_name}  ${context}  encoding=UTF-8
+
 check UE attach
     [Arguments]    ${Ue_Num}=1
     Open Connection    ${HOST}
@@ -224,6 +242,7 @@ check ping traffic
     Write    ${uecssh}
     Write    ping 12.12.12.13 -c 10
     ${output}=    Read    delay=12s
+    Write log to text   ping.txt  ${output}
     Should Contain    ${output}=    64 bytes from 12.12.12.13
     log to console   ping successful
 
@@ -236,6 +255,7 @@ check DL UDP traffic
     Login    ${USERNAME}    ${PASSWORD}
     Write    iperf3 -u -c 10.10.5.1 -B 12.12.12.13 -p 5001 -b 2M -l 1024 -t 30
     ${output}=    Read    delay=50s
+    Write log to text   DL traffic.txt  ${output}
     Should Contain    ${output}=    iperf Done
     log to console  start DL UDP traffic successful
 
@@ -248,5 +268,6 @@ check UL UDP traffic
     Write    ${uecssh}
     Write    iperf3 -u -c 12.12.12.13 -B 10.10.5.1 -p 5001 -b 2M -l 1024 -t 30
     ${output}=    Read    delay=50s
+    Write log to text   UL traffic.txt  ${output}
     Should Contain    ${output}=    iperf Done
     log to console  start UL UDP traffic successful
