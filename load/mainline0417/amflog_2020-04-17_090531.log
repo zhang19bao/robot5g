@@ -1,0 +1,6 @@
+[17/04/2020 09:28:02.902571][TRC][amf_sctp_conn_mgr_msg_processor.cpp:173] Adding Transferred SCTP FD[16] to EPOLL
+[17/04/2020 09:28:02.902613][INF][amf_gst_rx_thread.h:120] Registering FD to Rx thread EPOLL with instance id 393217
+[17/04/2020 09:28:02.902947][INF][amf_gst_sctp_msg_processsor.cpp:1052] Assoc Id : 76 SCTP_ASSOC_UP
+[17/04/2020 09:28:02.918322][INF][amf_gnb_mgr_thread.cpp:120] GNB Manager Comm Thread:: process_message, Thread Id: 40001 Source  Thread Id: 60001
+[17/04/2020 09:28:02.918437][TRC][amf_gnb_mgr_fsm.cpp:186] Processing NG Setup Request Message at AMF
+[17/04/2020 09:28:02.990304][INF][amf_gnb_mgr_fsm.cpp:251] Sending NG Setup Response Message from AMF

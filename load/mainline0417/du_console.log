@@ -1,0 +1,1282 @@
+
+ *************** 
+ local memory: 0x7fc048f04010, size: 1021214720, numBkts: 4
+wls_lib: Open /dev/wls 0xc0085701
+wls_lib: User Space Lib Context: us va 0x00007fc1f874c000 kernel va 0xffff880016720000 pa 0x0000000016720000 size 65536 
+wls_lib: 
+Mode 1
+wls_lib: 
+WLS device /dev/wls [8]
+Opening WLS_device: 0x7fc1f874c000
+wls_lib: hugePageSize on the system is 1073741824
+wls_lib: shm open /tmp/phyappshm__dev_wls
+wls_lib: Attach to shared memory
+wls_lib: pvirtAddr  0x00002aaac0000000
+wls_lib: WLS_Alloc: 0x00002aaac0000000 [620756992]
+wls_lib: Connecting to remote peer ...
+wls_lib: Remote: pWls_us 0x0x7fc1f8730000
+wls_lib: size wls_us_ctx_t 51880
+wls_lib:     ul free  : off 0x0000000000002028
+wls_lib:     get_queue: off 0x0000000000008048
+wls_lib:     put_queue: off 0x000000000000a460
+
+ *************** 
+ WLS memory: 0x2aaac0000000, size: 616562688
+Global Memory Info: 
+mtDynMemSz[0]: [0x00007fc048f04010]
+mtDynMemSz[1]: [0x00007fc052b44010]
+mtDynMemSz[2]: [0x00007fc068ad4010]
+mtDynMemSz[3]: [0x00007fc0750ec010]
+mtDynMemSz[4]: [0x00002aaac0400000]
+Starting Address of Bkt Entry [0]: [0x7fc048f04010], memSize[163840000]
+Starting Address of Bkt Entry [1]: [0x7fc052b44010], memSize[368640000]
+Starting Address of Bkt Entry [2]: [0x7fc068ad4010], memSize[207716352]
+Starting Address of Bkt Entry [3]: [0x7fc0750ec010], memSize[281018368]
+Starting Address of Bkt Entry [4]: [0x2aaac0400000], memSize[616562688]
+
+
+
+	#############################################################################
+	#  _______    ______         __    __  _______         _______   __    __   #
+	# |       \  /      \       |  \  |  \|       \       |       \ |     |  \  #
+	# | $$$$$$$ |  $$$$$$\      | $$\ | $$| $$$$$$$\      | $$$$$$$\| $$  | $$  #
+	# | $$____  | $$ __\$$      | $$$\| $$| $$__| $$      | $$  | $$| $$  | $$  #
+	# | $$    \ | $$|           | $$$$\ $$| $$    $/      | $$  | $$| $$  | $$  #
+	#  \$$$$$$$\| $$ \$$$\      | $$\$$ $$| $$$$$$$\      | $$  | $$| $$  | $$  #
+	# |  \__| $$| $$__| $$      | $$ \$$$$| $$  | $$      | $$__/ $$| $$__/ $$  #
+	#  \$$    $$ \$$    $$      | $$  \$$$| $$  | $$      | $$    $$ \$$    $$  #
+	#   \$$$$$$   \$$$$$$        \$$   \$$ \$$   \$$       \$$$$$$$   \$$$$$$   #
+	#                                                                           #
+	#############################################################################
+
+
+
+	#############################################################################
+	  commit bd2a6b2391d85a251366b45aeaa56c6fbda4846c
+	  Author: yangdongli <yangdl@certusnet.com.cn>
+	#############################################################################
+Inside cmnInitCmGCb taskCb[0x7fc048f04114]
+ Pending Info 0x7fc048f04314
+Stored in entity_type 6 pending_info_ownership 1
+
+Pending info 0x7fc048f04314 is created and ownership is with entity 6
+ Pending Info 0x7fc048f04714
+Stored in entity_type 9 pending_info_ownership 1
+
+Pending info 0x7fc048f04714 is created and ownership is with entity 9
+
+Pending info 0x7fc048f04b14 is created and ownership is with entity 21
+ Pending Info 0x7fc048f04d14
+Stored in entity_type 10 pending_info_ownership 1
+
+Pending info 0x7fc048f04d14 is created and ownership is with entity 10
+ Pending Info 0x7fc048f05114
+Stored in entity_type 14 pending_info_ownership 1
+
+Pending info 0x7fc048f05114 is created and ownership is with entity 14
+ Pending Info 0x7fc048f05514
+Stored in entity_type 12 pending_info_ownership 1
+
+Pending info 0x7fc048f05514 is created and ownership is with entity 12
+ Pending Info 0x7fc048f05914
+Stored in entity_type 11 pending_info_ownership 1
+
+Pending info 0x7fc048f05914 is created and ownership is with entity 11
+ Pending Info 0x7fc048f05d14
+Stored in entity_type 16 pending_info_ownership 1
+
+Pending info 0x7fc048f05d14 is created and ownership is with entity 16
+ Pending Info 0x7fc048f06114
+Stored in entity_type 17 pending_info_ownership 1
+
+Pending info 0x7fc048f06114 is created and ownership is with entity 17
+ Pending Info 0x7fc048f06514
+Stored in entity_type 20 pending_info_ownership 1
+
+Pending info 0x7fc048f06514 is created and ownership is with entity 20
+ Pending Info 0x7fc048f06914
+Stored in entity_type 15 pending_info_ownership 1
+
+Pending info 0x7fc048f06914 is created and ownership is with entity 15
+OAM IPC IP Address : Port : 65535
+ Pending Info 0x7fc048f07114
+Stored in entity_type 7 pending_info_ownership 1
+
+Pending info 0x7fc048f07114 is created and ownership is with entity 7
+ Pending Info 0x7fc048f07714
+Stored in entity_type 8 pending_info_ownership 1
+
+Pending info 0x7fc048f07714 is created and ownership is with entity 8
+existing_entity_type 8
+ Pending Info 0x7fc048f07714
+Stored in entity_type 9 pending_info_ownership 0
+[17/04/2020 05:28:07.009923][STHREAD][INF][ngp_sys_thread.cpp:276]Policy : SCHED_RR 
+free_idx 0
+[17/04/2020 05:28:07.012333][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+free_idx 1
+[17/04/2020 05:28:07.012511][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+thread_pool_instance_id0
+[17/04/2020 05:28:07.012645][STHREAD][INF][ngp_sys_thread.cpp:276]Policy : SCHED_RR 
+[17/04/2020 05:28:07.012736][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+[17/04/2020 05:28:07.012816][STHREAD][INF][ngp_sys_thread.cpp:276]Policy : SCHED_RR 
+[17/04/2020 05:28:07.012907][STHREAD][INF][ngp_sys_thread.cpp:272]Policy : SCHED_FIFO 
+cmPutFreeIdx 6 index is freeed 
+receive EVT_OAM_START_REQUEST
+TRACE Connected (cdb) to ConfD
+TRACE CDB_NEW_SESSION  --> CONFD_OK
+TRACE Established new CDB session to ConfD
+TRACE CDB_SET_NAMESPACE  --> CONFD_OK
+TRACE CDB_GET /GNBDUFunction/gNBDUId --> CONFD_OK
+TRACE CDB_GET /GNBDUFunction/gNBDUNamePresent --> CONFD_OK
+TRACE CDB_GET /GNBDUFunction/gNBDUName --> CONFD_OK
+TRACE CDB_GET /GNBDUFunction/gNBId --> CONFD_OK
+TRACE CDB_GET /GNBDUFunction/gNBIdLength --> CONFD_OK
+TRACE CDB_GET /GNBDUFunction/nsAgentCfgType --> CONFD_OK
+TRACE CDB_GET /GNBDUFunction/sulHarmonicEnabled --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1/sctpConfig/numOutBoundStreams --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1/sctpConfig/maxInboundStreams --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1/sctpConfig/maxInitAttempts --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1/sctpConfig/hbInterval --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1/sctpConfig/maxPathRetx --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1/sctpConfig/sctpDstIpAddr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1/sctpConfig/sctpSrcIpAddr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1/sctpConfig/sctpDstPortNum --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1/sctpConfig/sctpSrcPortNum --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1U/egtpuConfig/f1UEgtpuTransportConfig/ipAddress --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1U/egtpuConfig/f1UEgtpuTransportConfig/teidMin --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1U/egtpuConfig/f1UEgtpuTransportConfig/teidMax --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/maxRlcSduqSize --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/rlcSduqLwrThr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/rlcSduqUprThr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/nrUpFlwCtrlTmr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/pktReadPerTti --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/ueConfig/rntiStart --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/ueConfig/maxNumRnti --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/ueConfig/maxNumUes --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/loggingInfo/gnbLoggingConfig --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[0]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[0]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[1]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[1]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[2]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[2]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[3]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[3]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[4]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[4]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[5]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[5]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[6]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[6]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[7]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[7]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[8]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[8]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[9]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[9]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[10]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[10]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[11]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[11]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[12]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[12]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[13]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/gnbLoggingConfig[13]/logLevel --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/loggingInfo/ngpLoggingConfig --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[0]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[0]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[1]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[1]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[2]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[2]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[3]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[3]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[4]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[4]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[5]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[5]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[6]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[6]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[7]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[7]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[8]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[8]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[9]/moduleId --> CONFD_OK
+/GNBDUFunction/gNBDUId	1
+/GNBDUFunction/gNBDUNamePresent	True
+/GNBDUFunction/gNBDUName	gnb60du1000
+/GNBDUFunction/gNBDUNameTTI:	1000000
+/GNBDUFunction/gNBId	60
+/GNBDUFunction/gNBIdLength	22
+/GNBDUFunction/nsAgentCfgType	0
+/GNBDUFunction/sulHarmonicEnabled	False
+GNBDUFunction/EP_F1/sctpConfig/numOutBoundStreams	1
+GNBDUFunction/EP_F1/sctpConfig/maxInboundStreams	1
+GNBDUFunction/EP_F1/sctpConfig/maxInitAttempts	5
+GNBDUFunction/EP_F1/sctpConfig/hbInterval	1
+GNBDUFunction/EP_F1/sctpConfig/maxPathRetx	1
+GNBDUFunction/EP_F1/sctpConfig/sctpDstIpAddr	168.168.31.101
+GNBDUFunction/EP_F1/sctpConfig/sctpSrcIpAddr	168.168.31.102
+GNBDUFunction/EP_F1/sctpConfig/sctpDstPortNum	38472
+GNBDUFunction/EP_F1/sctpConfig/sctpSrcPortNum	38472
+GNBDUFunction/EP_F1U/egtpuConfig/f1UEgtpuTransportConfig/ipAddress	 10.10.9.40
+GNBDUFunction/EP_F1U/egtpuConfig/f1UEgtpuTransportConfig/teidMin	1
+GNBDUFunction/EP_F1U/egtpuConfig/f1UEgtpuTransportConfig/teidMax	100
+GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/maxRlcSduqSize	2000
+GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/rlcSduqLwrThr	200
+GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/rlcSduqUprThr	400
+GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/nrUpFlwCtrlTmr	15
+GNBDUFunction/EP_F1U/f1uFlowCtrlCfgInfo/pktReadPerTti	75
+GNBDUFunction/ueConfig/rntiStart	17717
+GNBDUFunction/ueConfig/maxNumRnti	256
+GNBDUFunction/ueConfig/maxNumUes	8
+Elements in GNBDUFunction/loggingInfo/gnbLoggingConfig	14
+GNBDUFunction/loggingInfo/gnbLoggingConfig[0]/moduleId	0
+GNBDUFunction/loggingInfo/gnbLoggingConfig[0]/logLevel	5
+GNBDUFunction/loggingInfo/gnbLoggingConfig[1]/moduleId	1
+GNBDUFunction/loggingInfo/gnbLoggingConfig[1]/logLevel	5
+GNBDUFunction/loggingInfo/gnbLoggingConfig[2]/moduleId	2
+GNBDUFunction/loggingInfo/gnbLoggingConfig[2]/logLevel	5
+GNBDUFunction/loggingInfo/gnbLoggingConfig[3]/moduleId	3
+GNBDUFunction/loggingInfo/gnbLoggingConfig[3]/logLevel	5
+GNBDUFunction/loggingInfo/gnbLoggingConfig[4]/moduleId	4
+GNBDUFunction/loggingInfo/gnbLoggingConfig[4]/logLevel	2
+GNBDUFunction/loggingInfo/gnbLoggingConfig[5]/moduleId	5
+GNBDUFunction/loggingInfo/gnbLoggingConfig[5]/logLevel	5
+GNBDUFunction/loggingInfo/gnbLoggingConfig[6]/moduleId	6
+GNBDUFunction/loggingInfo/gnbLoggingConfig[6]/logLevel	2
+GNBDUFunction/loggingInfo/gnbLoggingConfig[7]/moduleId	7
+GNBDUFunction/loggingInfo/gnbLoggingConfig[7]/logLevel	2
+GNBDUFunction/loggingInfo/gnbLoggingConfig[8]/moduleId	8
+GNBDUFunction/loggingInfo/gnbLoggingConfig[8]/logLevel	2
+GNBDUFunction/loggingInfo/gnbLoggingConfig[9]/moduleId	14
+GNBDUFunction/loggingInfo/gnbLoggingConfig[9]/logLevel	5
+GNBDUFunction/loggingInfo/gnbLoggingConfig[10]/moduleId	15
+GNBDUFunction/loggingInfo/gnbLoggingConfig[10]/logLevel	5
+GNBDUFunction/loggingInfo/gnbLoggingConfig[11]/moduleId	16
+GNBDUFunction/loggingInfo/gnbLoggingConfig[11]/logLevel	2
+GNBDUFunction/loggingInfo/gnbLoggingConfig[12]/moduleId	17
+GNBDUFunction/loggingInfo/gnbLoggingConfig[12]/logLevel	5
+GNBDUFunction/loggingInfo/gnbLoggingConfig[13]/moduleId	18
+GNBDUFunction/loggingInfo/gnbLoggingConfig[13]/logLevel	2
+Elements in GNBDUFunction/loggingInfo/ngpLoggingConfig	16
+GNBDUFunction/loggingInfo/ngpLoggingConfig[0]/moduleId	0
+GNBDUFunction/loggingInfo/ngpLoggingConfig[0]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[1]/moduleId	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[1]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[2]/moduleId	2
+GNBDUFunction/loggingInfo/ngpLoggingConfig[2]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[3]/moduleId	3
+GNBDUFunction/loggingInfo/ngpLoggingConfig[3]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[4]/moduleId	4
+GNBDUFunction/loggingInfo/ngpLoggingConfig[4]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[5]/moduleId	5
+GNBDUFunction/loggingInfo/ngpLoggingConfig[5]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[6]/moduleId	6
+GNBDUFunction/loggingInfo/ngpLoggingConfig[6]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[7]/moduleId	7
+GNBDUFunction/loggingInfo/ngpLoggingConfig[7]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[8]/moduleId	8
+GNBDUFunction/loggingInfo/ngpLoggingConfig[8]/logLevel	1
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[9]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[10]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[10]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[11]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[11]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[12]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[12]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[13]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[13]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[14]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[14]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[15]/moduleId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/ngpLoggingConfig[15]/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/rlogConfig/logPath --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/rlogConfig/logFile --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/rlogConfig/initLog --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/rlogConfig/moduleMask --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/rlogConfig/numOfLogFiles --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/rlogConfig/logFileSizeLmt --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/rlogConfig/logLevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/loggingInfo/logFileName --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/du_s_NSSAI/nsSysCfgInfo --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/du_s_NSSAI/nsSysCfgInfo[0]/nsiId --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/du_s_NSSAI/nsSysCfgInfo[0]/coreList --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/du_s_NSSAI/nsSysCfgInfo[0]/coreList --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/nCI --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/AdminState --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/maxUlUePerTTI --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/maxDlUePerTTI --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/maxDlHqTX --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/maxMsg4HqTx --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/prmblStart --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/prmblSize --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/cFI --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/cyclicPrefix --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/dmrsTypaPos --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/maxNumUEs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/csiPrdcty --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/nrUEMaxDlRank --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/nrUEPtrsEnable --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/nrUEMaxUlRank --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/nrDlNumOfAntPorts --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/ulModulation5Gnr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/dlModulation5Gnr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/schDlMcs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/macConfigCommon/schUlMcs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/tddUlDlConfigurationCommon/slotFormat --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/defaultPagCycle --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/paging_value_n --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/ns --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/firstPDCCHmonitoringPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/PDCCHmonitoringInfo/monitorType --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/PDCCHmonitoringInfo/numOfPoPerPf --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/isDrxEnabled --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/isDrxOnDurationTmrType --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxInactivityTmr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxOnDurationTmr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxRttTmrDl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxRttTmrUl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxRetxTmrDl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxRetxTmrUl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxLongCycle --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxCycleStartOffset --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/isDrxShortCycleEnabled --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxShortCycleTmr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DrxInfo/DrxSlotOffset --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/nr5qiCoeff --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/gbrServedRateCoeff --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/uePfsCoeff --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/totalSlicePrioLevels --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/totalUeServedRatePrioLevels --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/totalGbrServedRatePrioLevels --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/throughputCoeff --> CONFD_OK
+GNBDUFunction/loggingInfo/ngpLoggingConfig[9]/moduleId	9
+GNBDUFunction/loggingInfo/ngpLoggingConfig[9]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[10]/moduleId	10
+GNBDUFunction/loggingInfo/ngpLoggingConfig[10]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[11]/moduleId	11
+GNBDUFunction/loggingInfo/ngpLoggingConfig[11]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[12]/moduleId	12
+GNBDUFunction/loggingInfo/ngpLoggingConfig[12]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[13]/moduleId	13
+GNBDUFunction/loggingInfo/ngpLoggingConfig[13]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[14]/moduleId	14
+GNBDUFunction/loggingInfo/ngpLoggingConfig[14]/logLevel	1
+GNBDUFunction/loggingInfo/ngpLoggingConfig[15]/moduleId	15
+GNBDUFunction/loggingInfo/ngpLoggingConfig[15]/logLevel	1
+GNBDUFunction/loggingInfo/rlogConfig/logPath	./
+GNBDUFunction/loggingInfo/rlogConfig/logFile	dbglog
+GNBDUFunction/loggingInfo/rlogConfig/initLog	4
+GNBDUFunction/loggingInfo/rlogConfig/moduleMask	4
+GNBDUFunction/loggingInfo/rlogConfig/numOfLogFiles	5
+GNBDUFunction/loggingInfo/rlogConfig/logFileSizeLmt	5
+GNBDUFunction/loggingInfo/rlogConfig/logLevel	6
+GNBDUFunction/loggingInfo/logFileName	du
+Elements in GNBDUFunction/du_s_NSSAI/nsSysCfgInfo	1
+GNBDUFunction/du_s_NSSAI/nsSysCfgInfo[0]/nsiId	1
+CoreList 1 
+CoreList 2 
+CoreList 3 
+Elements in GNBDUFunction/NRCellDU	 1
+GNBDUFunction/NRCellDU[0]/nCI	000000001
+GNBDUFunction/NRCellDU[0]/AdminState	1
+GNBDUFunction/NRCellDU[0]/macConfigCommon/maxUlUePerTTI	1
+GNBDUFunction/NRCellDU[0]/macConfigCommon/maxDlUePerTTI	1
+GNBDUFunction/NRCellDU[0]/macConfigCommon/maxDlHqTX	1
+GNBDUFunction/NRCellDU[0]/macConfigCommon/maxMsg4HqTx	1
+GNBDUFunction/NRCellDU[0]/macConfigCommon/prmblStart	47
+GNBDUFunction/NRCellDU[0]/macConfigCommon/prmblSize	4
+GNBDUFunction/NRCellDU[0]/macConfigCommon/cFI	1
+GNBDUFunction/NRCellDU[0]/macConfigCommon/cyclicPrefix	0
+GNBDUFunction/NRCellDU[0]/macConfigCommon/dmrsTypaPos	0
+GNBDUFunction/NRCellDU[0]/macConfigCommon/maxNumUEs	8
+GNBDUFunction/NRCellDU[0]/macConfigCommon/csiPrdcty	160
+GNBDUFunction/NRCellDU[0]/macConfigCommon/nrUEMaxDlRank	2
+GNBDUFunction/NRCellDU[0]/macConfigCommon/nrUEPtrsEnable	False
+GNBDUFunction/NRCellDU[0]/macConfigCommon/nrUEMaxUlRank	1
+GNBDUFunction/NRCellDU[0]/macConfigCommon/nrDlNumOfAntPorts	2
+GNBDUFunction/NRCellDU[0]/macConfigCommon/ulModulation5Gnr	0
+GNBDUFunction/NRCellDU[0]/macConfigCommon/dlModulation5Gnr	1
+GNBDUFunction/NRCellDU[0]/macConfigCommon/schDlMcs	27
+GNBDUFunction/NRCellDU[0]/macConfigCommon/schUlMcs	28
+GNBDUFunction/NRCellDU[0]/tddUlDlConfigurationCommon/slotFormat	2
+GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/defaultPagCycle	1
+GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/paging_value_n	0
+GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/ns	0
+GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/firstPDCCHmonitoringPres	False
+GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/PDCCHmonitoringInfo/monitorType	0
+GNBDUFunction/NRCellDU[0]/pCCHcfgInfo/PDCCHmonitoringInfo/numOfPoPerPf	0
+GNBDUFunction/NRCellDU[0]/DrxInfo/isDrxEnabled	False
+GNBDUFunction/NRCellDU[0]/DrxInfo/isDrxOnDurationTmrType	1
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxInactivityTmr	4
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxOnDurationTmr	0
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxRttTmrDl	56
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxRttTmrUl	56
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxRetxTmrDl	3
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxRetxTmrUl	3
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxLongCycle	7
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxCycleStartOffset	0
+GNBDUFunction/NRCellDU[0]/DrxInfo/isDrxShortCycleEnabled	True
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxShortCycleTmr	2
+GNBDUFunction/NRCellDU[0]/DrxInfo/DrxSlotOffset	0
+GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/nr5qiCoeff	5
+GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/gbrServedRateCoeff	5
+GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/uePfsCoeff	5
+GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/totalSlicePrioLevels	10
+GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/totalUeServedRatePrioLevels	100
+GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/totalGbrServedRatePrioLevels	100
+GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/throughputCoefTRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/fairnessCoeff --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/pdschRateMatching/ssPbchEnabled --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/pdschRateMatching/coreSetEnabled --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/modeInfo --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRTAC --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRCGI/nrCgipLMNId/MCC --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRCGI/nrCgipLMNId/MNC --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRCGI/nrCellId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRPCI --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/subCarrierSpacing --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/freqRangeType --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/servedPlmnIndex --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/sliceList --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/sliceList[0]/sliceIndex --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/sliceList[0]/sst --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/sliceList[0]/sd --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/servedPlmnId/MCC --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/servedPlmnId/MNC --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/bwpId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/mu --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/cp --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/numRb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/startRb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/pdschCmnPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/pdcchCmnPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/csSsCfg/avgAggrlvl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/csSsCfg/maxAggrlvl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/csSsCfg/mntrSlotPrdcty/slType --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/absFreqPointA --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/absArfcnPointA --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/absFreqSsb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/absArfcnSsb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/nrFreqBand --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/bSChannelBwDL --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/dlEarfcn --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/scsCarrierLst --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/scsCarrierLst[0]/offsetToCarrier --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/scsCarrierLst[0]/scs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/scsCarrierLst[0]/carrierBw --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/absFreqPointA --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/absArfcnPointA --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/nrFreqBand --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/bSChannelBwUl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/freqShft7p5khz --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/addtlSpctrmEmssn --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/pMax --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/ulEarfcn --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/scsCarrierLst --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/scsCarrierLst[0]/offsetToCarrier --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/scsCarrierLst[0]/scs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/scsCarrierLst[0]/carrierBw --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/bwpId --> CONFD_OK
+f	5
+GNBDUFunction/NRCellDU[0]/cellPfsCfgInfo/fairnessCoeff	5
+GNBDUFunction/NRCellDU[0]/pdschRateMatching/ssPbchEnabled	False
+GNBDUFunction/NRCellDU[0]/pdschRateMatching/coreSetEnabled	False
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/modeInfo	1
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRTAC/	1
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRCGI/nrCgipLMNId/MCC	311
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRCGI/nrCgipLMNId/MNC	48
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRCGI/nrCellId	000000001
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/nRPCI	1
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/subCarrierSpacing	1
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/freqRangeType	0
+Num of Items in GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList	1
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/servedPlmnIndex	1
+Num of Items in GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/sliceList	1
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/sliceList[0]/sliceIndex	1
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/sliceList[0]/sst	1
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/sliceList[0]/sd	1
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/servedPlmnId/MCC	311
+GNBDUFunction/NRCellDU[0]/cellGenConfigInfo/servedPlmnList[0]/servedPlmnId/MNC	48
+Num of Items in GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg	1
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/bwpId	0
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/mu	1
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/cp	0
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/numRb	273
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/startRb	0
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/pdschCmnPres	True
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/pdcchCmnPres	True
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/csSsCfg/avgAggrlvl	2
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/csSsCfg/maxAggrlvl	4
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlBwpCfg[0]/csSsCfg/mntrSlotPrdcty/slType	0
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/absFreqPointA	2517750
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/absArfcnPointA	503550
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/absFreqSsb	2528550
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/absArfcnSsb	6321
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/nrFreqBand	41
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/bSChannelBwDL	10
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/dlEarfcn	503550
+Num of Items in GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/scsCarrierLst	1
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/scsCarrierLst[0]/offsetToCarrier	0
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/scsCarrierLst[0]/scs	1
+GNBDUFunction/NRCellDU[0]/DownlinkConfigCommon/dlFreqInfo/scsCarrierLst[0]/carrierBw	273
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/absFreqPointA	2517750
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/absArfcnPointA	503550
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/nrFreqBand	41
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/bSChannelBwUl	10
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/freqShft7p5khz	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/addtlSpctrmEmssn	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/pMax	23
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/ulEarfcn	503550
+Num of Items in GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/scsCarrierLst 1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/scsCarrierLst[0]/offsetToCarrier	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/scsCarrierLst[0]/scs	1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulFreqInfo/scsCarrierLst[0]/carrierBw	273
+Num of Ul Bwp Config in GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg	1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulTRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/mu --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/cp --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/numRb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/startRb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCmnPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/puschCmnPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/puschCmnCfg/msg3DeltaPreambl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/puschCmnCfg/p0NominalWithGrnt --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnPresTRACE Connected (maapi) to ConfD
+TRACE MAAPI_LOAD_ALL_NS
+ --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnCfg/pucchResourceCommon --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnCfg/pucchGrpHopping --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnCfg/hoppingId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnCfg/p0Nominal --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/prachCfgIndex --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/msg1Fdm --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/msg1FreqStart --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/zeroCorrelationZoneCfg --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/prmblRcvdTgtPwr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/prmblTransMax --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/pwrRampingStep --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/raRspWin --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/totNumOfRaPlmbs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/ssbsPerRach --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/cbPrmblPerSsb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/grpBPrmblsCfg/isGroupBPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/grpBPrmblsCfg/msg3SizeGroupA --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/grpBPrmblsCfg/numOfRaPreambleGrpA --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/contResTmr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/seqType --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rsrpThrshldSsb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rootSequenceIndex --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/msg1Scs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/restrictedSetCfg --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/maxMsg3Tx --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/prmblFrmt --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/srPrdcty --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/csiPrdcty --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/f2MaxPayloadLen1 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/f2MaxPayloadLen2 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/cyclicShift/numOfCycShift --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/cyclicShift/cycShiftBitmap --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/puschTxConfig --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/srsCfg/numSrsSym --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/srsCfg/ktc --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/srsCfg/maxSrsUePerSlot --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/sulCfgPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/maxUlUePerTTI --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/isHarmoniceNB --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/isSulFreqMute --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/cCCHcqi --> CONFD_OK
+BwpCfg[0]/bwpId	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/mu	1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/cp	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/numRb	273
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/startRb	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCmnPres	True
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/puschCmnPres	True
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/puschCmnCfg/msg3DeltaPreambl	
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/puschCmnCfg/p0NominalWithGrnt	-70
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnPres	True
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnCfg/pucchResourceCommon	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnCfg/pucchGrpHopping	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnCfg/hoppingId	1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/pucchCmnCfg/p0Nominal	-70
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/prachCfgIndex	202
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/msg1Fdm	1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/msg1FreqStart	50
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/zeroCorrelationZoneCfg	6
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/prmblRcvdTgtPwr	-76
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/prmblTransMax	1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/pwrRampingStep	2
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rachGenCfg/raRspWin	5
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/totNumOfRaPlmbs	63
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/ssbsPerRach	3
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/cbPrmblPerSsb	8
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/grpBPrmblsCfg/isGroupBPres	False
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/grpBPrmblsCfg/msg3SizeGroupA	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/grpBPrmblsCfg/numOfRaPreambleGrpA	4
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/contResTmr	7
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/seqType	1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rsrpThrshldSsb	62
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/rootSequenceIndex	24
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/msg1Scs	1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/restrictedSetCfg	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/maxMsg3Tx	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/rachCfgInfo/prmblFrmt	12
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/srPrdcty	10
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/csiPrdcty	8
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/f2MaxPayloadLen1	24
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/f2MaxPayloadLen2	36
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/cyclicShift/numOfCycShift	2
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/cyclicShift/cycShiftBitmap	9
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/puschTxConfig	1
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/srsCfg/numSrsSym	0
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/srsCfg/ktc	2
+GNBDUFunction/NRCellDU[0]/UplinkConfigCommon/ulBwpCfg[0]/srsCfg/maxSrsUePerSlot	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/sulCfgPres	False
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/maxUlUePerTTI	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/isHarmoniceNB	False
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/isSulFreqMute	True
+GNTRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/TgtUlCqi/pres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/TgtUlCqi/trfCqi --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/absFreqPointA --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/absArfcnPointA --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/nrFreqBand --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/bSChannelBwUl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/freqShft7p5khz --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/addtlSpctrmEmssn --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/pMax --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/ulEarfcn --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[0]/offsetToCarrier --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[0]/scs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[0]/carrierBw --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[1]/offsetToCarrier --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[1]/scs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[1]/carrierBw --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/bwpId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/mu --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/cp --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/numRb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/startRb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCmnPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/puschCmnPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnCfg/pucchResourceCommon --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnCfg/pucchGrpHopping --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnCfg/hoppingId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnCfg/p0Nominal --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/prachCfgIndex --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/msg1Fdm --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/msg1FreqStart --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/zeroCorrelationZoneCfg --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/prmblRcvdTgtPwr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/prmblTransMax --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/pwrRampingStep --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/raRspWin --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/totNumOfRaPlmbs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/ssbsPerRach --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/cbPrmblPerSsb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/grpBPrmblsCfg/isGroupBPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/grpBPrmblsCfg/msg3SizeGroupA --> CONFD_OK
+BDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/cCCHcqi	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/TgtUlCqi/pres	False
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/TgtUlCqi/trfCqi	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/absFreqPointA	28015680
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/absArfcnPointA	2079427
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/nrFreqBand	257
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/bSChannelBwUl	3
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/freqShft7p5khz	3
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/addtlSpctrmEmssn	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/pMax	23
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/ulEarfcn	2079415
+Num of Items in GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst	2
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[0]/offsetToCarrier	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[0]/scs	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[0]/carrierBw	106
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[1]/offsetToCarrier	2
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[1]/scs	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/FreqCfgUl/scsCarrierLst[1]/carrierBw	106
+Num of SUl Bwp Config in GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/bwpId	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/mu	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/cp	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/numRb	106
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/startRb	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCmnPres	True
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/puschCmnPres	True
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnPres	True
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnCfg/pucchResourceCommon	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnCfg/pucchGrpHopping	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnCfg/hoppingId	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/pucchCmnCfg/p0Nominal	-70
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/prachCfgIndex	81
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/msg1Fdm	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/msg1FreqStart	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/zeroCorrelationZoneCfg	6
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/prmblRcvdTgtPwr	-74
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/prmblTransMax	6
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/pwrRampingStep	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rachGenCfg/raRspWin	7
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/totNumOfRaPlmbs	63
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/ssbsPerRach	3
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/cbPrmblPerSsb	8
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/grpBPrmblsCfg/isGroupBPres	False
+GNBDUFunction/NRCellDU[0]/supplemTRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/grpBPrmblsCfg/numOfRaPreambleGrpA --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/contResTmr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/seqType --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rsrpThrshldSsb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rootSequenceIndex --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/msg1Scs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/restrictedSetCfg --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/maxMsg3Tx --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/prmblFrmt --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/srPrdcty --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/csiPrdcty --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/f2MaxPayloadLen1 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/f2MaxPayloadLen2 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/cyclicShift/numOfCycShift --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/cyclicShift/cycShiftBitmap --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/puschTxConfig --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/srsCfg/numSrsSym --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/srsCfg/ktc --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/srsCfg/maxSrsUePerSlot --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sib2Present --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sib3Present --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sib2Perd --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sib3Perd --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs[0]/valueTag --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs[0]/sibType --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs[1]/valueTag --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs[1]/sibType --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nDLcentrFreqTRACE MAAPI_LOAD_HASH_DB
+ --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nULcentrFreq --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nDLbandwith --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nULbandwith --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nSSBpwr --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nSSBprbOffset --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nDLFftSize --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nULFftSize --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nCAlevel --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nDLCarrier-K0 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nULCarrier-K0 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/pres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/l1PrachCfgInfoTRootSequenceIndex --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachCfgIndex --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/zeroCorrelationZoneCfg --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/highSpeedFlag --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachFreqOffset --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachSubcSpacing --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachRestrictSet --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachFreqStart --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachFdm --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachSsbRach --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/subCarrSpacCmn --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/ssbSubCarrOff --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/dmrsTypAPos --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/pdcchConfigSib1/controlResourceSetZero --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/pdcchConfigSib1/searchSpaceZero --> CONFD_OK
+entaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/grpBPrmblsCfg/msg3SizeGroupA	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/grpBPrmblsCfg/numOfRaPreambleGrpA	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/contResTmr	4
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/seqType	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rsrpThrshldSsb	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/rootSequenceIndex	24
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/msg1Scs	3
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/restrictedSetCfg	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/maxMsg3Tx	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/rachCfgInfo/prmblFrmt	0
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/srPrdcty	10
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/csiPrdcty	8
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/f2MaxPayloadLen1	24
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/f2MaxPayloadLen2	36
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/cyclicShift/numOfCycShift	2
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/cyclicShift/cycShiftBitmap	9
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/puschTxConfig	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/srsCfg/numSrsSym	1
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/srsCfg/ktc	2
+GNBDUFunction/NRCellDU[0]/supplementaryUplinkConfigCommon/SULbWPcFGg[0]/srsCfg/maxSrsUePerSlot	1
+GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sib2Present	True
+GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sib3Present	True
+GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sib2Perd	4
+GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sib3Perd	5
+Num of Items in GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs	2
+GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs[0]/valueTag	1
+GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs[0]/sibType	1
+GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs[1]/valueTag	2
+GNBDUFunction/NRCellDU[0]/si-SchedulingInfo/sibs[1]/sibType	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nDLcentrFreq	2566890
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nULcentrFreq	2566890
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nDLbandwith	100
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nULbandwith	100
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nSSBpwr	-30
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nSSBprbOffset	4
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nDLFftSize	4096
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nULFftSize	4096
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nCAlevel	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nDLCarrier-K0	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/nULCarrier-K0	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/pres	True
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/l1PrachCfgInfoTRootSequenceIndex	24
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachCfgIndex	202
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/zeroCorrelationZoneCfg	6
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/highSpeedFlag	False
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachFreqOffset	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachSubcSpacing	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachRestrictSet	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachFreqStart	50
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachFdm	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/prachCfg/prachSsbRach	3
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/subCarrSpacCmn	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/ssbSubCarrOff	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/dmrsTypAPos	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/pdcchConfigSib1/controlResourceSetZero	11
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/pdcchConfigSib1/searchTRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/cellBarredTRACE Connected (cdb) to ConfD
+TRACE Connected (cdb) to ConfD
+TRACE CDB_SUBSCRIBE /msgs/process-msgs --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/intraFreqReselctionDEBUG item does not exist - No such namespace
+ --> CONFD_ERR
+SpaceZero	4
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/cellBarred	1
+PROCESS_MGR: Terminate: subscribe -1
+ --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellSelectionInfo/qRxLevMin/rsrpLvl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellSelectionInfo/qRxLevMinSul/rsrpLvl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellSelectionInfo/qQualMin/rsrpLvl --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t300 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t301 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t310 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/n310 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t311 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/n311 --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t319 --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdentityInfoIndex --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/tacBitMap --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/ranac --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/cellId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/cellRsrvdOperatorUse --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdList --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdList[0]/pLMNIdIndex --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdList[0]/MCC --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdList[0]/MNC --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/trafficPattern/trafficPatternPres --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/trafficPattern/cellId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/trafficPattern/actvtSfn --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/trafficPattern/isSulFreqMute --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/trafficPattern/prbsAvlPerSlot --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/trafficPattern/prbsAvlPerSlot[0]/startPrb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/trafficPattern/prbsAvlPerSlot[0]/numPrbs --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/nsiId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/resType --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/nsResId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/NsiCellCfgTResCfg/numDlPrb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/NsiCellCfgTResCfg/numUlPrb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/dlSlaTrgtRate --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/ulSlaTrgtRate --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/numDlUePerTti --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/numUlUePerTti --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/nsiId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/resType --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/nsResId --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/NsiCellCfgTResCfg/numDlPrb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/NsiCellCfgTResCfg/numUlPrb --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/dlSlaTrgtRate --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/ulSlaTrgtRate --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/numDlUePerTti --> CONFD_OK
+TRACE CDB_GET GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/numUlUePerTti --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsDelList/nsIdToDel --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsActList/nsIdToAct --> CONFD_OK
+TRACE CDB_NUM_INSTANCES GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsDeactList/nsIdToDeAct --> CONFD_OK
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/mibParams/intraFreqReselction	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellSelectionInfo/qRxLevMin/rsrpLvl	-60
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellSelectionInfo/qRxLevMinSul/rsrpLvl	-50
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellSelectionInfo/qQualMin/rsrpLvl	-29
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t300	5
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t301	5
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t310	5
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/n310	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t311	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/n311	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/ueTimersAndConstants/t319	5
+Num Of Items inGNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdentityInfoIndex	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/tacBitMap	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/ranac	0
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/cellId	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/cellRsrvdOperatorUse	1
+Num of Items in GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdList	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdList[0]/pLMNIdIndex	1
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdList[0]/MCC	311
+GNBDUFunction/NRCellDU[0]/l1-CfgInfo/sib1Params/cellAccessInfo/pLMNIdentityList[0]/pLMNIdList[0]/MNC	48
+GNBDUFunction/NRCellDU[0]/trafficPattern/trafficPatternPres	False
+GNBDUFunction/NRCellDU[0]/trafficPattern/cellId	1
+GNBDUFunction/NRCellDU[0]/trafficPattern/actvtSfn	2
+GNBDUFunction/NRCellDU[0]/trafficPattern/isSulFreqMute	False
+Num of Items in GNBDUFunction/NRCellDU[0]/trafficPattern/prbsAvlPerSlot	1
+GNBDUFunction/NRCellDU[0]/trafficPattern/prbsAvlPerSlot[0]/startPrb	1
+GNBDUFunction/NRCellDU[0]/trafficPattern/prbsAvlPerSlot[0]/numPrbs	25
+Num of Items in GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo	1
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/nsiId	2
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/resType	0
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/nsResId	2
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/NsiCellCfgTResCfg/numDlPrb	11
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/NsiCellCfgTResCfg/numUlPrb	11
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/dlSlaTrgtRate	50000000
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/ulSlaTrgtRate	5000000
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/numDlUePerTti	1
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsAddList/nsAddInfo[0]/numUlUePerTti	1
+Num of Items in GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo	1
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/nsiId	3
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/resType	0
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/nsResId	2
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/NsiCellCfgTResCfg/numDlPrb	11
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/NsiCellCfgTResCfg/numUlPrb	11
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/dlSlaTrgtRate	50000000
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/ulSlaTrgtRate	5000000
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/numDlUePerTti	1
+GNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsModList/nsModInfo[0]/numUlUePerTti	1
+Leaf-ListGNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsDelList/nsIdToDelis empty
+Leaf-ListGNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsActList/nsIdToActis empty
+Leaf-ListGNBDUFunction/NRCellDU[0]/s_NSSAIRan/nsDeactList/nsIdToDeActis empty
+*** du config IP:127.0.0.1 
+init cl log!
+alfq log init IP:127.0.0.1 
+oam_du_config.ue_config.max_num_ues =8
+send  EVT_OAM_DU_CONFIG_REQUEST
+oam_agent_confd_cell_mgr::init
+TRACE Connected (maapi) to ConfD
+TRACE MAAPI_LOAD_ALL_NS
+TRACE MAAPI_LOAD_HASH_DB
+cmInitFreeIdxDb.freeIdxDb->startIdx=17717,freeIdxDb->maxEntries=256
+connect to cdb
+TRACE Connected (cdb) to ConfD
+TRACE CDB_SUBSCRIBE /GNBDUFunction/NRCellDU --> CONFD_OK
+TRACE CDB_SUBSCRIBE_DONE  --> CONFD_OK
+PROCESS_MGR: Posting MSG_CODE_DU_READY_IND
+[OAM Debug Print] Set AdminState 1
+SCH-LVL1 task mapping cellId(1) to taskCbIdx(0) totalNumLvl1SchTask 1
+SCH-LVL2 task mapping cellId(1) to taskCbIdx(0) totalNumLvl2SchTask 1
+UL_BWP_ENTRY:: MAX_PAYLOAD_LEN1_F2=24 MAX_PAYLOAD_LEN2_F2=36!!!!!!
+[OAM Debug Print] add cell config to msg struct cell is UNBLOCK 
+TAC is 1
+connect to data cdb
+	### Triggering F1 Setup Request message...
+TRACE Connected (cdb) to ConfD
+UpTime : 10 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   UlDatInd ULBLER  ULPRB   [0m
+---------------------------------------------------------
+[1;4m
+DU APP Level User Statistics:
+
+UE-ID     CELL-ID   #PKT_TX   #PKT_RX   DL_gTPT   DL_rTPT   DL_sTPT   UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2              [0m
+[1;4m
+PUCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  GP-ID   SET-ID  PUCCH FAIL     PUCCH_SUCC  [0m
+[1;4m
+PDCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  PDCCH_TYP CSID    SSID  AGG_LVL  FAIL  SUCC  [0m
+[1;4m
+PDSCH Rate Match Stats:
+
+UE-ID  CELL-ID BWP_ID  RATE_MATCH_CNT  PBCH_RATE_MATCH_CNT  CSET_RATE_MATCH_CNT  AVG_RATE_MATCH_MCS  AVG_MCS FAIL_CNT NUM_PRB_INC[0m
+[1;4m
+DU RLC RB Level User Statistics:
+
+CELL-ID UE-ID   RB-ID   TYPE    MODE    DL_RX   DL_TX   DL_T_SEG ST_PDU_T DL_DISC UL_RX   ST_PDU_R UL_R_CMP UL_R_SEG UL_SEG_RM UL_TX   UL_DISC RM_TEXP [0m
+Total Number of Task executed by worker 11
+---------------------------------------------------------
+-----------------------------------------------
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Persistent KPI:
+
+CELL    HANDOUT_TRIG        HANDOUT_SUCCESS     HANDOUT_FAIL        HANDIN_TRIG         HANDIN_SUCCESS      HANDIN_FAIL         [0m
+---------------------------------------------------------
+-----------------------------------------------
+UpTime : 20 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   UlDatInd ULBLER  ULPRB   [0m
+---------------------------------------------------------
+[1;4m
+DU APP Level User Statistics:
+
+UE-ID     CELL-ID   #PKT_TX   #PKT_RX   DL_gTPT   DL_rTPT   DL_sTPT   UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2              [0m
+[1;4m
+PUCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  GP-ID   SET-ID  PUCCH FAIL     PUCCH_SUCC  [0m
+[1;4m
+PDCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  PDCCH_TYP CSID    SSID  AGG_LVL  FAIL  SUCC  [0m
+[1;4m
+PDSCH Rate Match Stats:
+
+UE-ID  CELL-ID BWP_ID  RATE_MATCH_CNT  PBCH_RATE_MATCH_CNT  CSET_RATE_MATCH_CNT  AVG_RATE_MATCH_MCS  AVG_MCS FAIL_CNT NUM_PRB_INC[0m
+[1;4m
+DU RLC RB Level User Statistics:
+
+CELL-ID UE-ID   RB-ID   TYPE    MODE    DL_RX   DL_TX   DL_T_SEG ST_PDU_T DL_DISC UL_RX   ST_PDU_R UL_R_CMP UL_R_SEG UL_SEG_RM UL_TX   UL_DISC RM_TEXP [0m
+Total Number of Task executed by worker 0
+---------------------------------------------------------
+-----------------------------------------------
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Persistent KPI:
+
+CELL    HANDOUT_TRIG        HANDOUT_SUCCESS     HANDOUT_FAIL        HANDIN_TRIG         HANDIN_SUCCESS      HANDIN_FAIL         [0m
+---------------------------------------------------------
+-----------------------------------------------
+UpTime : 30 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   UlDatInd ULBLER  ULPRB   [0m
+---------------------------------------------------------
+[1;4m
+DU APP Level User Statistics:
+
+UE-ID     CELL-ID   #PKT_TX   #PKT_RX   DL_gTPT   DL_rTPT   DL_sTPT   UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2              [0m
+[1;4m
+PUCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  GP-ID   SET-ID  PUCCH FAIL     PUCCH_SUCC  [0m
+[1;4m
+PDCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  PDCCH_TYP CSID    SSID  AGG_LVL  FAIL  SUCC  [0m
+[1;4m
+PDSCH Rate Match Stats:
+
+UE-ID  CELL-ID BWP_ID  RATE_MATCH_CNT  PBCH_RATE_MATCH_CNT  CSET_RATE_MATCH_CNT  AVG_RATE_MATCH_MCS  AVG_MCS FAIL_CNT NUM_PRB_INC[0m
+[1;4m
+DU RLC RB Level User Statistics:
+
+CELL-ID UE-ID   RB-ID   TYPE    MODE    DL_RX   DL_TX   DL_T_SEG ST_PDU_T DL_DISC UL_RX   ST_PDU_R UL_R_CMP UL_R_SEG UL_SEG_RM UL_TX   UL_DISC RM_TEXP [0m
+Total Number of Task executed by worker 0
+---------------------------------------------------------
+-----------------------------------------------
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Persistent KPI:
+
+CELL    HANDOUT_TRIG        HANDOUT_SUCCESS     HANDOUT_FAIL        HANDIN_TRIG         HANDIN_SUCCESS      HANDIN_FAIL         [0m
+---------------------------------------------------------
+-----------------------------------------------
+UpTime : 40 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   UlDatInd ULBLER  ULPRB   [0m
+---------------------------------------------------------
+[1;4m
+DU APP Level User Statistics:
+
+UE-ID     CELL-ID   #PKT_TX   #PKT_RX   DL_gTPT   DL_rTPT   DL_sTPT   UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2              [0m
+[1;4m
+PUCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  GP-ID   SET-ID  PUCCH FAIL     PUCCH_SUCC  [0m
+[1;4m
+PDCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  PDCCH_TYP CSID    SSID  AGG_LVL  FAIL  SUCC  [0m
+[1;4m
+PDSCH Rate Match Stats:
+
+UE-ID  CELL-ID BWP_ID  RATE_MATCH_CNT  PBCH_RATE_MATCH_CNT  CSET_RATE_MATCH_CNT  AVG_RATE_MATCH_MCS  AVG_MCS FAIL_CNT NUM_PRB_INC[0m
+[1;4m
+DU RLC RB Level User Statistics:
+
+CELL-ID UE-ID   RB-ID   TYPE    MODE    DL_RX   DL_TX   DL_T_SEG ST_PDU_T DL_DISC UL_RX   ST_PDU_R UL_R_CMP UL_R_SEG UL_SEG_RM UL_TX   UL_DISC RM_TEXP [0m
+Total Number of Task executed by worker 0
+---------------------------------------------------------
+-----------------------------------------------
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Persistent KPI:
+
+CELL    HANDOUT_TRIG        HANDOUT_SUCCESS     HANDOUT_FAIL        HANDIN_TRIG         HANDIN_SUCCESS      HANDIN_FAIL         [0m
+---------------------------------------------------------
+-----------------------------------------------
+UpTime : 50 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   UlDatInd ULBLER  ULPRB   [0m
+---------------------------------------------------------
+[1;4m
+DU APP Level User Statistics:
+
+UE-ID     CELL-ID   #PKT_TX   #PKT_RX   DL_gTPT   DL_rTPT   DL_sTPT   UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2              [0m
+[1;4m
+PUCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  GP-ID   SET-ID  PUCCH FAIL     PUCCH_SUCC  [0m
+[1;4m
+PDCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  PDCCH_TYP CSID    SSID  AGG_LVL  FAIL  SUCC  [0m
+[1;4m
+PDSCH Rate Match Stats:
+
+UE-ID  CELL-ID BWP_ID  RATE_MATCH_CNT  PBCH_RATE_MATCH_CNT  CSET_RATE_MATCH_CNT  AVG_RATE_MATCH_MCS  AVG_MCS FAIL_CNT NUM_PRB_INC[0m
+[1;4m
+DU RLC RB Level User Statistics:
+
+CELL-ID UE-ID   RB-ID   TYPE    MODE    DL_RX   DL_TX   DL_T_SEG ST_PDU_T DL_DISC UL_RX   ST_PDU_R UL_R_CMP UL_R_SEG UL_SEG_RM UL_TX   UL_DISC RM_TEXP [0m
+Total Number of Task executed by worker 0
+---------------------------------------------------------
+-----------------------------------------------
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Persistent KPI:
+
+CELL    HANDOUT_TRIG        HANDOUT_SUCCESS     HANDOUT_FAIL        HANDIN_TRIG         HANDIN_SUCCESS      HANDIN_FAIL         [0m
+---------------------------------------------------------
+-----------------------------------------------
+UpTime : 60 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   UlDatInd ULBLER  ULPRB   [0m
+---------------------------------------------------------
+[1;4m
+DU APP Level User Statistics:
+
+UE-ID     CELL-ID   #PKT_TX   #PKT_RX   DL_gTPT   DL_rTPT   DL_sTPT   UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2              [0m
+[1;4m
+PUCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  GP-ID   SET-ID  PUCCH FAIL     PUCCH_SUCC  [0m
+[1;4m
+PDCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  PDCCH_TYP CSID    SSID  AGG_LVL  FAIL  SUCC  [0m
+[1;4m
+PDSCH Rate Match Stats:
+
+UE-ID  CELL-ID BWP_ID  RATE_MATCH_CNT  PBCH_RATE_MATCH_CNT  CSET_RATE_MATCH_CNT  AVG_RATE_MATCH_MCS  AVG_MCS FAIL_CNT NUM_PRB_INC[0m
+[1;4m
+DU RLC RB Level User Statistics:
+
+CELL-ID UE-ID   RB-ID   TYPE    MODE    DL_RX   DL_TX   DL_T_SEG ST_PDU_T DL_DISC UL_RX   ST_PDU_R UL_R_CMP UL_R_SEG UL_SEG_RM UL_TX   UL_DISC RM_TEXP [0m
+Total Number of Task executed by worker 0
+---------------------------------------------------------
+-----------------------------------------------
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Persistent KPI:
+
+CELL    HANDOUT_TRIG        HANDOUT_SUCCESS     HANDOUT_FAIL        HANDIN_TRIG         HANDIN_SUCCESS      HANDIN_FAIL         [0m
+---------------------------------------------------------
+-----------------------------------------------
+UpTime : 70 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   UlDatInd ULBLER  ULPRB   [0m
+---------------------------------------------------------
+[1;4m
+DU APP Level User Statistics:
+
+UE-ID     CELL-ID   #PKT_TX   #PKT_RX   DL_gTPT   DL_rTPT   DL_sTPT   UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2              [0m
+[1;4m
+PUCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  GP-ID   SET-ID  PUCCH FAIL     PUCCH_SUCC  [0m
+[1;4m
+PDCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  PDCCH_TYP CSID    SSID  AGG_LVL  FAIL  SUCC  [0m
+[1;4m
+PDSCH Rate Match Stats:
+
+UE-ID  CELL-ID BWP_ID  RATE_MATCH_CNT  PBCH_RATE_MATCH_CNT  CSET_RATE_MATCH_CNT  AVG_RATE_MATCH_MCS  AVG_MCS FAIL_CNT NUM_PRB_INC[0m
+[1;4m
+DU RLC RB Level User Statistics:
+
+CELL-ID UE-ID   RB-ID   TYPE    MODE    DL_RX   DL_TX   DL_T_SEG ST_PDU_T DL_DISC UL_RX   ST_PDU_R UL_R_CMP UL_R_SEG UL_SEG_RM UL_TX   UL_DISC RM_TEXP [0m
+Total Number of Task executed by worker 0
+---------------------------------------------------------
+-----------------------------------------------
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Persistent KPI:
+
+CELL    HANDOUT_TRIG        HANDOUT_SUCCESS     HANDOUT_FAIL        HANDIN_TRIG         HANDIN_SUCCESS      HANDIN_FAIL         [0m
+---------------------------------------------------------
+-----------------------------------------------
+UpTime : 80 sec
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Non Persistent KPI:
+
+CELL    DLBLER   #DTX  DLPRB  DL_Occ   Success  DlNewTx  DlReTx   UL_Succ  UlNewTx  UlReTx   UlDatInd ULBLER  ULPRB   [0m
+---------------------------------------------------------
+[1;4m
+DU APP Level User Statistics:
+
+UE-ID     CELL-ID   #PKT_TX   #PKT_RX   DL_gTPT   DL_rTPT   DL_sTPT   UL_TPT    DL_LC_1   UL_LC_1   DL_LC_2   UL_LC_2              [0m
+[1;4m
+PUCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  GP-ID   SET-ID  PUCCH FAIL     PUCCH_SUCC  [0m
+[1;4m
+PDCCH Resource Allocation Stats:
+
+UE-ID  CELL-ID BWP_ID  PDCCH_TYP CSID    SSID  AGG_LVL  FAIL  SUCC  [0m
+[1;4m
+PDSCH Rate Match Stats:
+
+UE-ID  CELL-ID BWP_ID  RATE_MATCH_CNT  PBCH_RATE_MATCH_CNT  CSET_RATE_MATCH_CNT  AVG_RATE_MATCH_MCS  AVG_MCS FAIL_CNT NUM_PRB_INC[0m
+[1;4m
+DU RLC RB Level User Statistics:
+
+CELL-ID UE-ID   RB-ID   TYPE    MODE    DL_RX   DL_TX   DL_T_SEG ST_PDU_T DL_DISC UL_RX   ST_PDU_R UL_R_CMP UL_R_SEG UL_SEG_RM UL_TX   UL_DISC RM_TEXP [0m
+Total Number of Task executed by worker 0
+---------------------------------------------------------
+-----------------------------------------------
+[gNodeB Console]
+****************** Kpi Stats ******************
+[1;4m
+Cell Level Persistent KPI:
+
+CELL    HANDOUT_TRIG        HANDOUT_SUCCESS     HANDOUT_FAIL        HANDIN_TRIG         HANDIN_SUCCESS      HANDIN_FAI

@@ -2,7 +2,8 @@
 Library       Telnet
 Library       SSHLibrary
 Resource       ${EXECDIR}${/}NR${/}resources${/}PowerSwitchControl.robot
-Resource       ${EXECDIR}${/}NR${/}resources${/}nr_E500.robot
+Resource       ${EXECDIR}${/}NR${/}resources${/}nr_RealUe.robot
+#Resource       ${EXECDIR}${/}NR${/}resources${/}nr_E500.robot
 
 Documentation
 ...  *How To execute test case:*
@@ -18,11 +19,15 @@ ${passwd2}  123456
 
 *** Test Cases ***
 login_test
-    SSHLibrary.Open Connection   ${host2}  timeout=10s
-    SSHLibrary.Login    ${usr}    ${passwd2}
-    SSHLibrary.Close all connections
+    ${log_file_name}  Get Timestamp String
+    Set Global Variable  ${log_file_name}
+    log to console  ${log_file_name}
+    Case Scenario Execution
 
 
 *** Keywords ***
 Case Scenario Execution
-    ButtonSixOnOff
+    realue start spark log  #spark_log_path= D:\\sparkLogfiles\\
+    sleep  5s
+    realue stop spark log
+

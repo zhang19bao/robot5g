@@ -7,10 +7,11 @@ def match_line_separate(string):
     result = re.match(pattern, string)
     return result
 
+
 if __name__ == '__main__':
     file_path = r'/home/PhyStats-c0.txt'
     new_file = r'/home/new_file.txt'
-    f1 = open(file_path,newline='')
+    f1 = open(file_path, newline='')
     fh = open(r'/home/head.txt', 'w', newline='')
     n = 0
     while 1:
@@ -30,7 +31,7 @@ if __name__ == '__main__':
         list_one_line = []
         while 1:
             result = match_line_separate(line)
-            result1 = re.match(r'^\s+Slot\s+\|.*$',line)
+            result1 = re.match(r'^\s+Slot\s+\|.*$', line)
             if result is None and result1 is None:
                 list_one_line.append(line)
                 line = f1.readline()
