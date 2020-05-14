@@ -29,13 +29,17 @@ E500_temp
 Case Scenario Execution
 #    Dialogs.Pause Execution
     E500 log setup  ue_attach
+    sleep   3s
     E500 Send Script
+    sleep   3s
     E500 log stop
     sleep   30s
     log to console  Test Case Scenario Executio
     E500 Shernick Start
+    sleep   3s
+    E500 sheck status
 #    Dialogs.Pause Execution
-    E500 Shernick Stop
+    E500 Shernick Sto
     log to console  ${TEST NAME}
 
 Case Log Analysis

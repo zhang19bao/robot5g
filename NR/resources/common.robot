@@ -2,7 +2,7 @@
 Library         String
 Library         DateTime
 Library         SSHLibrary
-#Library         Telnet
+Library         Process
 Library         OperatingSystem
 Library         Collections
 Library         Dialogs
@@ -123,7 +123,8 @@ Get Timestamp String
 
 NR Test Suite Common Setup
     ${start_time}=	Get Timestamp String
-    Set Global Variable  ${TESTSUITE_LOG_DIR}  ${OUTPUT_DIR}${/}${start_time}
+    Set Global Variable  ${log_file_name}  ${start_time}
+    Set Global Variable  ${TESTSUITE_LOG_DIR}  ${OUTPUT_DIR}${/}${log_file_name}
     Log To Console         ******************************************************************************
     Log To Console         *****************************Test Log Directory:******************************
     Log To Console         ${TESTSUITE_LOG_DIR}

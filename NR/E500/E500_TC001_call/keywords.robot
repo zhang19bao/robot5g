@@ -49,6 +49,8 @@ loop repeadedly attach
     E500 get console log
     E500 download log to folder  ${loop_log_path}
     OperatingSystem.run   cp ${TESTSUITE_LOG_DIR}${/}E500*.log ${TESTSUITE_LOG_DIR}${/}${loop}
+    sleep  3s
+    OperatingSystem.run   rm -rf ${TESTSUITE_LOG_DIR}${/}E500*.log
     Should Be True      ${status1} == True and ${status2} == True and ${status3} == True
 
 case sheck e500 status

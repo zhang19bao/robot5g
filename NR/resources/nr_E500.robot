@@ -115,7 +115,9 @@ E500 du setup
     ${ssh_index}  Create Ssh Connection    ${NRHOST}   ${NRUSR}    ${NRPWD}
     SSHLibrary.Write    ulimit -c unlimited
     SSHLibrary.Write    ${startdu}
-    ${output}=    SSHLibrary.Read    delay=20s
+    sleep  5s
+    SSHLibrary.Write Bare  0
+    ${output}=    SSHLibrary.Read    delay=10s
 #    log to console   ${output}
     Should Contain    ${output}=    CELL[1] is UP
     log to console  du start completed

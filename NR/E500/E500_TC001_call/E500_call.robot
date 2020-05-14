@@ -31,7 +31,7 @@ E500_call
 *** Keywords ***
 Case Scenario Execution
 
-    :FOR  ${index}  IN RANGE  ${1}
+    :FOR  ${index}  IN RANGE  ${10}
     \    log to console  loop ${index} start
     \    ${case_stat}  Run Keyword And Return Status    loop repeadedly attach   ${index}
     \    run keyword if  ${case_stat} == False  OperatingSystem.Run  echo loop ${index} fail >> ${TESTSUITE_LOG_DIR}${/}result.log
